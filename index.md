@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: The Recipe of a Viral Conflict
 subtitle: Understanding Negative Bursts on Reddit
 cover-img: /assets/img/reddit.png
