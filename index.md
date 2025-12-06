@@ -4,6 +4,25 @@ title: The Recipe of a Viral Conflict
 subtitle: Understanding Negative Bursts on Reddit
 cover-img: /assets/img/reddit.png
 ---
+<div class="reddit-card">
+  <div class="reddit-header">
+    <span class="reddit-user">u/anonymous</span> • <span class="reddit-date">Jan 20, 2014</span>
+  </div>
+  <div class="reddit-content">
+    <p>
+      Ukraine is rioting over the new set of laws that outlaw basic freedoms such as protesting. How come the US citizens don't riot over NDAA?
+    </p>
+    <p>
+      <a href="http://rt.com/usa/obama-ndaa-appeal-suit" target="_blank">http://rt.com/usa/obama-ndaa-appeal-suit</a>
+    </p>
+    <p>
+      People are saying things such as: how come the Ukrainians are hailed for standing up and rioting against their government, and to use violence up until the point where their government is forced to repeal their tyrannical legislation, but it seems like when Americans talk about revolt, it’s immediately squashed with arguments of "and" and more talk of it being senseless. Are Americans too comfortable, or just too many clueless, uneducated citizens?
+    </p>
+    <p>
+      On the 20th of January, 2014, within hours, this post triggered what we call a <strong>negative burst</strong> on Reddit: a sudden surge of reactions and arguments, often hostile or confrontational. What triggers such sudden bursts of negative attention? Is it the topic, the wording, the emotions, or the context?
+    </p>
+  </div>
+</div>
 
 
 ## Introduction {#top}

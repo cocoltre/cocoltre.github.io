@@ -1124,3 +1124,40 @@ pre {
     display: inline-block;
   }
 }
+
+.reddit-card {
+  background: #f8f9fa;  /* light grey Reddit-style background */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 800px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+}
+
+.reddit-header {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ff4500;  /* Reddit orange */
+}
+
+.reddit-header .reddit-date {
+  font-weight: normal;
+  color: #777;
+  margin-left: 10px;
+}
+
+.reddit-content p {
+  margin-bottom: 1rem;
+}
+
+.reddit-content a {
+  color: #008AFF;
+  text-decoration: none;
+}
+
+.reddit-content a:hover {
+  text-decoration: underline;
+}
