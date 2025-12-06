@@ -1167,13 +1167,3 @@ pre {
   margin-bottom: 1rem;
 }
 
-
-/* Make page text full width */
-body > main, 
-body > main > div {
-  max-width: 100% !important;
-  width: 100% !important;
-  padding-left: 2rem;  /* optional side spacing */
-  padding-right: 2rem;
-  margin: 0 auto;
-}
