@@ -1,9 +1,15 @@
 ---
-layout: page
+layout: default
 title: The Recipe of a Viral Conflict
 subtitle: Understanding Negative Bursts on Reddit
 cover-img: /assets/img/reddit.png
 ---
+<div class="right-menu">
+  <a href="#communitylevel">Community Level</a><br>
+  <a href="#userlevel">User Level</a><br>
+  <a href="#wordlevel">Word Level</a>
+</div>
+
 ## Introduction {#top}
 
 Today, Wikipedia is part of everybody’s life. It is the first source that most people will check when they want to get information. This website is maintained by volunteers through open collaboration, and what makes its strength, can also bring problems. Wikipedia aims to have a neutral point of view and stay strictly factual but can we guarantee this when anyone can become a contributor? A study [<sup>[1]</sup>](#ref) observed that a large number of Wikipedia editors change their behavior and focus on editing controversial topics when promoted to administrators, they might be biased (consciously or not) and influence these articles. This concern about bias in Wikipedia content leads us to consider how such biases might extend to user interactions with the platform, in the Wikispeedia game.  
