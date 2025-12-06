@@ -14,7 +14,7 @@ Imagine scrolling through Reddit and stumbling upon a post like this one:
   <div class="reddit-title">
     <p>
       Ukraine is rioting over the new set of laws that outlaw basic freedoms such as protesting. How come the US citizens don't riot over NDAA?
-      {: .text-justify}
+      
     </p>
   </div>
   <div class="reddit-content">
@@ -23,7 +23,7 @@ Imagine scrolling through Reddit and stumbling upon a post like this one:
     </p>
     <p>
       People are saying things such as: how come the Ukrainians are hailed for standing up and rioting against their government, and to use violence up until the point where their government is forced to repeal their tyrannical legislation, but it seems like when Americans talk about revolt, it’s immediately squashed with arguments of "and" and more talk of it being senseless. Are Americans too comfortable, or just too many clueless, uneducated citizens?
-      {: .text-justify}
+      
     </p>
   </div>
 </div>
