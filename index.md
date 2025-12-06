@@ -4,11 +4,7 @@ title: The Recipe of a Viral Conflict
 subtitle: Understanding Negative Bursts on Reddit
 cover-img: /assets/img/reddit.png
 ---
-<div class="right-menu">
-  <a href="#communitylevel">Community Level</a><br>
-  <a href="#userlevel">User Level</a><br>
-  <a href="#wordlevel">Word Level</a>
-</div>
+
 
 ## Introduction {#top}
 
