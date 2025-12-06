@@ -9,7 +9,8 @@ Imagine scrolling through Reddit and stumbling upon a post like this one:
 
 <div class="reddit-card">
   <div class="reddit-header">
-    <span class="reddit-user">u/anonymous</span> • <span class="reddit-date">Jan 20, 2014</span>
+    <span class="reddit-subreddit">r/askreddit</span>
+    <span class="reddit-user">u/dandemonium</span> • <span class="reddit-date">Jan 20, 2014</span>
   </div>
   <div class="reddit-title">
     <p>
