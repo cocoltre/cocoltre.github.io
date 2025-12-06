@@ -1149,6 +1149,12 @@ pre {
   color: #ff4500;  /* Reddit orange */
 }
 
+.reddit-header .reddit-user {
+  font-weight: bold;
+  color: #777;
+  margin-left: 10px;
+}
+
 .reddit-header .reddit-date {
   font-weight: normal;
   color: #777;
