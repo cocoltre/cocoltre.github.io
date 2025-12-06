@@ -22,7 +22,7 @@ author: Les Requins du Dataset
 navbar-links:
   Community Level: "#communitylevel"
   User Level: "#userlevel"
-  Word level: "#wordlevel"
+  Post level: "#postlevel"
   About Us: "aboutus"
   Resources:
     - The dataset: "https://snap.stanford.edu/data/soc-RedditHyperlinks.html"
