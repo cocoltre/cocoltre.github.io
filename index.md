@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: The Recipe of a Viral Conflict
 subtitle: Understanding Negative Bursts on Reddit
 cover-img: /assets/img/reddit.png
@@ -205,7 +205,7 @@ Future work will focus on conducting more robust, and deeper, statistical analys
 
 #### References {#ref}
 
-[1] Srijan Kumar, William L. Hamilton, Jure Leskovec, and Dan Jurafsky. 2018. Community Interaction and Conflict on the Web. In WWW 2018: The 2018 Web Conference, April 23–27, 2018, Lyon, France. ACM, New York, NY, USA, 11 pages. [DOI]https://doi.org/10.1145/3178876.3186141
+[1] Srijan Kumar, William L. Hamilton, Jure Leskovec, and Dan Jurafsky. 2018. Community Interaction and Conflict on the Web. In WWW 2018: The 2018 Web Conference, April 23–27, 2018, Lyon, France. ACM, New York, NY, USA, 11 pages. [DOI](https://doi.org/10.1145/3178876.3186141)
 
 
 
