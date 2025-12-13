@@ -20,11 +20,12 @@ author: Les Requins du Dataset
 ###############################################
 
 navbar-links:
-  Introduction: ""
-  Community Level: "#communitylevel"
-  User Level: "#userlevel"
-  Post level: "#postlevel"
-  Final Recipe ! : "#finalrecipe"
+navbar-links:
+  Introduction: "/"
+  Community level: "/communitylevel/"
+  User level: "/userlevel/"
+  Post level: "/postlevel/"
+  Final recipe ! : "/finalrecipe/"
   About Us: "aboutus"
   Resources:
     - The dataset: "https://snap.stanford.edu/data/soc-RedditHyperlinks.html"
