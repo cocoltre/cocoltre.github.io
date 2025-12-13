@@ -72,8 +72,6 @@ At each level, we use both descriptive (visual and statistical) and predictive (
 
 <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:22px">
   <a class="btn btn-primary" href="/communitylevel/">Start: Community level →</a>
-  <a class="btn btn-default" href="/resources/">Resources</a>
-  <a class="btn btn-default" href="/about/">About us</a>
 </div>
 
 ---
