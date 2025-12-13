@@ -59,6 +59,14 @@ Thus, the probability that some posts that made a burst used a word than none ot
 The single words alone are hard to understand why they would enhance the probability of making a burst... Maybe we should look at what these words represent? We could analyze this using specific features, calculated using the text of the post.
 {: .text-justify}
 
+
+<iframe
+  src="{{ '/assets/plots/semantic_features_treemap.html' | relative_url }}"
+  width="100%"
+  height="750"
+  style="border:none;">
+</iframe>
+
 <hr>
 
 <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:20px">
