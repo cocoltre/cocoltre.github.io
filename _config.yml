@@ -20,6 +20,7 @@ author: Les Requins du Dataset
 ###############################################
 
 navbar-links:
+  Introduction: ""
   Community Level: "#communitylevel"
   User Level: "#userlevel"
   Post level: "#postlevel"
