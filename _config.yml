@@ -23,6 +23,7 @@ navbar-links:
   Community Level: "#communitylevel"
   User Level: "#userlevel"
   Post level: "#postlevel"
+  Final Recipe ! : "#finalrecipe"
   About Us: "aboutus"
   Resources:
     - The dataset: "https://snap.stanford.edu/data/soc-RedditHyperlinks.html"
