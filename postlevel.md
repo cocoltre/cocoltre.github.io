@@ -67,6 +67,40 @@ The single words alone are hard to understand why they would enhance the probabi
   style="border:none;">
 </iframe>
 
+
+
+
+
+<iframe
+  src="{{ '/assets/plots/corr_before.html' | relative_url }}"
+  width="100%"
+  height="950"
+  style="border:none;">
+</iframe>
+
+
+
+
+<iframe
+  src="{{ '/assets/plots/feature_selection_treemap_dropdown.html' | relative_url }}"
+  width="100%"
+  height="800"
+  style="border:none;">
+</iframe>
+
+
+
+<iframe
+  src="{{ '/assets/plots/feature_importance_dropdown.html' | relative_url }}"
+  width="100%"
+  height="750"
+  style="border:none;">
+</iframe>
+
+
+
+
+
 <hr>
 
 <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:20px">

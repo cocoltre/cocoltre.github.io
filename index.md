@@ -67,7 +67,7 @@ We adopt a multi-scale perspective, moving from the macro level of subreddit net
 - User embeddings to identify clusters of users and their role in burst diffusion.
 - Semantic features (text statistics, sentiment, and LIWC categories) to capture linguistic signals that characterize bursty posts.
 
-At each level, we use both descriptive (visual and statistical) and predictive (model-based) analyses. This step-by-step approach allows us to isolate which dimensions—network position, user profile, or linguistic tone—contribute most to the emergence of a burst.
+At each level, we use both descriptive (visual and statistic dal) and predictive (model-based) analyses. This step-by-step approach allows us to isolate which dimensions—network position, user profile, or linguistic tone—contribute most to the emergence of a burst.
 {: .text-justify}
 
 <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:22px">
