@@ -78,13 +78,10 @@ The single words alone are hard to understand why they would enhance the probabi
   style="border:none;">
 </iframe>
 
-
-
-
 <iframe
-  src="{{ '/assets/plots/feature_selection_treemap_dropdown.html' | relative_url }}"
+  src="{{ '/assets/plots/corr_after.html' | relative_url }}"
   width="100%"
-  height="800"
+  height="950"
   style="border:none;">
 </iframe>
 
@@ -99,6 +96,25 @@ The single words alone are hard to understand why they would enhance the probabi
 
 
 
+
+<iframe
+  src="{{ '/assets/plots/feature_selection_treemap_dropdown.html' | relative_url }}"
+  width="100%"
+  height="800"
+  style="border:none;">
+</iframe>
+
+
+
+
+
+
+<iframe
+  src="{{ '/assets/plots/model_performance_by_subset.html' | relative_url }}"
+  width="100%"
+  height="720"
+  style="border:none;">
+</iframe>
 
 
 <hr>
