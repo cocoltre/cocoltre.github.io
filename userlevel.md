@@ -13,7 +13,7 @@ permalink: /userlevel/
 </iframe>
 
 
-## User Level {#userlevel}
+## User Level
 
 Once we know from where (from which subreddit) one's talking, let's look at who they are exactly, and when they are talking.
 In this section, we are interested to explore and to understand which user properties distinguish posts that trigger a burst from those that do not.
@@ -40,27 +40,26 @@ To achieve this, we will take the same dataset as part 1.1, containing, for each
 The dataset is derived using handcrafted_features.csv, tokenized_posts.tsv, and snap.tsv, taking the source_subreddit, the author, and the burst parameter. You can generate this dataset by running src/scripts/1_create_dataset_subreddits-users.py
 {: .text-justify}
 
-<iframe
-  src="{{ '/assets/plots/2_top5_users_activity.html' | relative_url }}"
-  width="100%"
-  height="950"
-  style="border:none;">
-</iframe>
+<div style="position: relative; width: 100%; max-width: 800px; padding-top: 50%; margin: auto;">
+  <iframe
+    src="{{ '/assets/plots/2_top5_users_activity.html' | relative_url }}"
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+  </iframe>
+</div>
 
-<iframe
-  src="{{ '/assets/plots/2_distribution_users_activity.html' | relative_url }}"
-  width="100%"
-  height="950"
-  style="border:none;">
-</iframe>
+<div style="position: relative; width: 100%; max-width: 800px; padding-top: 50%; margin: auto;">
+  <iframe
+    src="{{ '/assets/plots/2_distribution_users_activity.html' | relative_url }}"
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+  </iframe>
+</div>
 
-<iframe
-  src="{{ '/assets/plots/2_distribution_users_activity.html' | relative_url }}"
-  width="100%"
-  height="950"
-  style="border:none;">
-</iframe>
-
+<div style="position: relative; width: 100%; max-width: 800px; padding-top: 50%; margin: auto;">
+  <iframe
+    src="{{ '/assets/plots/2_users_activity_describe.html' | relative_url }}"
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+  </iframe>
+</div>
 
 Here, we can see that users have many different amounts of subreddits, and of posts. The distribution for both types of activity is extremely left-skewed, meaning that most of the users are active in very few subreddits (minimum 75% of them in only 1) and do few posts (minimum 75% of them make 1 too). We also see that the distribution of users across the number of subreddits or number of posts is not exactly the same, which makes sense as 1 user can post several times in the same subreddit. Suprinsingly, the users that are active in the most subreddits do not necessarily post the most. For instance, over the 14'000 users that we have, 12'855 users have posted in only 1 subreddit, while only 11 users have posted in more than 10 subreddits. That means that 91.8% of users have posted in only 1 subreddit, which explains the highly left-skewness.
 {: .text-justify}
@@ -76,12 +75,12 @@ First, let's first find out about **the number of subreddits.**
 
 #### The activity is the number of subreddits in which they are active
 
-<iframe
-  src="{{ '/assets/plots/2_mean_burst_ratio_by_users_subreddits.html' | relative_url }}"
-  width="100%"
-  height="950"
-  style="border:none;">
-</iframe>
+<div style="position: relative; width: 100%; max-width: 800px; padding-top: 50%; margin: auto;">
+  <iframe
+    src="{{ '/assets/plots/2_mean_burst_ratio_by_users_subreddits.html' | relative_url }}"
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+  </iframe>
+</div>
 
 Here, we see that the burst ratios vary from 0 to 0.043 (meaning that on average 4.3% of all the posts from a user who is active in 5 subreddits make a burst). That indicates that the number of subreddits in which a user is being active may influence the burst ratio, thus the probability of their post to make a burst.
 {: .text-justify}
@@ -89,12 +88,12 @@ Here, we see that the burst ratios vary from 0 to 0.043 (meaning that on average
 Let's see if the difference is statistically significant.
 {: .text-justify}
 
-<iframe
-  src="{{ '/assets/plots/2_mean_burst_ratio_by_subreddits_cluster.html' | relative_url }}"
-  width="100%"
-  height="950"
-  style="border:none;">
-</iframe>
+<div style="position: relative; width: 100%; max-width: 800px; padding-top: 50%; margin: auto;">
+  <iframe
+    src="{{ '/assets/plots/2_mean_burst_ratio_by_subreddits_cluster.html' | relative_url }}"
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+  </iframe>
+</div>
 
 With a K-means algorithm, we are able to distinguish 3 clusters of users: the users active in a low number of subreddits (1), in a medium number of subreddits (~2), and in a high number of subreddits (~9).
 {: .text-justify}
@@ -114,12 +113,12 @@ Now let's see if the number of posts a user has made has also an influence on th
 Remember our data:
 {: .text-justify}
 
-<iframe
-  src="{{ '/assets/plots/2_top5_users_activity.html' | relative_url }}"
-  width="100%"
-  height="950"
-  style="border:none;">
-</iframe>
+<div style="position: relative; width: 100%; max-width: 800px; padding-top: 50%; margin: auto;">
+  <iframe
+    src="{{ '/assets/plots/2_top5_users_activity.html' | relative_url }}"
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+  </iframe>
+</div>
 
 Here, we can see that users make many different amounts of posts. We also see that no matter their amount of the subreddits they belong to nor the identity of active users, they have different burst ratios (the portion of posts that did a burst).
 {: .text-justify}
@@ -127,12 +126,12 @@ Here, we can see that users make many different amounts of posts. We also see th
 **Can the number of posts of a user influence the probability of it to make a burst ?**
 {: .text-justify}
 
-<iframe
-  src="{{ '/assets/plots/2_mean_burst_ratio_by_users_posts.html' | relative_url }}"
-  width="100%"
-  height="950"
-  style="border:none;">
-</iframe>
+<div style="position: relative; width: 100%; max-width: 800px; padding-top: 50%; margin: auto;">
+  <iframe
+    src="{{ '/assets/plots/2_mean_burst_ratio_by_users_posts.html' | relative_url }}"
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+  </iframe>
+</div>
 
 Here, we see that the burst ratios vary from 0 to 0.22 (meaning that on average 22% of all the posts from a user who made 22 posts in total make a burst). That indicates that the number of posts of a user may influence the burst ratio, thus the probability of a post to make a burst.
 {: .text-justify}
@@ -140,12 +139,12 @@ Here, we see that the burst ratios vary from 0 to 0.22 (meaning that on average 
 Because we have way more subreddits with few posts, it is hard to see in details the burst ratios on this plot. Let's find a better way to visualize.
 {: .text-justify}
 
-<iframe
-  src="{{ '/assets/plots/2_mean_burst_ratio_by_posts_cluster.html' | relative_url }}"
-  width="100%"
-  height="950"
-  style="border:none;">
-</iframe>
+<div style="position: relative; width: 100%; max-width: 800px; padding-top: 50%; margin: auto;">
+  <iframe
+    src="{{ '/assets/plots/2_mean_burst_ratio_by_posts_cluster.html' | relative_url }}"
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+  </iframe>
+</div>
 
 Okay, now we see a bit better. With a K-means algorithm, we are able to distinguish 3 clusters of users: the users with a low number of posts (~3), with a medium number of posts (~12), and with a high number of posts (~58).
 {: .text-justify}

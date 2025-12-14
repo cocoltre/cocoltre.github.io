@@ -21,7 +21,7 @@ cluster_25 are images
 
 
 
-## Community Level {#communitylevel}
+## Community Level
 First, let's observe how subreddits themselves have an influence on the burst. In this section, we are interested to explore and to understand which subreddits properties distinguish posts that trigger a burst from those that do not.
 {: .text-justify}
 

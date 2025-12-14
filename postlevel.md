@@ -6,7 +6,7 @@ permalink: /postlevel/
 ---
 
 
-## Post Level {#postlevel}
+## Post Level
 
 Once we know who and when one’s talking, let's look look at what they're saying.
 In this section, we are interested to explore and to understand which textual, linguistic or emotional properties distinguish posts that trigger a burst from those that do not.
