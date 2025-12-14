@@ -87,12 +87,12 @@ First, let's first find out about **the number of active users.**
 
 #### The size is the number of active users
 
-<iframe
-  src="{{ '/assets/plots/1_mean_burst_ratio_by_subreddit_users.html' | relative_url }}"
-  width="100%"
-  height="950"
-  style="border:none;">
-</iframe>
+<div style="position: relative; width: 100%; max-width: 800px; padding-top: 50%; margin: auto;">
+  <iframe
+    src="{{ '/assets/plots/1_mean_burst_ratio_by_subreddit_users.html' | relative_url }}"
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+  </iframe>
+</div>
 
 Here, we see that the burst ratios vary from 0 to 0.176 (meaning that on average 17.6% of all the posts from a community with 81 active users make a burst). That indicates that the number of active users a subreddit has may influence the burst ratio, thus the probability of a post to make a burst.
 {: .text-justify}
@@ -100,12 +100,12 @@ Here, we see that the burst ratios vary from 0 to 0.176 (meaning that on average
 Because we have way more subreddits with few users, it is hard to see in details the burst ratios on this plot. Let's find a better way to visualize.
 {: .text-justify}
 
-<iframe
-  src="{{ '/assets/plots/1_mean_burst_ratio_by_users_cluster.html' | relative_url }}"
-  width="100%"
-  height="950"
-  style="border:none;">
-</iframe>
+<div style="position: relative; width: 100%; max-width: 800px; padding-top: 50%; margin: auto;">
+  <iframe
+    src="{{ '/assets/plots/1_mean_burst_ratio_by_users_cluster.html' | relative_url }}"
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+  </iframe>
+</div>
 
 Okay, now we see a bit better. With a K-means algorithm, we are able to distinguish 3 clusters of subreddits: the subreddits with a low number of active users (~3), with a medium number of active users (~113), and with a high number of active users (~487).
 {: .text-justify}
