@@ -56,11 +56,13 @@ This is what our posts look like for now. Kind of hard to know what the post was
 
 Great, now we can understand a bit better the content of each post. Let's see if that can bring us more information.
 
+TITLE
 <img 
   src="{{ '/assets/plots/3_wordcloud1_title.png' | relative_url }}" 
   style="width: 100%; max-width: 800px; height: auto; display: block; margin: auto;" 
   alt="Wordcloud">
 
+BODY
 <img 
   src="{{ '/assets/plots/3_wordcloud1_body.png' | relative_url }}" 
   style="width: 100%; max-width: 800px; height: auto; display: block; margin: auto;" 
@@ -76,11 +78,13 @@ But still, kind of hard to understand why these words out of all the vocabulary 
 Let's see if they stay in the top ones, if we look at the words that are present in the most BURST posts (not overall).
 {: .text-justify}
 
+TITLE
 <img 
   src="{{ '/assets/plots/3_wordcloud2_title.png' | relative_url }}" 
   style="width: 100%; max-width: 800px; height: auto; display: block; margin: auto;" 
   alt="Wordcloud">
 
+BODY
 <img 
   src="{{ '/assets/plots/3_wordcloud2_body.png' | relative_url }}" 
   style="width: 100%; max-width: 800px; height: auto; display: block; margin: auto;" 
@@ -92,16 +96,13 @@ Mmm that's what we thought, the previous words were overrepresented. But here we
 For understanding the overall tendance, maybe we should look at what these words represent. We could continue the analysis using specific features, calculated using the text of the posts.
 {: .text-justify}
 
+
 <iframe
   src="{{ '/assets/plots/semantic_features_treemap.html' | relative_url }}"
   width="100%"
   height="750"
   style="border:none;">
 </iframe>
-
-
-
-
 
 <iframe
   src="{{ '/assets/plots/corr_before.html' | relative_url }}"
