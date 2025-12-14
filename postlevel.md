@@ -38,12 +38,12 @@ The dataset is derived using handcrafted_features.csv, tokenized_posts.tsv, and 
 We will also use the dataset glove_word_embeds.txt which contains all the vocabulary and their embeddings.
 {: .text-justify}
 
-<iframe
-  src="{{ '/assets/plots/3_top5_posts.html' | relative_url }}"
-  width="100%"
-  height="950"
-  style="border:none;">
-</iframe>
+<div style="position: relative; width: 100%; max-width: 800px; padding-top: 50%; margin: auto;">
+  <iframe
+    src="{{ '/assets/plots/3_top5_posts.html' | relative_url }}"
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+  </iframe>
+</div>
 
 This is what our posts look like for now. Kind of hard to know what the post was about right ?
 
@@ -54,9 +54,7 @@ This is what our posts look like for now. Kind of hard to know what the post was
   </iframe>
 </div>
 
-
 Great, now we can understand a bit better the content of each post. Let's see if that can bring us more information.
-
 
 <img 
   src="{{ '/assets/plots/3_wordcloud1_title.png' | relative_url }}" 
