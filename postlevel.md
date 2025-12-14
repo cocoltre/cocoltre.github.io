@@ -47,12 +47,13 @@ We will also use the dataset glove_word_embeds.txt which contains all the vocabu
 
 This is what our posts look like for now. Kind of hard to know what the post was about right ?
 
-<iframe
-  src="{{ '/assets/plots/3_top5_words.html' | relative_url }}"
-  width="100%"
-  height="950"
-  style="border:none;">
-</iframe>
+<div style="position: relative; width: 100%; max-width: 800px; padding-top: 50%; margin: auto;">
+  <iframe
+    src="{{ '/assets/plots/3_top5_words.html' | relative_url }}"
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+  </iframe>
+</div>
+
 
 Great, now we can understand a bit better the content of each post. Let's see if that can bring us more information.
 
@@ -62,13 +63,10 @@ Great, now we can understand a bit better the content of each post. Let's see if
   style="width: 100%; max-width: 800px; height: auto; display: block; margin: auto;" 
   alt="Wordcloud">
 
-
-<iframe
-  src="{{ '/assets/plots/3_wordcloud1_body.png' | relative_url }}"
-  width="70%"
-  height="600"
-  style="border:none;">
-</iframe>
+<img 
+  src="{{ '/assets/plots/3_wordcloud1_body.png' | relative_url }}" 
+  style="width: 100%; max-width: 800px; height: auto; display: block; margin: auto;" 
+  alt="Wordcloud">
 
 Here are the words that appear the most frequently in all the posts that led to a burst, both in the title of the post, and in the body.   
 Falcao, Monaco, Batmen, wlw, Agureo... We can try to figure out why some of thewe words led to a burst. For instance, on February 21st 2017, Manchester City beat Monaco in eight-goal thriller during a Champions League game, Radamel Falcao's scored and missed a penalty, and Aguero scored twice. We can imagine the tension after such a game.
