@@ -5,6 +5,12 @@ subtitle: Who participates and when
 permalink: /userlevel/
 ---
 
+<iframe
+  src="{{ '/assets/plots/clusters_bubbles_user.html' | relative_url }}"
+  width="100%"
+  height="800"
+  style="border:none;">
+</iframe>
 
 
 ## User Level {#userlevel}
