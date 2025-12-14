@@ -125,12 +125,12 @@ Now let's see if the number of posts a community has, also has an influence on t
 Remember our data:
 {: .text-justify}
 
-<iframe
-  src="{{ '/assets/plots/1_top10_subreddits_size.html' | relative_url }}"
-  width="100%"
-  height="950"
-  style="border:none;">
-</iframe>
+<div style="position: relative; width: 100%; max-width: 800px; padding-top: 50%; margin: auto;">
+  <iframe
+    src="{{ '/assets/plots/1_top10_subreddits_size.html' | relative_url }}"
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+  </iframe>
+</div>
 
 Here, we can see that subreddits have many different amounts of posts. We also see that no matter the amount of active users nor their identity, they have different burst ratios (the portion of posts that did a burst).
 {: .text-justify}
@@ -138,12 +138,12 @@ Here, we can see that subreddits have many different amounts of posts. We also s
 **Can the number of posts of a subreddit influence the probability of it to make a burst ?**
 {: .text-justify}
 
-<iframe
-  src="{{ '/assets/plots/1_mean_burst_ratio_by_subreddit_posts.html' | relative_url }}"
-  width="100%"
-  height="950"
-  style="border:none;">
-</iframe>
+<div style="position: relative; width: 100%; max-width: 800px; padding-top: 50%; margin: auto;">
+  <iframe
+    src="{{ '/assets/plots/1_mean_burst_ratio_by_subreddit_posts.html' | relative_url }}"
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+  </iframe>
+</div>
 
 Here, we see that the burst ratios vary from 0 to 0.175 (meaning that on average 17.6% of all the posts from a community with 85 posts make a burst). That indicates that the number of posts of a subreddit may influence the burst ratio, thus the probability of a post to make a burst.
 {: .text-justify}
@@ -151,12 +151,12 @@ Here, we see that the burst ratios vary from 0 to 0.175 (meaning that on average
 Because we have way more subreddits with few posts, it is hard to see in details the burst ratios on this plot. Let's find a better way to visualize.
 {: .text-justify}
 
-<iframe
-  src="{{ '/assets/plots/1_mean_burst_ratio_by_posts_cluster.html' | relative_url }}"
-  width="100%"
-  height="950"
-  style="border:none;">
-</iframe>
+<div style="position: relative; width: 100%; max-width: 800px; padding-top: 50%; margin: auto;">
+  <iframe
+    src="{{ '/assets/plots/1_mean_burst_ratio_by_posts_cluster.html' | relative_url }}"
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+  </iframe>
+</div>
 
 Okay, now we see a bit better. With a K-means algorithm, we are able to distinguish 3 clusters of subreddits: the subreddits with a low number of posts (~3), with a medium number of posts (~203), and with a high number of posts (~902).
 {: .text-justify}
