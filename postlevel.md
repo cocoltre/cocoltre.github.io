@@ -57,12 +57,11 @@ This is what our posts look like for now. Kind of hard to know what the post was
 Great, now we can understand a bit better the content of each post. Let's see if that can bring us more information.
 
 
-<iframe
-  src="{{ '/assets/plots/3_wordcloud1_title.png' | relative_url }}"
-  width="70%"
-  height="600"
-  style="border:none;">
-</iframe>
+<img 
+  src="{{ '/assets/plots/3_wordcloud1_title.png' | relative_url }}" 
+  style="width: 100%; max-width: 800px; height: auto; display: block; margin: auto;" 
+  alt="Wordcloud">
+
 
 <iframe
   src="{{ '/assets/plots/3_wordcloud1_body.png' | relative_url }}"
