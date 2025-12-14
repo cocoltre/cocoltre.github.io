@@ -76,19 +76,15 @@ But still, kind of hard to understand why these words out of all the vocabulary 
 Let's see if they stay in the top ones, if we look at the words that are present in the most BURST posts (not overall).
 {: .text-justify}
 
-<iframe
-  src="{{ '/assets/plots/3_wordcloud2_title.png' | relative_url }}"
-  width="100%"
-  height="950"
-  style="border:none;">
-</iframe>
+<img 
+  src="{{ '/assets/plots/3_wordcloud2_title.png' | relative_url }}" 
+  style="width: 100%; max-width: 800px; height: auto; display: block; margin: auto;" 
+  alt="Wordcloud">
 
-<iframe
-  src="{{ '/assets/plots/3_wordcloud2_body.png' | relative_url }}"
-  width="100%"
-  height="950"
-  style="border:none;">
-</iframe>
+<img 
+  src="{{ '/assets/plots/3_wordcloud2_body.png' | relative_url }}" 
+  style="width: 100%; max-width: 800px; height: auto; display: block; margin: auto;" 
+  alt="Wordcloud">
 
 Mmm that's what we thought, the previous words were overrepresented. But here we are, with some other hard-to-understand-why-they-are-here words: glutamate, aiden, wlw, tsn, rnn... Did you know glutamate could be a source of tension and insults ?
 {: .text-justify}
