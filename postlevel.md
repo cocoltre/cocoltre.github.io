@@ -28,7 +28,7 @@ Our goals are to:
 - Decode the content of every post.
 - Understand which words best explain or predict the probability of triggering a burst.
 
-To achieve this, we will take a dataset containing, for each post :
+To achieve this, we will take a dataset containing, for each post:
 
 - the source_subreddit, the author, the body's title, the post's body, and the burst parameter.
 
@@ -38,27 +38,67 @@ The dataset is derived using handcrafted_features.csv, tokenized_posts.tsv, and 
 We will also use the dataset glove_word_embeds.txt which contains all the vocabulary and their embeddings.
 {: .text-justify}
 
-PLOT
+<iframe
+  src="{{ '/assets/plots/3_top5_posts.html' | relative_url }}"
+  width="100%"
+  height="950"
+  style="border:none;">
+</iframe>
 
 This is what our posts look like for now. Kind of hard to know what the post was about right ?
 
-PLOT
+<iframe
+  src="{{ '/assets/plots/3_top5_words.html' | relative_url }}"
+  width="100%"
+  height="950"
+  style="border:none;">
+</iframe>
 
 Great, now we can understand a bit better the content of each post. Let's see if that can bring us more information.
 
-PLOT
+<iframe
+  src="{{ '/assets/plots/3_wordcloud1_title.png' | relative_url }}"
+  width="100%"
+  height="950"
+  style="border:none;">
+</iframe>
 
-Here are the words that appear the more frequently in the posts that led to a burst, both in the title of the post, and in the body.
-It looks difficult to understand something from it !
+<iframe
+  src="{{ '/assets/plots/3_wordcloud1_body.png' | relative_url }}"
+  width="100%"
+  height="950"
+  style="border:none;">
+</iframe>
+
+Here are the words that appear the most frequently in all the posts that led to a burst, both in the title of the post, and in the body.   
+Falcao, Monaco, Batmen, wlw, Agureo... We can try to figure out why some of thewe words led to a burst. For instance, on February 21st 2017, Manchester City beat Monaco in eight-goal thriller during a Champions League game, Radamel Falcao's scored and missed a penalty, and Aguero scored twice. We can imagine the tension after such a game.
 {: .text-justify}
 
-The probabilities for the top 10 words in titles and bodies to make a BURST are really close to 1. This makes sense as our dataset is really small (20'702 posts) and the vocabulary is way larger (174'558 different words). Moreover, only 733 of these posts made a burst, which makes only 3.5% of all posts.
-Thus, the probability that some posts that made a burst used a word than none other post used must me large (it is 0.33 for using a unique word in their title, and 0.37 in their body).
+But still, kind of hard to understand why these words out of all the vocabulary (174'558 different words) are the ones the most tempted to produce a burst... They must have been overrepresented in very few BURST posts.
 {: .text-justify}
 
-The single words alone are hard to understand why they would enhance the probability of making a burst... Maybe we should look at what these words represent? We could analyze this using specific features, calculated using the text of the post.
+Let's see if they stay in the top ones, if we look at the words that are present in the most BURST posts (not overall).
 {: .text-justify}
 
+<iframe
+  src="{{ '/assets/plots/3_wordcloud2_title.png' | relative_url }}"
+  width="100%"
+  height="950"
+  style="border:none;">
+</iframe>
+
+<iframe
+  src="{{ '/assets/plots/3_wordcloud2_body.png' | relative_url }}"
+  width="100%"
+  height="950"
+  style="border:none;">
+</iframe>
+
+Mmm that's what we thought, the previous words were overrepresented. But here we are, with some other hard-to-understand-why-they-are-here words: glutamate, aiden, wlw, tsn, rnn... Did you know glutamate could be a source of tension and insults ?
+{: .text-justify}
+
+For understanding the overall tendance, maybe we should look at what these words represent. We could continue the analysis using specific features, calculated using the text of the posts.
+{: .text-justify}
 
 <iframe
   src="{{ '/assets/plots/semantic_features_treemap.html' | relative_url }}"

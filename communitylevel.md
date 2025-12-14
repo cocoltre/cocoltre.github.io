@@ -30,9 +30,14 @@ Our goals are to:
 - Identify the subreddits' differences that differ most between bursty and non-bursty posts.
 - Understand which of these differences best explain or predict the probability of triggering a burst.
 
-### Number of users across communities
+### Size of a source subreddit community
 
-Okay, let's look at the number of users for each subreddit and see what that brings us. To achieve this, we will take a dataset containing, for each post :
+Does the size of a subreddit influence the probability of a post to make a burst ?
+Let's look into that. What is the effective size of a subreddit ? Is it best described by the number of users it has ? Or by the number of posts it has made ? Indeed, some users are shared between subreddits communities, and some users may post many times in a single subreddit community, so we have to pay attention to these details.
+{: .text-justify}
+
+In the following, we will try to answer the initial question with the two definitions.
+To achieve this, we will take a dataset containing, for each post:
 {: .text-justify}
 
 - the source_subreddit, the author, and the burst parameter.
@@ -40,31 +45,131 @@ Okay, let's look at the number of users for each subreddit and see what that bri
 The dataset is derived using handcrafted_features.csv, tokenized_posts.tsv, and snap.tsv, taking the source_subreddit, the author, and the burst parameter. You can generate this dataset by running src/scripts/1_create_dataset_subreddits-users.py
 {: .text-justify}
 
-PLOT
+<iframe
+  src="{{ '/assets/plots/1_top10_subreddits_size.html' | relative_url }}"
+  width="100%"
+  height="950"
+  style="border:none;">
+</iframe>
 
-Here, we can see that subreddits have many different amounts of active users (users that have already posted something).
-Can the number of users a subreddit influence the probability to make a burst ?
+<iframe
+  src="{{ '/assets/plots/1_distribution_subreddits_size.html' | relative_url }}"
+  width="100%"
+  height="950"
+  style="border:none;">
+</iframe>
+
+<iframe
+  src="{{ '/assets/plots/1_subreddit_size_describe.html' | relative_url }}"
+  width="100%"
+  height="950"
+  style="border:none;">
+</iframe>
+
+First, let's call an "active user" a user that has already posted in a specific subreddit.
 {: .text-justify}
 
-PLOT
-
-Let's call an "active user" a user that has already posted in a specific subreddit. Over the 4'145 subreddits that we have, 2'657 subreddits have only 1 user who has been active in it, while only 19 subreddits have more than 100 active users. That means that only 64.1% of subreddits have only 1 active user.
+Here, we can see that subreddits have many different amounts of active users, and of posts. The distribution for both sizes is extremely left-skewed, meaning that most of the subreddits have very few active users (75% of them have less than 2) and few posts (75% of them have less than 2 too). For instance, over the 4'145 subreddits that we have, 2'657 subreddits have only 1 user who has been active in it, while only 19 subreddits have more than 100 active users. 
+That means that 64.1% of subreddits have only 1 active user, which is huge and explains the skewness.
 {: .text-justify}
 
-Will this ratio change depending on if the subreddit has already been used for making a burst?
-
-PLOT
-
-The ratios appear to change a lot.
-That probably means that the number of active users in one subreddit may probably have an influence on the ability of the subreddit to trigger a burst. A next step would be to evaluate this statiscally.
+We also see that the distribution of subreddits across number of active users or number of posts is not exactly the same, which makes sense as 1 user can post several times in the same subreddit.
 {: .text-justify}
 
-We can not be sure that the influence for burst does come from the subreddit itself. Maybe it goes beyond that, and then what matters is the interactions between all subreddits.
+We also see that no matter their amount nor the identity of active users, they have different burst ratios (the portion of posts that did a burst). This burst ratio helps to put the same weight for a community that has 1 user who made 4 posts and one that has 1 user who made 1 post, and really just look for the global activity of the subreddit (not their own activity).
 {: .text-justify}
 
-We will work on it.
-Now, let's move to understand how the subreddits interact through hyperlinks. it will help us to then focus on the interactions before and after a burst.
+**Can the number of active users or the number of posts of a subreddit influence the probability of a post to make a burst?**
 {: .text-justify}
+
+First, let's first find out about **the number of active users.**
+{: .text-justify}
+
+#### The size is the number of active users
+
+<iframe
+  src="{{ '/assets/plots/1_mean_burst_ratio_by_subreddit_users.html' | relative_url }}"
+  width="100%"
+  height="950"
+  style="border:none;">
+</iframe>
+
+Here, we see that the burst ratios vary from 0 to 0.176 (meaning that on average 17.6% of all the posts from a community with 81 active users make a burst). That indicates that the number of active users a subreddit has may influence the burst ratio, thus the probability of a post to make a burst.
+{: .text-justify}
+
+Because we have way more subreddits with few users, it is hard to see in details the burst ratios on this plot. Let's find a better way to visualize.
+{: .text-justify}
+
+<iframe
+  src="{{ '/assets/plots/1_mean_burst_ratio_by_users_cluster.html' | relative_url }}"
+  width="100%"
+  height="950"
+  style="border:none;">
+</iframe>
+
+Okay, now we see a bit better. With a K-means algorithm, we are able to distinguish 3 clusters of subreddits: the subreddits with a low number of active users (~3), with a medium number of active users (~113), and with a high number of active users (~487).
+{: .text-justify}
+
+Suprinsingly, we see that if a post is made in a subreddit with a medium number of active users, it has more probability to create a burst than in the low or high numbered subreddits.
+{: .text-justify}
+
+As our initial distribution is highly skewed and definitely non normal, it is better to use Kruskal–Wallis statistical test. What we find is amazing: the p-value is extremely low (7.0e-63). Thus, we have strong statistical evidence to say that the mean burst ratios between the 3 clusters is different, ie the number of active users of a subreddit has an influence on the probability of a post to make a burst.
+{: .text-justify}
+
+That's great! We can use the column "Nb_users_per_subreddit" as our first feature in our ML model.
+{: .text-justify}
+
+#### The size is the number of posts
+
+Now let's see if the number of posts a community has, also has an influence on the probability of a post to make a burst.
+Remember our data:
+{: .text-justify}
+
+<iframe
+  src="{{ '/assets/plots/1_top10_subreddits_size.html' | relative_url }}"
+  width="100%"
+  height="950"
+  style="border:none;">
+</iframe>
+
+Here, we can see that subreddits have many different amounts of posts. We also see that no matter the amount of active users nor their identity, they have different burst ratios (the portion of posts that did a burst).
+{: .text-justify}
+
+**Can the number of posts of a subreddit influence the probability of it to make a burst ?**
+{: .text-justify}
+
+<iframe
+  src="{{ '/assets/plots/1_mean_burst_ratio_by_subreddit_posts.html' | relative_url }}"
+  width="100%"
+  height="950"
+  style="border:none;">
+</iframe>
+
+Here, we see that the burst ratios vary from 0 to 0.175 (meaning that on average 17.6% of all the posts from a community with 85 posts make a burst). That indicates that the number of posts of a subreddit may influence the burst ratio, thus the probability of a post to make a burst.
+{: .text-justify}
+
+Because we have way more subreddits with few posts, it is hard to see in details the burst ratios on this plot. Let's find a better way to visualize.
+{: .text-justify}
+
+<iframe
+  src="{{ '/assets/plots/1_mean_burst_ratio_by_posts_cluster.html' | relative_url }}"
+  width="100%"
+  height="950"
+  style="border:none;">
+</iframe>
+
+Okay, now we see a bit better. With a K-means algorithm, we are able to distinguish 3 clusters of subreddits: the subreddits with a low number of posts (~3), with a medium number of posts (~203), and with a high number of posts (~902).
+{: .text-justify}
+
+Suprinsingly, we see here that if a post is made in a subreddit with a high number of posts, it has more probability to create a burst than in the medium numbered subreddits and way more than in the low numbered subreddits.
+{: .text-justify}
+
+As our initial distribution is highly skewed and definitely non normal, it is better to use Kruskal–Wallis statistical test. What we find is amazing: the p-value is extremely low (3.2e-38). Thus, we have strong statistical evidence to say that the mean burst ratios between the 3 clusters is different, ie the number of posts of a subreddit has an influence on the probability of a post to make a burst.
+{: .text-justify}
+
+That's great! We can use the column "Nb_posts_per_subreddit" as our second feature in our ML model.
+{: .text-justify}
+
 
 ### Interactions between communities via hyperlinks
 
