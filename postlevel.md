@@ -61,25 +61,23 @@ Great, now we can understand a bit better the content of each post. Let's see if
   <button onclick="showPlot1('body')">Body</button>
 </div>
 
-<div style="max-width:800px; margin:auto;">
-  <iframe
-    id="plot-title1"
-    src="{{ '/assets/plots/3_wordcloud1_title.png' | relative_url }}"
-    style="width:100%; height:450px; border:none;">
-  </iframe>
+<img
+  id="img-title1"
+  src="{{ '/assets/plots/3_wordcloud1_title.png' | relative_url }}"
+  style="width:100%; max-width:800px; height:auto; display:block; margin:auto;"
+  alt="Wordcloud Title">
 
-  <iframe
-    id="plot-body1"
-    src="{{ '/assets/plots/3_wordcloud1_body.png' | relative_url }}"
-    style="width:100%; height:450px; border:none; display:none;">
-  </iframe>
-</div>
+<img
+  id="img-body1"
+  src="{{ '/assets/plots/3_wordcloud1_body.png' | relative_url }}"
+  style="width:100%; max-width:800px; height:auto; display:none; margin:auto;"
+  alt="Wordcloud Body">
 
 <script>
 function showPlot1(which) {
-  document.getElementById("plot-title1").style.display =
+  document.getElementById("img-title1").style.display =
     which === "title" ? "block" : "none";
-  document.getElementById("plot-body1").style.display =
+  document.getElementById("img-body1").style.display =
     which === "body" ? "block" : "none";
 }
 </script>
@@ -101,26 +99,23 @@ Let's see if they stay in the top ones, if we look at the words that are present
   <button onclick="showPlot2('body')">Body</button>
 </div>
 
-<div style="max-width:800px; margin:auto;">
-  <iframe
-    id="plot-title2"
-    src="{{ '/assets/plots/3_wordcloud2_title.png' | relative_url }}"
-    style="width:100%; height:450px; border:none;">
-  </iframe>
+<img
+  id="img-title2"
+  src="{{ '/assets/plots/3_wordcloud2_title.png' | relative_url }}"
+  style="width:100%; max-width:800px; height:auto; display:block; margin:auto;"
+  alt="Wordcloud Title">
 
-  <iframe
-    id="plot-body2"
-    src="{{ '/assets/plots/3_wordcloud2_body.png' | relative_url }}"
-    style="width:100%; height:450px; border:none; display:none;">
-  </iframe>
-</div>
+<img
+  id="img-body2"
+  src="{{ '/assets/plots/3_wordcloud2_body.png' | relative_url }}"
+  style="width:100%; max-width:800px; height:auto; display:none; margin:auto;"
+  alt="Wordcloud Body">
 
 <script>
-
 function showPlot2(which) {
-  document.getElementById("plot-title2").style.display =
+  document.getElementById("img-title2").style.display =
     which === "title" ? "block" : "none";
-  document.getElementById("plot-body2").style.display =
+  document.getElementById("img-body2").style.display =
     which === "body" ? "block" : "none";
 }
 </script>
