@@ -11,7 +11,10 @@ permalink: /finalrecipe/
   <div class="hero-text">
     <h1>The Recipe of a Viral Conflict</h1>
     <p>We study what makes a Reddit post “spill over” across communities — and how to predict it.</p>
-    <a class="btn btn-primary" href="{{ '/postlevel' | relative_url }}">Explore the post-level results</a>
+    <a class="btn btn-primary" href="{{ '/index' | relative_url }}">Intro</a>
+    <a class="btn btn-primary" href="{{ '/communitylevel' | relative_url }}">Community-level results</a>
+    <a class="btn btn-primary" href="{{ '/userlevel' | relative_url }}">User-level results</a>
+    <a class="btn btn-primary" href="{{ '/postlevel' | relative_url }}">Post-level results</a>
   </div>
   <div class="hero-img">
     <img src="{{ '/assets/img/hero_reddit.png' | relative_url }}" alt="Reddit network illustration">
@@ -33,12 +36,7 @@ permalink: /finalrecipe/
   </div>
 </div>
 
-<div class="page-nav" style="display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 6px">
-  <a class="btn btn-default" href="{{ '/' | relative_url }}">Intro</a>
-  <a class="btn btn-default" href="{{ '/communitylevel' | relative_url }}">Community level</a>
-  <a class="btn btn-default" href="{{ '/userlevel' | relative_url }}">User level</a>
-  <a class="btn btn-default" href="{{ '/postlevel' | relative_url }}">Post level</a>
-</div>
+
 
 
 ## Conclusion
