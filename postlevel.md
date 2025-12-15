@@ -57,45 +57,34 @@ This is what our posts look like for now. Kind of hard to know what the post was
 Great, now we can understand a bit better the content of each post. Let's see if that can bring us more information.
 
 <div style="text-align:center; margin-bottom:1rem;">
-  <button onclick="showPlot('title')">Title</button>
-  <button onclick="showPlot('body')">Body</button>
+  <button onclick="showPlot1('title')">Title</button>
+  <button onclick="showPlot1('body')">Body</button>
 </div>
 
 <div style="max-width:800px; margin:auto;">
   <iframe
-    id="plot-title"
-    src="{{ '/assets/plots/3_wordcloud1_title.html' | relative_url }}"
+    id="plot-title1"
+    src="{{ '/assets/plots/3_wordcloud1_title.png' | relative_url }}"
     style="width:100%; height:450px; border:none;">
   </iframe>
 
   <iframe
-    id="plot-body"
-    src="{{ '/assets/plots/3_wordcloud1_body.html' | relative_url }}"
+    id="plot-body1"
+    src="{{ '/assets/plots/3_wordcloud1_body.png' | relative_url }}"
     style="width:100%; height:450px; border:none; display:none;">
   </iframe>
 </div>
 
 <script>
-function showPlot(which) {
-  document.getElementById("plot-title").style.display =
+function showPlot1(which) {
+  document.getElementById("plot-title1").style.display =
     which === "title" ? "block" : "none";
-  document.getElementById("plot-body").style.display =
+  document.getElementById("plot-body1").style.display =
     which === "body" ? "block" : "none";
 }
 </script>
 
 
-TITLE
-<img 
-  src="{{ '/assets/plots/3_wordcloud1_title.png' | relative_url }}" 
-  style="width: 100%; max-width: 800px; height: auto; display: block; margin: auto;" 
-  alt="Wordcloud">
-
-BODY
-<img 
-  src="{{ '/assets/plots/3_wordcloud1_body.png' | relative_url }}" 
-  style="width: 100%; max-width: 800px; height: auto; display: block; margin: auto;" 
-  alt="Wordcloud">
 
 Here are the words that appear the most frequently in all the posts that led to a burst, both in the title of the post, and in the body.   
 Falcao, Monaco, Batmen, wlw, Agureo... We can try to figure out why some of thewe words led to a burst. For instance, on February 21st 2017, Manchester City beat Monaco in eight-goal thriller during a Champions League game, Radamel Falcao's scored and missed a penalty, and Aguero scored twice. We can imagine the tension after such a game.
@@ -107,17 +96,34 @@ But still, kind of hard to understand why these words out of all the vocabulary 
 Let's see if they stay in the top ones, if we look at the words that are present in the most BURST posts (not overall).
 {: .text-justify}
 
-TITLE
-<img 
-  src="{{ '/assets/plots/3_wordcloud2_title.png' | relative_url }}" 
-  style="width: 100%; max-width: 800px; height: auto; display: block; margin: auto;" 
-  alt="Wordcloud">
+<div style="text-align:center; margin-bottom:1rem;">
+  <button onclick="showPlot2('title')">Title</button>
+  <button onclick="showPlot2('body')">Body</button>
+</div>
 
-BODY
-<img 
-  src="{{ '/assets/plots/3_wordcloud2_body.png' | relative_url }}" 
-  style="width: 100%; max-width: 800px; height: auto; display: block; margin: auto;" 
-  alt="Wordcloud">
+<div style="max-width:800px; margin:auto;">
+  <iframe
+    id="plot-title2"
+    src="{{ '/assets/plots/3_wordcloud2_title.png' | relative_url }}"
+    style="width:100%; height:450px; border:none;">
+  </iframe>
+
+  <iframe
+    id="plot-body2"
+    src="{{ '/assets/plots/3_wordcloud2_body.png' | relative_url }}"
+    style="width:100%; height:450px; border:none; display:none;">
+  </iframe>
+</div>
+
+<script>
+
+function showPlot2(which) {
+  document.getElementById("plot-title2").style.display =
+    which === "title" ? "block" : "none";
+  document.getElementById("plot-body2").style.display =
+    which === "body" ? "block" : "none";
+}
+</script>
 
 Mmm that's what we thought, the previous words were overrepresented. But here we are, with some other hard-to-understand-why-they-are-here words: glutamate, aiden, wlw, tsn, rnn... Did you know glutamate could be a source of tension and insults ?
 {: .text-justify}
