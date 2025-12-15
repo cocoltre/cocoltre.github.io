@@ -7,7 +7,7 @@ permalink: /communitylevel/
 
 
 <iframe
-  src="{{ '/assets/plots/clusters_bubbles_subreddits.html' | relative_url }}"
+  src="{{ '/assets/plots/1_clusters_bubbles_subreddits.html' | relative_url }}"
   width="100%"
   height="800"
   style="border:none;">

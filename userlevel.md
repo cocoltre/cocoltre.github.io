@@ -6,7 +6,7 @@ permalink: /userlevel/
 ---
 
 <iframe
-  src="{{ '/assets/plots/clusters_bubbles_user.html' | relative_url }}"
+  src="{{ '/assets/plots/2_clusters_bubbles_user.html' | relative_url }}"
   width="100%"
   height="800"
   style="border:none;">

@@ -149,21 +149,21 @@ For understanding the overall tendance, maybe we should look at what these words
 
 
 <iframe
-  src="{{ '/assets/plots/semantic_features_treemap.html' | relative_url }}"
+  src="{{ '/assets/plots/3_semantic_features_treemap.html' | relative_url }}"
   width="100%"
   height="750"
   style="border:none;">
 </iframe>
 
 <iframe
-  src="{{ '/assets/plots/corr_before.html' | relative_url }}"
+  src="{{ '/assets/plots/3_corr_before.html' | relative_url }}"
   width="100%"
   height="950"
   style="border:none;">
 </iframe>
 
 <iframe
-  src="{{ '/assets/plots/corr_after.html' | relative_url }}"
+  src="{{ '/assets/plots/3_corr_after.html' | relative_url }}"
   width="100%"
   height="950"
   style="border:none;">
@@ -172,7 +172,7 @@ For understanding the overall tendance, maybe we should look at what these words
 
 
 <iframe
-  src="{{ '/assets/plots/feature_importance_dropdown.html' | relative_url }}"
+  src="{{ '/assets/plots/3_feature_importance_dropdown.html' | relative_url }}"
   width="100%"
   height="750"
   style="border:none;">
@@ -182,7 +182,7 @@ For understanding the overall tendance, maybe we should look at what these words
 
 
 <iframe
-  src="{{ '/assets/plots/feature_selection_treemap_dropdown.html' | relative_url }}"
+  src="{{ '/assets/plots/3_feature_selection_treemap_dropdown.html' | relative_url }}"
   width="100%"
   height="800"
   style="border:none;">
@@ -194,7 +194,7 @@ For understanding the overall tendance, maybe we should look at what these words
 
 
 <iframe
-  src="{{ '/assets/plots/model_performance_by_subset.html' | relative_url }}"
+  src="{{ '/assets/plots/3_model_performance_by_subset.html' | relative_url }}"
   width="100%"
   height="720"
   style="border:none;">
