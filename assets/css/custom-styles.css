@@ -59,27 +59,49 @@
 }
 
 /* Optionnel: style des "cards" de ta page */
-.card{
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  padding: 18px;
-  box-shadow: 0 10px 22px rgba(0,0,0,.06);
-}
-
+/* HERO : 2 colonnes (texte+boutons à gauche, image à droite) */
 .hero{
   display:grid;
-  grid-template-columns: 1.2fr .8fr;
-  gap: 22px;
+  grid-template-columns: 1.1fr .9fr;
+  gap:2rem;
   align-items:center;
-  margin: 18px 0 28px 0;
+  margin:1.5rem 0 2rem;
 }
 
-.hero img{
-  width: 100%;
-  height: auto;
-  border-radius: 18px;
-  border: 1px solid var(--border);
+/* Empiler les boutons à gauche */
+.hero-text .btn{
+  display:block;          /* 1 bouton par ligne */
+  width: fit-content;     /* ou 100% si tu veux des boutons full-width */
+  margin-top: .6rem;
+}
+
+/* Image à droite */
+.hero-img img{
+  width:100%;
+  border-radius:18px;
+  box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+
+/* CARDS : 3 en colonne */
+.cards{
+  display:grid;
+  grid-template-columns: 1fr;  /* une seule colonne */
+  gap:1rem;
+  margin-top:1.5rem;
+}
+
+.card{
+  background:#fff;
+  border:1px solid rgba(0,0,0,.08);
+  border-radius:16px;
+  padding:1rem 1.1rem;
+  box-shadow:0 10px 25px rgba(0,0,0,.04);
+}
+
+/* Mobile : tout en colonne (image sous le texte) */
+@media(max-width:900px){
+  .hero{ grid-template-columns:1fr; }
+  .hero-text .btn{ width:100%; } /* optionnel: boutons pleine largeur sur mobile */
 }
 
 /* inputs de ton mini-form */
