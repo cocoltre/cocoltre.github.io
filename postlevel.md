@@ -145,7 +145,7 @@ Mmm that's what we thought, the previous words were overrepresented. But here we
 For understanding the overall tendance, maybe we should look at what these words represent. We could continue the analysis using specific features, calculated using the text of the posts.
 {: .text-justify}
 
-## 2. Visualize emantic features
+## 2. Visualize semantic features
 
 Now, let's look at the semantical part, how words are shaped, what they represent, etc. 
 
@@ -289,6 +289,36 @@ The **forward_top20** subset achieves performance that is **almost as good as us
 So in practice, we can reduce the feature space by a factor of ~4, while keeping nearly the same predictive power.  
 
 In other words: **these 20 features seem to capture most of the signal needed to detect bursts.**. 
+
+**But what do these 20 features actually capture?**  
+
+To better understand *why* the forward-selected top-20 features work so well, we can try to understand what each feature represents in practice, and how it may relate to a Reddit post becoming widely discussed or shared. 
+
+| Feature | What it measures | Why it may contribute to a burst |
+|---|---|---|
+| Fraction of digits | Proportion of numbers in the text | Numbers often signal evidence, statistics, dates, prices, or scores. These posts are easy to quote, verify, or challenge, which fuels discussion. |
+| Fraction of uppercase characters | Use of capital letters | Capitals add emphasis or urgency (sometimes perceived as shouting), often seen in provocative or emotionally charged posts. |
+| Fraction of white spaces | Overall spacing and structure | Captures writing style: compact, punchy posts versus long explanations or list-like formats. Structure can affect readability and shareability. |
+| Number of long words (≥ 6 chars) | Lexical complexity | Distinguishes more formal, technical explanations from simple rants or memes. Both styles can burst, but in different communities. |
+| VADER compound | Overall sentiment polarity | Strongly positive or negative tone often signals enthusiasm or controversy, both of which increase engagement and cross-subreddit attention. |
+| LIWC_Pronoun | Overall use of pronouns | Indicates how personal or social the post is. Posts focused on people rather than abstract topics tend to attract more reactions. |
+| LIWC_I | First-person singular (“I”) | Personal stories, experiences, or confessions are highly relatable and often spark discussion. |
+| LIWC_We | First-person plural (“we”) | Signals group identity or shared experience, which can mobilize communities and create “us vs them” dynamics. |
+| LIWC_You | Direct address (“you”) | Creates confrontation or direct engagement with the reader, often increasing emotional response and debate. |
+| LIWC_Past | References to the past | Mentions of past events, incidents, or decisions can resurface old controversies and reignite discussions. |
+| LIWC_Adverbs | Use of adverbs | Adds intensity, subjectivity, or emphasis (e.g., “clearly”, “extremely”), reinforcing persuasive or emotional narratives. |
+| LIWC_Quant | Quantifiers (“all”, “many”, “none”) | Strong generalizations make claims easier to argue for or against, increasing comment activity. |
+| LIWC_Social | Social-related words | Language about people, groups, or relationships provides material for social judgment and collective discussion. |
+| LIWC_Insight | Thinking and reasoning words | Indicates interpretation or analysis (“think”, “realize”), often used in explanatory or opinionated posts that invite debate. |
+| LIWC_Cause | Causal language | Suggests explanations or blame (“because”, “therefore”), which encourages counter-arguments and discussion. |
+| LIWC_Motion | Action-related words | Helps build narratives with events and actions, making posts more story-like and engaging. |
+| LIWC_Space | Spatial references | Anchors stories in places or contexts, which increases concreteness and memorability. |
+| LIWC_Work | Work-related vocabulary | Topics related to jobs, careers, or productivity are broadly relatable and often spark comparison and debate. |
+| LIWC_Leisure | Leisure and hobbies | Shared interests (games, sports, entertainment) spread easily across communities. |
+| LIWC_Home | Home and everyday life | Familiar, everyday contexts increase identification and cross-community resonance. |
+
+Overall, these features suggest that bursting posts are not just about *what* is said, but *how* it is said:  
+emotion, personal stance, social framing, and concrete storytelling all play a key role.
 
 <hr>
 
