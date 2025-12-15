@@ -242,7 +242,8 @@ Now that we have several “shortlists” of features, the next question is simp
 We’d like to keep the feature set **as small as possible**, while staying **as close as possible to the performance of the full 86-feature model**.
 
 
-Here are all the subsets we will test:
+Here are all the subsets we will test:  
+
 | Dataset | Number of features |
 |---|---:|
 | Univariate selection (top 20) | 20 |
