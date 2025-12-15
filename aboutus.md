@@ -4,18 +4,38 @@ title: About us
 subtitle: Why you'd want to give us the best grade
 ---
 
-Our team name is Les Requins du Dataset, or The Sharks of the Dataset in english. We are a team of 5:
-- Archibald Lecointre
-- Clara Delandre
-- Coline Leteurtre
-- Paola Biocchi
-- Christos 
+<div class="hero">
+  <div class="hero-text">
+    <h2>Les Requins du Dataset 🦈</h2>
+    <p>
+      Our team name is Les Requins du Dataset, or The Sharks of the Dataset in english. We’re a team of 5 exploring how Reddit conflicts spill across communities, and how to predict a burst.
+    </p>
 
-We have the following qualities:
+    <div class="team-list">
+      <div class="member">Archibald Lecointre</div>
+      <div class="member">Clara Delandre</div>
+      <div class="member">Coline Leteurtre</div>
+      <div class="member">Paola Biocchi</div>
+      <div class="member">Christos Konstantinidis</div>
+    </div>
 
-- We are excellent swimmers
-- We are extremely loyal to our family
+    <p style="margin-top:12px">
+      We have the following qualities:
+      <br>• We are excellent swimmers
+      <br>•We are extremely loyal to our family
+      <br>• We don’t abandon our teammates when the code breaks at 2am
+      <br>• We can turn chaos into plots
+      What else do you need?
+    </p>
+  </div>
 
-What else do you need?
+  <div class="hero-img">
+    <img src="{{ '/assets/img/shark.jpg' | relative_url }}" alt="Les Requins du Dataset">
+  </div>
+</div>
 
+<hr>
 
+<p style="opacity:.9">
+If you want the serious version: we built the pipeline, selected meaningful features, and tested several models to balance performance and simplicity.
+</p>
