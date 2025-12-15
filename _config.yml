@@ -20,6 +20,7 @@ author: Les Requins du Dataset
 ###############################################
 
 navbar-links:
+  Introduction: ""
   Community level: "communitylevel"
   User level: "userlevel"
   Post level: "postlevel"
@@ -142,21 +143,24 @@ navbar-var-length: true
 # Personalize the colours in your website. Colour values can be any valid CSS colour
 
 page-col: "#FFFFFF"
-text-col: "#404040"
+text-col: "#2B2B2B"
 
-link-col: "#008AFF"
-hover-col: "#0085A1"
+link-col: "#66C5CC"      # Pastel turquoise (accent principal)
+hover-col: "#FE88B1"     # Pastel rose (accent secondaire, hover)
+
 
 # Top band (navbar)
-navbar-col: "#D6ECFF"        # light blue
-navbar-text-col: "#404040"
-navbar-border-col: "#ADD6FF" # slightly darker blue border
+navbar-col: "#EAF6F7"        # très clair (proche du turquoise, lisible)
+navbar-text-col: "#2B2B2B"
+navbar-border-col: "#66C5CC" # border nette, cohérente avec les plots
+
 
 # Bottom band (footer)
-footer-col: "#D6ECFF"        # light blue
-footer-text-col: "#404040"
-footer-link-col: "#404040"
-footer-hover-col: "#0085A1"
+
+footer-col: "#EAF6F7"
+footer-text-col: "#2B2B2B"
+footer-link-col: "#2B2B2B"
+footer-hover-col: "#66C5CC"
 
 # Alternatively, the navbar, footer, and page background can be set to an image
 # instead of colour
@@ -172,7 +176,7 @@ footer-hover-col: "#0085A1"
 #site-css:
 #  - "/assets/css/custom-styles.css"
 site-css:
-  - "/assets/css/custom.css"
+  - "/assets/css/custom-styles.css"
 
 # If you have common JavaScript files that should be included in every page, list them here
 #site-js:

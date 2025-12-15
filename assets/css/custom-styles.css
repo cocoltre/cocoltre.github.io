@@ -1,0 +1,93 @@
+:root{
+  /* Plotly Pastel (approx hex) */
+  --p1:#66C5CC; /* rgb(102,197,204) */
+  --p2:#F6CF71;
+  --p3:#F89C74;
+  --p4:#DCB0F2;
+  --p5:#87C55F;
+  --p6:#9EB9F3;
+  --p7:#FE88B1;
+  --p8:#C9DB74;
+  --p9:#8BE0A4;
+  --p10:#B497E7;
+  --p11:#B3B3B3;
+
+  /* site tokens */
+  --bg: #FFFFFF;
+  --text: #2B2B2B;
+  --muted: #666;
+  --card: #FFFFFF;
+  --border: rgba(0,0,0,.10);
+
+  --primary: var(--p1);      /* bouton principal */
+  --primary-hover: #52B4BB;  /* un peu plus foncé */
+  --secondary: var(--p6);    /* bouton “default” */
+  --secondary-hover: #86A7F0;
+}
+
+/* Boutons Beautiful Jekyll */
+.btn{
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-weight: 600;
+  border: 1px solid transparent;
+  transition: transform .06s ease, background-color .15s ease, border-color .15s ease;
+}
+
+.btn:active{ transform: translateY(1px); }
+
+.btn-primary{
+  background: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: #073B3E !important; /* texte foncé lisible sur pastel */
+}
+
+.btn-primary:hover{
+  background: var(--primary-hover) !important;
+  border-color: var(--primary-hover) !important;
+}
+
+.btn-default{
+  background: transparent !important;
+  border-color: var(--secondary) !important;
+  color: #1E2A44 !important;
+}
+
+.btn-default:hover{
+  background: rgba(158,185,243,.25) !important; /* pastel léger */
+  border-color: var(--secondary-hover) !important;
+}
+
+/* Optionnel: style des "cards" de ta page */
+.card{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 10px 22px rgba(0,0,0,.06);
+}
+
+.hero{
+  display:grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 22px;
+  align-items:center;
+  margin: 18px 0 28px 0;
+}
+
+.hero img{
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+}
+
+/* inputs de ton mini-form */
+select, input, textarea{
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  margin: 6px 0 12px 0;
+}
+label{ font-weight: 600; }

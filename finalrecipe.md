@@ -33,6 +33,13 @@ permalink: /finalrecipe/
   </div>
 </div>
 
+<div class="page-nav" style="display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 6px">
+  <a class="btn btn-default" href="{{ '/' | relative_url }}">Intro</a>
+  <a class="btn btn-default" href="{{ '/communitylevel' | relative_url }}">Community level</a>
+  <a class="btn btn-default" href="{{ '/userlevel' | relative_url }}">User level</a>
+  <a class="btn btn-default" href="{{ '/postlevel' | relative_url }}">Post level</a>
+</div>
+
 
 ## Conclusion
 
