@@ -5,6 +5,19 @@ subtitle: What is said and how it is said
 permalink: /postlevel/
 ---
 
+<style>
+.plot-btn {
+  padding: 6px 12px;
+  margin: 0 4px;
+  border: 1px solid #ccc;
+  background: #f5f5f5;
+  cursor: pointer;
+}
+.plot-btn.active {
+  background: #ddd;
+  font-weight: bold;
+}
+</style>
 
 ## Post Level
 
@@ -57,8 +70,8 @@ This is what our posts look like for now. Kind of hard to know what the post was
 Great, now we can understand a bit better the content of each post. Let's see if that can bring us more information.
 
 <div style="text-align:center; margin-bottom:1rem;">
-  <button onclick="showPlot1('title')">Title</button>
-  <button onclick="showPlot1('body')">Body</button>
+  <button class="plot-btn active" id="btn-title1" onclick="showPlot1('title')">Title</button>
+  <button class="plot-btn" id="btn-body1" onclick="showPlot1('body')">Body</button>
 </div>
 
 <img
@@ -79,6 +92,9 @@ function showPlot1(which) {
     which === "title" ? "block" : "none";
   document.getElementById("img-body1").style.display =
     which === "body" ? "block" : "none";
+
+  document.getElementById("btn-title1").classList.toggle("active", which === "title");
+  document.getElementById("btn-body1").classList.toggle("active", which === "body");
 }
 </script>
 
@@ -94,9 +110,11 @@ But still, kind of hard to understand why these words out of all the vocabulary 
 Let's see if they stay in the top ones, if we look at the words that are present in the most BURST posts (not overall).
 {: .text-justify}
 
+
+
 <div style="text-align:center; margin-bottom:1rem;">
-  <button onclick="showPlot2('title')">Title</button>
-  <button onclick="showPlot2('body')">Body</button>
+  <button class="plot-btn active" id="btn-title2" onclick="showPlot2('title')">Title</button>
+  <button class="plot-btn" id="btn-body2" onclick="showPlot2('body')">Body</button>
 </div>
 
 <img
@@ -117,6 +135,9 @@ function showPlot2(which) {
     which === "title" ? "block" : "none";
   document.getElementById("img-body2").style.display =
     which === "body" ? "block" : "none";
+
+  document.getElementById("btn-title2").classList.toggle("active", which === "title");
+  document.getElementById("btn-body2").classList.toggle("active", which === "body");
 }
 </script>
 
