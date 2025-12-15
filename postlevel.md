@@ -56,6 +56,35 @@ This is what our posts look like for now. Kind of hard to know what the post was
 
 Great, now we can understand a bit better the content of each post. Let's see if that can bring us more information.
 
+<div style="text-align:center; margin-bottom:1rem;">
+  <button onclick="showPlot('title')">Title</button>
+  <button onclick="showPlot('body')">Body</button>
+</div>
+
+<div style="max-width:800px; margin:auto;">
+  <iframe
+    id="plot-title"
+    src="{{ '/assets/plots/3_wordcloud1_title.html' | relative_url }}"
+    style="width:100%; height:450px; border:none;">
+  </iframe>
+
+  <iframe
+    id="plot-body"
+    src="{{ '/assets/plots/3_wordcloud1_body.html' | relative_url }}"
+    style="width:100%; height:450px; border:none; display:none;">
+  </iframe>
+</div>
+
+<script>
+function showPlot(which) {
+  document.getElementById("plot-title").style.display =
+    which === "title" ? "block" : "none";
+  document.getElementById("plot-body").style.display =
+    which === "body" ? "block" : "none";
+}
+</script>
+
+
 TITLE
 <img 
   src="{{ '/assets/plots/3_wordcloud1_title.png' | relative_url }}" 
