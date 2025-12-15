@@ -116,3 +116,30 @@ label{ font-weight: 600; }
 
 .team-list{display:grid;grid-template-columns:1fr;gap:.5rem;margin-top:1rem}
 .member{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:12px;padding:.55rem .8rem}
+
+
+.page-banner{
+  background-image: url("/assets/img/baniere.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 18px;
+  padding: 44px 28px;
+  margin: 12px 0 26px;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-banner::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,0.35); /* assombrit pour que le texte reste lisible */
+}
+
+.page-banner-inner{
+  position: relative;
+  color: white;
+}
+
+.page-title{ margin: 0 0 6px; }
+.page-subtitle{ margin: 0; opacity: 0.95; }

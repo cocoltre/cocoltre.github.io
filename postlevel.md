@@ -4,6 +4,13 @@ title: Post Level
 subtitle: What is said and how it is said
 permalink: /postlevel/
 ---
+<div class="page-banner">
+  <div class="page-banner-inner">
+    <h1 class="page-title">Post Level</h1>
+    <p class="page-subtitle">What is said and how it is said</p>
+  </div>
+</div>
+
 
 <style>
 .plot-btn {
