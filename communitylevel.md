@@ -231,7 +231,7 @@ The pair **drama ↔ subredditdrama** stands out with the highest proportion of 
 As all these hyperlinks have a **source** and a **target**...
 We could now think about the question : `Do subreddits mainly act as sources (linking to others) or targets (being linked to), and whether this changes over time?`
 
-<iframe src="{{ '/assets/plots/1_fig3.html' | relative_url }}" width="100%" height="800" style="border:none;"></iframe>
+<iframe src="{{ '/assets/plots/1_fig3.html' | relative_url }}" width="100%" height="600" style="border:none;"></iframe>
 
 This very simple plot shows the **monthly source-to-target ratio** for the ten most active subreddits. To understand it, basically :
 
@@ -248,7 +248,7 @@ Next step could be to summarize this behavior into usable features. Let's comput
 - **Mean source ratio** → represents typical role of the subreddit  
 - **Variance** → represents how often the role changes  
 
-<iframe src="{{ '/assets/plots/1_fig4.html' | relative_url }}" width="100%" height="400" style="border:none;"></iframe>
+<iframe src="{{ '/assets/plots/1_fig4.html' | relative_url }}" width="100%" height="300" style="border:none;"></iframe>
 
 **Key observations:**
 - Mean source ratios are strongly polarized near **0 or 1**
@@ -281,7 +281,7 @@ This dataset focuses exclusively on **conflict-driven interactions**.
 
 We first compare the number of burst events with the total number of negative hyperlinks over time, just to have a quick idea of the count evolution across time.
 
-<iframe src="{{ '/assets/plots/1_fig5.html' | relative_url }}" width="100%" height="800" style="border:none;"></iframe>
+<iframe src="{{ '/assets/plots/1_fig5.html' | relative_url }}" width="100%" height="300" style="border:none;"></iframe>
 
 Both signals increase over time, reflecting Reddit’s activity growth.  
 However, bursts (which counts are at a much lower scale) show **stronger fluctuations**, including a visible drop around **2015**, unlike the smoother growth of negative links.
