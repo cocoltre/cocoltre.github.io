@@ -30,7 +30,7 @@ Our goals are to:
 - Identify the subreddits' differences that differ most between bursty and non-bursty posts.
 - Understand which of these differences best explain or predict the probability of triggering a burst.
 
-### Size of a source subreddit community
+### 1. Size of a source subreddit community
 
 Does the size of a subreddit influence the probability of a post to make a burst ?
 Let's look into that. What is the effective size of a subreddit ? Is it best described by the number of users it has ? Or by the number of posts it has made ? Indeed, some users are shared between subreddits communities, and some users may post many times in a single subreddit community, so we have to pay attention to these details.
@@ -85,7 +85,7 @@ We also see that no matter their amount nor the identity of active users, they h
 First, let's first find out about **the number of active users.**
 {: .text-justify}
 
-#### The size is the number of active users
+#### 1.1 The size is the number of active users
 
 <div style="position: relative; width: 100%; max-width: 800px; padding-top: 50%; margin: auto;">
   <iframe
@@ -119,7 +119,7 @@ As our initial distribution is highly skewed and definitely non normal, it is be
 That's great! We can use the column "Nb_users_per_subreddit" as our first feature in our ML model.
 {: .text-justify}
 
-#### The size is the number of posts
+#### 1.2 The size is the number of posts
 
 Now let's see if the number of posts a community has, also has an influence on the probability of a post to make a burst.
 Remember our data:
@@ -171,7 +171,7 @@ That's great! We can use the column "Nb_posts_per_subreddit" as our second featu
 {: .text-justify}
 
 
-## 1.2 Interactions between communities via hyperlinks
+### 2. Interactions between communities via hyperlinks
 
 In this section, we analyze how subreddits interact through hyperlinks.  
 We first describe **global interaction patterns**, then focus on **burst vs non-burst dynamics**.
@@ -192,7 +192,7 @@ The dataset is generated using:
 
 ---
 
-### 1.2.1 Dataset Description
+#### 2.1 Dataset Description
 
 The dataset combines:
 - **SNAP Reddit hyperlink data** (`snap_body.tsv`, `snap_title.tsv`)
@@ -201,7 +201,7 @@ The dataset combines:
 Each row represents a **hyperlink between two subreddits**.  
 The `Burst` label is available only for annotated posts; all others are left as `NaN`.
 
-#### Dataset overview
+##### Dataset overview
 
 | Quantity | Value |
 |--------|-------|
@@ -218,7 +218,7 @@ The figure below shows how **hyperlink sentiment (positive vs negative)** overla
 
 ---
 
-### 1.2.2 Top Undirected Subreddit Pairs
+#### 2.2 Top Undirected Subreddit Pairs
 
 We first examine which **pairs of subreddits interact the most**, ignoring direction (A → B and B → A are counted together).
 
@@ -231,7 +231,7 @@ The pair **drama ↔ subredditdrama** stands out with the highest proportion of 
 
 ---
 
-### 1.2.3 Source vs Target Roles Over Time
+#### 2.3 Source vs Target Roles Over Time
 
 We now study whether subreddits mainly act as **sources** (linking to others) or **targets** (being linked to), and whether this changes over time.
 
@@ -262,13 +262,13 @@ To summarize this behavior into usable features, we compute:
 
 ---
 
-## 1.3 Interactions Leading to Bursts
+### 3. Interactions Leading to Bursts
 
 We now restrict the dataset to posts **with a defined burst label**, keeping only negative hyperlinks.
 
 ---
 
-### 1.3.1 Burst-Labeled Dataset
+#### 3.1 Burst-Labeled Dataset
 
 | Quantity | Value |
 |--------|-------|
@@ -281,7 +281,7 @@ This dataset focuses exclusively on **conflict-driven interactions**.
 
 ---
 
-### 1.3.2 Monthly Evolution of Bursts
+#### 3.2 Monthly Evolution of Bursts
 
 We compare the number of burst events with the total number of negative hyperlinks over time.
 
@@ -292,7 +292,7 @@ However, bursts show **stronger fluctuations**, including a visible drop around 
 
 ---
 
-### 1.3.3 Source vs Target Roles (Burst Data)
+#### 3.3 Source vs Target Roles (Burst Data)
 
 We repeat the role analysis using only burst-labeled interactions.
 
@@ -303,7 +303,7 @@ Most active subreddits act almost exclusively as **sources**.
 
 ---
 
-### 1.3.4 Burst-Making Subreddits
+#### 3.4 Burst-Making Subreddits
 
 We visualize which communities generate bursts over time.
 
@@ -313,7 +313,7 @@ A small group of subreddits (e.g. **SubredditDrama**, **ShitLiberalsSay**, **Cir
 
 ---
 
-### 1.3.5 From Target to Source
+#### 3.5 From Target to Source
 
 We test whether subreddits that are first **targeted** later become **sources**.
 
