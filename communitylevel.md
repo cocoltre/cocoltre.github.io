@@ -309,7 +309,7 @@ Most active subreddits act almost exclusively as **sources**.
 
 We visualize which are the top burst-making communities over time.
 
-<iframe src="{{ '/assets/plots/1_fig7.html' | relative_url }}" width="100%" height="800" style="border:none;"></iframe>
+<iframe src="{{ '/assets/plots/1_fig7.html' | relative_url }}" width="100%" height="600" style="border:none;"></iframe>
 
 A small group of subreddits (e.g. **SubredditDrama**, **ShitLiberalsSay**, **CircleBroke**) consistently appears across months, indicating that **bursts are concentrated in a few highly active communities**.
 
@@ -319,7 +319,7 @@ A small group of subreddits (e.g. **SubredditDrama**, **ShitLiberalsSay**, **Cir
 
 Now, simply out of curiosity, we would like to try to answer : Do subreddits that are first **targeted** later become **sources** ?
 
-<iframe src="{{ '/assets/plots/1_fig8.html' | relative_url }}" width="100%" height="800" style="border:none;"></iframe>
+<iframe src="{{ '/assets/plots/1_fig8.html' | relative_url }}" width="100%" height="600" style="border:none;"></iframe>
 
 If we look at the delay distribultion, it's pretty clear that most subreddits that switch roles do so within **100 days**.
 But then, looking at the fast switch timeline, (when the switch is done under ≤ 7 days after being targeted), we see that they fast transitions occur mainly at the start of the dataset, reflecting missing pre-dataset history rather than true behavior trends. 
