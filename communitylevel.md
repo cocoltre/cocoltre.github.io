@@ -173,12 +173,14 @@ That's great! We can use the column "Nb_posts_per_subreddit" as our second featu
 
 ### Interactions between communities via hyperlinks
 
-<iframe
-  src="{{ '/assets/plots/1_fig1.html' | relative_url }}"
-  width="100%"
-  height="800"
-  style="border:none;">
-</iframe>
+<div style="position: relative; width: 100%; max-width: 800px; padding-top: 50%; margin: auto;">
+  <iframe
+    src="{{ '/assets/plots/1_fig1.html' | relative_url }}"
+    width="100%"
+    height="800"
+    style="border:none;">
+  </iframe>
+</div>
 
 <iframe
   src="{{ '/assets/plots/1_fig2.html' | relative_url }}"
