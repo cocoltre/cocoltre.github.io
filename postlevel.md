@@ -160,9 +160,10 @@ Now, let's look at the semantical part, how words are shaped, what they represen
 
 For each post, we have 86 different semantic features! It's a lot, but let's try to explain a bit what they represent. 
 
-- Textual properties: The first 18 features represent how the post is constructed. These are mostly surface statistics about the string, not the “meaning”.  We have properties of length (number of characters, of words, of sentences,..) or ratios (fraction of whitespaces, digits, uppercase chars,..) and features representing the variety (number of unique words, fraction of stopwords, number of long words,..).
-- VADER computed features: The 3 next features represent sentiment calculated by VADER library. It describes how much of the text is perceived as positive / neutral / negative.  
-- LIWC computed features : 65 features corresponding to different themes (adverbs, emotions, social, etc.) where words allow to compute a score for each post, on each oh these themes. LIWC use a dictionnary to compute these scores.
+- **Textual properties**: The first 18 features represent how the post is constructed. These are mostly surface statistics about the string, not really the “meaning”.   
+We have properties of length (number of characters, of words, of sentences,..) or ratios (fraction of whitespaces, digits, uppercase chars,..) and features representing the variety (number of unique words, fraction of stopwords, number of long words,..).
+- **VADER computed features**: The 3 next features represent sentiment calculated by VADER library. It describes how much of the text is perceived as positive / neutral / negative.  
+- **LIWC computed features**: These 65 features correspond to different themes (adverbs, emotions, social, etc.) where words allow to compute a score for each post, on each oh these themes. LIWC use a dictionnary to compute these scores.
 
 We can visualize these features in a different way: 
 <iframe
@@ -174,35 +175,36 @@ We can visualize these features in a different way:
 
 
 As you can see, it's a LOT !!  
-As you remember, we're interested in finding the features that are the most relevant to predict a burst. Here, it will make sense to try to find, among these features, the one that are more explainative, instead of inventing or computing new features, right ? 
+As you remember, we're interested in finding the features that are the most relevant to predict a burst.  
+Here, it will make sense to try to find, among these features, the one that are more explainative, instead of inventing or computing new features, right ? 
 
 ## 3. Feature selection
-After the preprocessing of these features, we want to select  the most informative features. We explore several simple strategies:  
-- Manual pruning (human judgement): We look at the correlation matrix to spot features that tell almost the same story. When several features are very similar, we keep one and remove the redundant ones, within each subgroup precedently cited. 
-- Univariate selection (one feature at a time): For each feature, we compare its typical values in burst posts vs non-burst posts. Features showing a strong difference between the two groups are good candidates.
-- Offline selection (using the label *burst* directly, but without training a model): We rank features by how strongly they relate to the target burst, for example:
+After the preprocessing of these features, our goal is to select the most informative ones. We explore several simple strategies:  
+- **Manual pruning** (human judgement): We look at the correlation matrix to spot features that tell almost the same story. When several features are very similar, we keep one and remove the redundant ones, within each subgroup precedently cited. 
+- **Univariate selection** (one feature at a time): For each feature, we compare its typical values in burst posts vs non-burst posts. Features showing a strong difference between the two groups are good candidates.
+- **Offline selection** (using the label *burst* directly, but without training a model): We rank features by how strongly they relate to the target *burst*, for example:
     - by their correlation with the *burst* label
     - by mutual information, which can capture more complex relationships (not only linear ones).
-- Online forward selection (step-by-step with a model): We start with no features, then add them one by one, each time keeping the feature that brings the biggest improvement in prediction. We stop when adding more features no longer helps much.
+- **Online forward selection** (step-by-step with a model): We start with no features, then add them one by one, each time keeping the feature that brings the biggest improvement in prediction. We stop when adding more features no longer helps much.
 
 
 For example, for the first idea, we are interested in pruning this *big* correlation matrix. 
 
-
-<iframe
-  src="{{ '/assets/plots/3_corr_before.html' | relative_url }}"
-  width="100%"
-  height="550"
-  style="border:none;">
-</iframe>
 We try to remove obvious duplicates while preserving interpretable representatives across feature families. In parallel, we considered which features are most relevant to our research question and predictive objective, and which ones can be removed because they are either redundant or weakly connected to our task.
 
-<iframe
-  src="{{ '/assets/plots/3_corr_after.html' | relative_url }}"
-  width="100%"
-  height="550"
-  style="border:none;">
-</iframe>
+<div style="display:flex; gap:16px; align-items:flex-start;">
+  <iframe
+    src="{{ '/assets/plots/3_corr_before.html' | relative_url }}"
+    style="border:none; width:50%; height:450px; overflow:hidden;">
+  </iframe>
+
+  <iframe
+    src="{{ '/assets/plots/3_corr_after.html' | relative_url }}"
+    style="border:none; width:50%; height:450px; overflow:hidden;">
+  </iframe>
+</div>
+
+
 
 Pruning clearly breaks up the big correlation blocks, especially those driven by textual properties, and keep a lower number of relevant LIWC thematics features.
 So the remaining matrix is less redundant and easier to read. That said, 47 variables is still a lot for a sparse signal like “burst,” and some clusters remain (e.g., LIWC families with overlapping constructs).
