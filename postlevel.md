@@ -272,14 +272,17 @@ To avoid conclusions that depend on a single algorithm, we test several standard
 - Histogram Gradient Boosting: trees too, but built one after another, each new tree fixes the previous mistakes.   
 - XGBoost: boosted trees on steroids. Same “fix mistakes step by step” idea, but super optimized and often performs best if tuned.  
 
+We're using PR-AUC and ROC-AUC to evaluate the performances. 
+- **ROC-AUC**: “how well the model ranks positives above negatives” overall. A 0.5 performance is equivalent to a model classiying burst randomly, and 1.0 would be perfect.
+- **PR-AUC**: “how clean your positives are when positives are rare” (precision vs recall). Usually the more honest metric when burst is rare (our case, based on a quite imbalanced dataset).
+
+
 The results are shown in the plot below.   
 The **last column** is the reference: the model trained on **all 86 features**.  
 The **first four columns** are the four different **top-20** selections.  
 Then we have the **manual-pruned** set (47 features), and finally the different **unions**.
 
-We're using PR-AUC and ROC-AUC to evaluate the performances. 
-- ROC-AUC: “how well the model ranks positives above negatives” overall. A 0.5 performance is equivalent to a model classiying burst randomly, and 1.0 would be perfect.
-- PR-AUC: “how clean your positives are when positives are rare” (precision vs recall). Usually the more honest metric when burst is rare (our case, based on a quite imbalanced dataset).
+
 
 <iframe
   src="{{ '/assets/plots/3_model_performance_by_subset.html' | relative_url }}"
