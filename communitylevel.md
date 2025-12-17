@@ -235,7 +235,7 @@ The pair **drama ↔ subredditdrama** stands out with the highest proportion of 
 #### 2.3 Source vs Target Roles Over Time
 
 As all these hyperlinks have a **source** and a **target**...
-We could now think about the question : `Do subreddits mainly act as sources (linking to others) or targets (being linked to), and whether this changes over time?`
+We could now think about the question : ***Do subreddits mainly act as sources (linking to others) or targets (being linked to), and whether this changes over time?***
 
 <iframe src="{{ '/assets/plots/1_fig3.html' | relative_url }}" width="100%" height="550" style="border:none;"></iframe>
 
