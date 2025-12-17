@@ -223,7 +223,7 @@ The figure below shows how **hyperlink sentiment (positive vs negative)** overla
 
 Let's first examine which **pairs of subreddits interact the most**, ignoring direction (A → B and B → A are counted together).
 
-<iframe src="{{ '/assets/plots/1_fig2.html' | relative_url }}" width="100%" height="800" style="border:none;"></iframe>
+<iframe src="{{ '/assets/plots/1_fig2.html' | relative_url }}" width="100%" height="700" style="border:none;"></iframe>
 
 Among the **top 20 subreddit pairs**, some exceed **500 interactions**, indicating very strong cross-community activity.
 
