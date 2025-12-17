@@ -19,7 +19,7 @@ subtitle: Why you'd want to give us the best grade
       <div class="member">Christos Konstantinidis</div>
     </div>
 
-    <p style="margin-top:12px">
+    <p style="margin-top:20px">
       We have the following qualities:
       <br>• We are excellent swimmers
       <br>• We are extremely loyal to our family
