@@ -322,7 +322,7 @@ Now, simply out of curiosity, we would like to try to answer : Do subreddits tha
 <iframe src="{{ '/assets/plots/1_fig8.html' | relative_url }}" width="100%" height="350" style="border:none;"></iframe>
 
 If we look at the delay distribultion, it's pretty clear that most subreddits that switch roles do so within **100 days**.
-But then, looking at the fast switch timeline, (when the switch is done under ≤ 7 days after being targeted), we see that they fast transitions occur mainly at the start of the dataset, reflecting missing pre-dataset history rather than true behavior trends. 
+But then, looking at the fast switch timeline, (when the switch is done under ≤ 7 days after being targeted), we see that they fast transitions occur mainly at the start of the dataset, reflecting missing pre-dataset history rather than true behavior trends. Besides, the number of observations is very low.
 This suggests that the effect is likely driven by **dataset boundary effects**, rather than systematic retaliation.
 
 ---
