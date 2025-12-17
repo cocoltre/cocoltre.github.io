@@ -173,22 +173,18 @@ That's great! We can use the column "Nb_posts_per_subreddit" as our second featu
 
 ### 2. Interactions between communities via hyperlinks
 
-In this section, we analyze how subreddits interact through hyperlinks.  
-We first describe **global interaction patterns**, then focus on **burst vs non-burst dynamics**.
+The goal is to analyze how subreddits interact through hyperlinks.
 
-We study:
+Let's investigate:
 - **Who links to whom** (source vs target behavior),
 - **How interactions evolve over time**,
-- **Which subreddit pairs interact the most**.
+- **Which subreddit pairs interact the most**
 
 We then restrict the analysis to burst-labeled posts to answer the following question:
 
 > **Do bursts change the structure of subreddit interaction networks?**
 
-This section is exploratory and aims to identify **simple, interpretable community-level features** that can later be used for **burst prediction**.
-
-The dataset is generated using:  
-`src/scripts/1_create_dataset_subreddit_interactions.py`
+This part of the project is exploratory and aims to identify **simple, interpretable community-level features** that can later be used for **burst prediction**.
 
 ---
 
@@ -198,19 +194,18 @@ The dataset combines:
 - **SNAP Reddit hyperlink data** (`snap_body.tsv`, `snap_title.tsv`)
 - **Handcrafted burst annotations** (`handcrafted_features.tsv`)
 
-Each row represents a **hyperlink between two subreddits**.  
-The `Burst` label is available only for annotated posts; all others are left as `NaN`.
+Each row represents a **hyperlink between two subreddits**, and the `Burst` label is available only for annotated posts.
 
 ##### Dataset overview
 
 | Quantity | Value |
 |--------|-------|
-| Total posts | 831,014 |
+| Total posts | 831'014 |
 | Burst posts | 727 |
-| Non-burst posts | 17,976 |
-| Unlabeled posts | 812,311 |
-| Unique source subreddits | 55,863 |
-| Unique target subreddits | 34,026 |
+| Non-burst posts | 17'976 |
+| Unlabeled posts | 812'311 |
+| Unique source subreddits | 55'863 |
+| Unique target subreddits | 34'026 |
 
 The figure below shows how **hyperlink sentiment (positive vs negative)** overlaps with **burst annotations**, highlighting the strong class imbalance.
 
@@ -220,45 +215,46 @@ The figure below shows how **hyperlink sentiment (positive vs negative)** overla
 
 #### 2.2 Top Undirected Subreddit Pairs
 
-We first examine which **pairs of subreddits interact the most**, ignoring direction (A → B and B → A are counted together).
+Let's first examine which **pairs of subreddits interact the most**, ignoring direction (A → B and B → A are counted together).
 
 <iframe src="{{ '/assets/plots/1_fig2.html' | relative_url }}" width="100%" height="800" style="border:none;"></iframe>
 
 Among the **top 20 subreddit pairs**, some exceed **500 interactions**, indicating very strong cross-community activity.
 
 Most of these interactions are **positive**, which is expected given the SNAP dataset’s polarity distribution.  
-The pair **drama ↔ subredditdrama** stands out with the highest proportion of negative links, consistent with their content focus.
+The pair **drama ↔ subredditdrama** stands out with the highest proportion of negative links, which is consistent with their name id.
 
 ---
 
 #### 2.3 Source vs Target Roles Over Time
 
-We now study whether subreddits mainly act as **sources** (linking to others) or **targets** (being linked to), and whether this changes over time.
+As all these hyperlinks have a **source** and a **target**...
+We could now think about the question : `Do subreddits mainly act as sources (linking to others) or targets (being linked to), and whether this changes over time?`
 
 <iframe src="{{ '/assets/plots/1_fig3.html' | relative_url }}" width="100%" height="800" style="border:none;"></iframe>
 
-The plot shows the **monthly source-to-target ratio** for the ten most active subreddits:
+This very simple plot shows the **monthly source-to-target ratio** for the ten most active subreddits. To understand it, basically :
 
 - **1.0** → only acts as a source  
 - **0.0** → only acts as a target  
 - **0.5** → balanced behavior  
 
-Most top subreddits keep a **very stable role** across time, suggesting persistent structural positions in the network.
+Nice ! We can clearly observe most top subreddits keep a **very stable role** across time, suggesting persistent structural positions in the network.
 
 ---
 
-To summarize this behavior into usable features, we compute:
+Next step could be to summarize this behavior into usable features. Let's compute:
 
-- **Mean source ratio** → typical role of the subreddit  
-- **Variance** → how often the role changes  
+- **Mean source ratio** → represents typical role of the subreddit  
+- **Variance** → represents how often the role changes  
 
-<iframe src="{{ '/assets/plots/1_fig4.html' | relative_url }}" width="100%" height="800" style="border:none;"></iframe>
+<iframe src="{{ '/assets/plots/1_fig4.html' | relative_url }}" width="100%" height="400" style="border:none;"></iframe>
 
 **Key observations:**
 - Mean source ratios are strongly polarized near **0 or 1**
 - Variance is close to **0 for most subreddits**
 
-👉 We keep **only the mean source ratio**, as variance provides little additional information.
+We can suggest we keep **only the mean source ratio**, as variance provides little additional information. Indeed variance is nearly zero for the vast majority of communities, so it has limited discriminative value compared to the mean source ratio.
 
 ---
 
@@ -272,9 +268,9 @@ We now restrict the dataset to posts **with a defined burst label**, keeping onl
 
 | Quantity | Value |
 |--------|-------|
-| Total labeled posts | 18,703 |
+| Total labeled posts | 18'703 |
 | Burst posts | 727 |
-| Non-burst posts | 17,976 |
+| Non-burst posts | 17'976 |
 | Link sentiment | Negative only |
 
 This dataset focuses exclusively on **conflict-driven interactions**.
