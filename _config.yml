@@ -27,7 +27,7 @@ navbar-links:
   Final recipe ! : "finalrecipe"
   About Us: "aboutus"
   Resources:
-    - The dataset: "https://snap.stanford.edu/data/soc-RedditHyperlinks.html"
+    - The post dataset: "https://snap.stanford.edu/data/soc-RedditHyperlinks.html"
     - The embedding dataset: "https://snap.stanford.edu/data/web-RedditEmbeddings.html"
     - The paper: "https://cs.stanford.edu/~srijan/pubs/conflict-paper-www18.pdf"
     - The whole: "https://snap.stanford.edu/conflict/"

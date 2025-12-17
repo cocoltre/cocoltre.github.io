@@ -160,9 +160,10 @@ Now, let's look at the semantical part, how words are shaped, what they represen
 
 For each post, we have 86 different semantic features! It's a lot, but let's try to explain a bit what they represent. 
 
-- Textual properties: The first 18 features represent how the post is constructed. These are mostly surface statistics about the string, not the “meaning”.  We have properties of length (number of characters, of words, of sentences,..) or ratios (fraction of whitespaces, digits, uppercase chars,..) and features representing the variety (number of unique words, fraction of stopwords, number of long words,..).
-- VADER computed features: The 3 next features represent sentiment calculated by VADER library. It describes how much of the text is perceived as positive / neutral / negative.  
-- LIWC computed features : 65 features corresponding to different themes (adverbs, emotions, social, etc.) where words allow to compute a score for each post, on each oh these themes. LIWC use a dictionnary to compute these scores.
+- **Textual properties**: The first 18 features represent how the post is constructed. These are mostly surface statistics about the string, not really the “meaning”.   
+We have properties of length (number of characters, of words, of sentences,..) or ratios (fraction of whitespaces, digits, uppercase chars,..) and features representing the variety (number of unique words, fraction of stopwords, number of long words,..).
+- **VADER computed features**: The 3 next features represent sentiment calculated by VADER library. It describes how much of the text is perceived as positive / neutral / negative.  
+- **LIWC computed features**: These 65 features correspond to different themes (adverbs, emotions, social, etc.) where words allow to compute a score for each post, on each oh these themes. LIWC use a dictionnary to compute these scores.
 
 We can visualize these features in a different way: 
 <iframe
@@ -174,35 +175,30 @@ We can visualize these features in a different way:
 
 
 As you can see, it's a LOT !!  
-As you remember, we're interested in finding the features that are the most relevant to predict a burst. Here, it will make sense to try to find, among these features, the one that are more explainative, instead of inventing or computing new features, right ? 
+As you remember, we're interested in finding the features that are the most relevant to predict a burst.  
+Here, it will make sense to try to find, among these features, the one that are more explainative, instead of inventing or computing new features, right ? 
 
 ## 3. Feature selection
-After the preprocessing of these features, we want to select  the most informative features. We explore several simple strategies:  
-- Manual pruning (human judgement): We look at the correlation matrix to spot features that tell almost the same story. When several features are very similar, we keep one and remove the redundant ones, within each subgroup precedently cited. 
-- Univariate selection (one feature at a time): For each feature, we compare its typical values in burst posts vs non-burst posts. Features showing a strong difference between the two groups are good candidates.
-- Offline selection (using the label *burst* directly, but without training a model): We rank features by how strongly they relate to the target burst, for example:
+After the preprocessing of these features, our goal is to select the most informative ones. We explore several simple strategies:  
+- **Manual pruning** (human judgement): We look at the correlation matrix to spot features that tell almost the same story. When several features are very similar, we keep one and remove the redundant ones, within each subgroup precedently cited. 
+- **Univariate selection** (one feature at a time): For each feature, we compare its typical values in burst posts vs non-burst posts. Features showing a strong difference between the two groups are good candidates.
+- **Offline selection** (using the label *burst* directly, but without training a model): We rank features by how strongly they relate to the target *burst*, for example:
     - by their correlation with the *burst* label
     - by mutual information, which can capture more complex relationships (not only linear ones).
-- Online forward selection (step-by-step with a model): We start with no features, then add them one by one, each time keeping the feature that brings the biggest improvement in prediction. We stop when adding more features no longer helps much.
+- **Online forward selection** (step-by-step with a model): We start with no features, then add them one by one, each time keeping the feature that brings the biggest improvement in prediction. We stop when adding more features no longer helps much.
 
 
 For example, for the first idea, we are interested in pruning this *big* correlation matrix. 
 
-
-<iframe
-  src="{{ '/assets/plots/3_corr_before.html' | relative_url }}"
-  width="100%"
-  height="550"
-  style="border:none;">
-</iframe>
 We try to remove obvious duplicates while preserving interpretable representatives across feature families. In parallel, we considered which features are most relevant to our research question and predictive objective, and which ones can be removed because they are either redundant or weakly connected to our task.
 
-<iframe
-  src="{{ '/assets/plots/3_corr_after.html' | relative_url }}"
-  width="100%"
-  height="550"
-  style="border:none;">
-</iframe>
+<iframe src="{{ '/assets/plots/3_corr_before.html' | relative_url }}" width="100%" height="700" style="border:none;"> </iframe> 
+
+
+We try to remove obvious duplicates while preserving interpretable representatives across feature families. In parallel, we considered which features are most relevant to our research question and predictive objective, and which ones can be removed because they are either redundant or weakly connected to our task. 
+
+
+<iframe src="{{ '/assets/plots/3_corr_after.html' | relative_url }}" width="100%" height="700" style="border:none;"> </iframe>
 
 Pruning clearly breaks up the big correlation blocks, especially those driven by textual properties, and keep a lower number of relevant LIWC thematics features.
 So the remaining matrix is less redundant and easier to read. That said, 47 variables is still a lot for a sparse signal like “burst,” and some clusters remain (e.g., LIWC families with overlapping constructs).
@@ -223,11 +219,11 @@ This comparison helps us understand which semantic features are repeatedly highl
   style="border:none;">
 </iframe>
 
-We can also visualize the features kept by each ranking, and some different unions of features. 
+We can also visualize the features kept by each ranking per group, and some different unions of features. 
 
 For instance, if we take:
 - the top-20 features from the univariate ranking, and
-- the top-20 features from forward selection,
+- the top-20 features from forward selection,  
 their union gives 33 features (because 7 features are shared, so it’s 20 + 20 − 7).
 
 <iframe
@@ -241,13 +237,15 @@ their union gives 33 features (because 7 features are shared, so it’s 20 + 20 
 A couple of things stand out:
 - Mutual information picks only LIWC features in its top-20, meaning it mostly finds signal in the types of words used (themes/categories), rather than in basic text length or sentiment.
 - The univariate and correlation rankings end up being almost identical here, which suggests that the features that differ the most between burst vs non-burst are also the ones most directly correlated with the burst label.
+- The forward-selected features appear more uniformly distributed about the different subgroups: some are LIWC, some are text properties, without being correlated, and we still have 1 VADER feature to represent the sentiment perceived by the post.
+- The manually-selected and the unions of features give a higher number of features. We will try to understand if it's necessary to keep all of them of if we can restrict us to a smaller subset.
 
 
 ## 4. Model Analyses
 Now that we have several “shortlists” of features, the next question is simple:  
 
-**How many features do we really need to predict a burst well?**   
-We’d like to keep the feature set **as small as possible**, while staying **as close as possible to the performance of the full 86-feature model**.
+**How many features do we really need to predict a burst?**   
+We’d like to keep the feature set as small as possible, while staying as close as possible to the performance of the full 86-feature model!
 
 
 Here are all the subsets we will test:  
@@ -269,15 +267,21 @@ Here are all the subsets we will test:
 
 To avoid conclusions that depend on a single algorithm, we test several standard classifiers:
 
-- Logistic Regression  
-- Random Forest  
-- Histogram Gradient Boosting  
-- XGBoost  
+- Logistic Regression: the “basic” model. Fast, simple, easy to read, but it can miss messy patterns.
+- Random Forest: a bunch of decision trees voting together. One tree can be dumb, but 500 trees together are usually solid. 
+- Histogram Gradient Boosting: trees too, but built one after another, each new tree fixes the previous mistakes.   
+- XGBoost: boosted trees on steroids. Same “fix mistakes step by step” idea, but super optimized and often performs best if tuned.  
+
+We're using PR-AUC and ROC-AUC to evaluate the performances. 
+- **ROC-AUC**: “how well the model ranks positives above negatives” overall. A 0.5 performance is equivalent to a model classiying burst randomly, and 1.0 would be perfect.
+- **PR-AUC**: “how clean your positives are when positives are rare” (precision vs recall). Usually the more honest metric when burst is rare (our case, based on a quite imbalanced dataset).
+
 
 The results are shown in the plot below.   
 The **last column** is the reference: the model trained on **all 86 features**.  
 The **first four columns** are the four different **top-20** selections.  
 Then we have the **manual-pruned** set (47 features), and finally the different **unions**.
+
 
 
 <iframe
@@ -291,17 +295,19 @@ Across all subsets, **XGBoost is consistently the strongest model**.
 
 On the feature selection side:  
 - **Mutual information** performs the worst here (both ROC-AUC and PR-AUC).  
-- **Univariate** and **correlation-based** selection give almost the same results — which makes sense, because they tend to pick **very similar (and often redundant) features**.
-- The most interesting result is the **forward-selected top-20** subset: it gives a clear boost in **PR-AUC**, and gets **very close to the performance of much larger feature sets** (unions, and even the full 86-feature set).
+- **Univariate** and **correlation-based** selection give almost the same results, which makes sense, because they tend to pick very similar (and often redundant) features.
+- The most interesting result is the **forward-selected top-20** subset: it gives a clear boost in PR-AUC, and gets very close to the performance of much larger feature sets (unions, and even the full 86-feature set).
 
-The **forward_top20** subset achieves performance that is **almost as good as using all 86 features**.    
+The **forward_top20** subset achieves performance that is almost as good as using all 86 features.    
 So in practice, we can reduce the feature space by a factor of ~4, while keeping nearly the same predictive power.  
 
-In other words: **these 20 features seem to capture most of the signal needed to detect bursts.**. 
+In other words: **these 20 features seem to capture most of the signal needed to detect bursts!**. 
 
 **But what do these 20 features actually capture?**  
 
 To better understand *why* the forward-selected top-20 features work so well, we can try to understand what each feature represents in practice, and how it may relate to a Reddit post becoming widely discussed or shared. 
+
+
 
 | Feature | What it measures | Why it may contribute to a burst |
 |---|---|---|
@@ -325,6 +331,7 @@ To better understand *why* the forward-selected top-20 features work so well, we
 | LIWC_Work | Work-related vocabulary | Topics related to jobs, careers, or productivity are broadly relatable and often spark comparison and debate. |
 | LIWC_Leisure | Leisure and hobbies | Shared interests (games, sports, entertainment) spread easily across communities. |
 | LIWC_Home | Home and everyday life | Familiar, everyday contexts increase identification and cross-community resonance. |
+
 
 Overall, these features suggest that bursting posts are not just about *what* is said, but *how* it is said:  
 emotion, personal stance, social framing, and concrete storytelling all play a key role.
