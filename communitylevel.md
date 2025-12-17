@@ -342,7 +342,7 @@ These features are retained for downstream burst prediction models.
 
 
 <p style="text-align:right;">
-  <a href="#top">⬆️ Back to top</a>
+  <a href="#top"> ⬆ Back to top</a>
 </p>
 
 <hr>
