@@ -192,31 +192,13 @@ For example, for the first idea, we are interested in pruning this *big* correla
 
 We try to remove obvious duplicates while preserving interpretable representatives across feature families. In parallel, we considered which features are most relevant to our research question and predictive objective, and which ones can be removed because they are either redundant or weakly connected to our task.
 
-<div style="display:flex; gap:16px; align-items:flex-start;">
-  <iframe
-    src="{{ '/assets/plots/3_corr_before.html' | relative_url }}"
-    style="border:none; width:50%; height:450px; overflow:hidden;">
-  </iframe>
+<iframe src="{{ '/assets/plots/3_corr_before.html' | relative_url }}" width="100%" height="700" style="border:none;"> </iframe> 
 
-  <iframe
-    src="{{ '/assets/plots/3_corr_after.html' | relative_url }}"
-    style="border:none; width:50%; height:450px; overflow:hidden;">
-  </iframe>
-</div>
 
-<div style="transform:scale(0.55); transform-origin:0 0; width:182%; height:650px;">
-  <iframe
-    src="{{ '/assets/plots/corr_before.html' | relative_url }}"
-    style="border:none; width:100%; height:1100px; overflow:hidden;">
-  </iframe>
-</div>
+We try to remove obvious duplicates while preserving interpretable representatives across feature families. In parallel, we considered which features are most relevant to our research question and predictive objective, and which ones can be removed because they are either redundant or weakly connected to our task. 
 
-<div style="transform:scale(0.55); transform-origin:0 0; width:182%; height:650px;">
-  <iframe
-    src="{{ '/assets/plots/corr_after.html' | relative_url }}"
-    style="border:none; width:100%; height:1100px; overflow:hidden;">
-  </iframe>
-</div>
+
+<iframe src="{{ '/assets/plots/3_corr_after.html' | relative_url }}" width="100%" height="700" style="border:none;"> </iframe>
 
 Pruning clearly breaks up the big correlation blocks, especially those driven by textual properties, and keep a lower number of relevant LIWC thematics features.
 So the remaining matrix is less redundant and easier to read. That said, 47 variables is still a lot for a sparse signal like “burst,” and some clusters remain (e.g., LIWC families with overlapping constructs).
