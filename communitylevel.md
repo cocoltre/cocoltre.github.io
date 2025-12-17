@@ -5,6 +5,8 @@ subtitle: How subreddit structure relates to bursts
 permalink: /communitylevel/
 ---
 
+<a id="top"></a>
+
 
 <iframe
   src="{{ '/assets/plots/1_clusters_bubbles_subreddits.html' | relative_url }}"
@@ -336,6 +338,10 @@ This suggests that the effect is likely driven by **dataset boundary effects**, 
 
 These features are retained for downstream burst prediction models.
 
+
+<p style="text-align:right;">
+  <a href="#top">⬆️ Back to top</a>
+</p>
 
 <hr>
 
