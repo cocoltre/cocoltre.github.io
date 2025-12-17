@@ -289,7 +289,9 @@ This dataset focuses exclusively on **conflict-driven interactions**.
 
 We first compare the number of burst events with the total number of negative hyperlinks over time, just to have a quick idea of the count evolution across time.
 
-<iframe src="{{ '/assets/plots/1_fig5.html' | relative_url }}" width="100%" height="350" style="border:none;"></iframe>
+<div style="display:flex; justify-content:center;">
+  <iframe src="{{ '/assets/plots/1_fig5.html' | relative_url }}" width="100%" height="350" style="border:none;"></iframe>
+</div>
 
 Both signals increase over time, reflecting Reddit’s activity growth.  
 However, bursts (which counts are at a much lower scale) show **stronger fluctuations**, including a visible drop around **2015**, unlike the smoother growth of negative links.
