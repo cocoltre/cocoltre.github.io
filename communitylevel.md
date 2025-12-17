@@ -171,65 +171,167 @@ That's great! We can use the column "Nb_posts_per_subreddit" as our second featu
 {: .text-justify}
 
 
-### Interactions between communities via hyperlinks
+## 1.2 Interactions between communities via hyperlinks
 
+In this section, we analyze how subreddits interact through hyperlinks.  
+We first describe **global interaction patterns**, then focus on **burst vs non-burst dynamics**.
 
-<iframe
-  src="{{ '/assets/plots/1_fig1.html' | relative_url }}"
-  width="100%"
-  height="800"
-  style="border:none;">
-</iframe>
+We study:
+- **Who links to whom** (source vs target behavior),
+- **How interactions evolve over time**,
+- **Which subreddit pairs interact the most**.
 
+We then restrict the analysis to burst-labeled posts to answer the following question:
 
-<iframe
-  src="{{ '/assets/plots/1_fig2.html' | relative_url }}"
-  width="100%"
-  height="800"
-  style="border:none;">
-</iframe>
+> **Do bursts change the structure of subreddit interaction networks?**
 
-<iframe
-  src="{{ '/assets/plots/1_fig3.html' | relative_url }}"
-  width="100%"
-  height="800"
-  style="border:none;">
-</iframe>
+This section is exploratory and aims to identify **simple, interpretable community-level features** that can later be used for **burst prediction**.
 
-<iframe
-  src="{{ '/assets/plots/1_fig4.html' | relative_url }}"
-  width="100%"
-  height="800"
-  style="border:none;">
-</iframe>
+The dataset is generated using:  
+`src/scripts/1_create_dataset_subreddit_interactions.py`
 
-<iframe
-  src="{{ '/assets/plots/1_fig5.html' | relative_url }}"
-  width="100%"
-  height="800"
-  style="border:none;">
-</iframe>
+---
 
-<iframe
-  src="{{ '/assets/plots/1_fig6.html' | relative_url }}"
-  width="100%"
-  height="800"
-  style="border:none;">
-</iframe>
+### 1.2.1 Dataset Description
 
-<iframe
-  src="{{ '/assets/plots/1_fig7.html' | relative_url }}"
-  width="100%"
-  height="800"
-  style="border:none;">
-</iframe>
+The dataset combines:
+- **SNAP Reddit hyperlink data** (`snap_body.tsv`, `snap_title.tsv`)
+- **Handcrafted burst annotations** (`handcrafted_features.tsv`)
 
-<iframe
-  src="{{ '/assets/plots/1_fig8.html' | relative_url }}"
-  width="100%"
-  height="800"
-  style="border:none;">
-</iframe>
+Each row represents a **hyperlink between two subreddits**.  
+The `Burst` label is available only for annotated posts; all others are left as `NaN`.
+
+#### Dataset overview
+
+| Quantity | Value |
+|--------|-------|
+| Total posts | 831,014 |
+| Burst posts | 727 |
+| Non-burst posts | 17,976 |
+| Unlabeled posts | 812,311 |
+| Unique source subreddits | 55,863 |
+| Unique target subreddits | 34,026 |
+
+The figure below shows how **hyperlink sentiment (positive vs negative)** overlaps with **burst annotations**, highlighting the strong class imbalance.
+
+<iframe src="{{ '/assets/plots/1_fig1.html' | relative_url }}" width="100%" height="800" style="border:none;"></iframe>
+
+---
+
+### 1.2.2 Top Undirected Subreddit Pairs
+
+We first examine which **pairs of subreddits interact the most**, ignoring direction (A → B and B → A are counted together).
+
+<iframe src="{{ '/assets/plots/1_fig2.html' | relative_url }}" width="100%" height="800" style="border:none;"></iframe>
+
+Among the **top 20 subreddit pairs**, some exceed **500 interactions**, indicating very strong cross-community activity.
+
+Most of these interactions are **positive**, which is expected given the SNAP dataset’s polarity distribution.  
+The pair **drama ↔ subredditdrama** stands out with the highest proportion of negative links, consistent with their content focus.
+
+---
+
+### 1.2.3 Source vs Target Roles Over Time
+
+We now study whether subreddits mainly act as **sources** (linking to others) or **targets** (being linked to), and whether this changes over time.
+
+<iframe src="{{ '/assets/plots/1_fig3.html' | relative_url }}" width="100%" height="800" style="border:none;"></iframe>
+
+The plot shows the **monthly source-to-target ratio** for the ten most active subreddits:
+
+- **1.0** → only acts as a source  
+- **0.0** → only acts as a target  
+- **0.5** → balanced behavior  
+
+Most top subreddits keep a **very stable role** across time, suggesting persistent structural positions in the network.
+
+---
+
+To summarize this behavior into usable features, we compute:
+
+- **Mean source ratio** → typical role of the subreddit  
+- **Variance** → how often the role changes  
+
+<iframe src="{{ '/assets/plots/1_fig4.html' | relative_url }}" width="100%" height="800" style="border:none;"></iframe>
+
+**Key observations:**
+- Mean source ratios are strongly polarized near **0 or 1**
+- Variance is close to **0 for most subreddits**
+
+👉 We keep **only the mean source ratio**, as variance provides little additional information.
+
+---
+
+## 1.3 Interactions Leading to Bursts
+
+We now restrict the dataset to posts **with a defined burst label**, keeping only negative hyperlinks.
+
+---
+
+### 1.3.1 Burst-Labeled Dataset
+
+| Quantity | Value |
+|--------|-------|
+| Total labeled posts | 18,703 |
+| Burst posts | 727 |
+| Non-burst posts | 17,976 |
+| Link sentiment | Negative only |
+
+This dataset focuses exclusively on **conflict-driven interactions**.
+
+---
+
+### 1.3.2 Monthly Evolution of Bursts
+
+We compare the number of burst events with the total number of negative hyperlinks over time.
+
+<iframe src="{{ '/assets/plots/1_fig5.html' | relative_url }}" width="100%" height="800" style="border:none;"></iframe>
+
+Both signals increase over time, reflecting Reddit’s growth.  
+However, bursts show **stronger fluctuations**, including a visible drop around **2015**, unlike the smoother growth of negative links.
+
+---
+
+### 1.3.3 Source vs Target Roles (Burst Data)
+
+We repeat the role analysis using only burst-labeled interactions.
+
+<iframe src="{{ '/assets/plots/1_fig6.html' | relative_url }}" width="100%" height="800" style="border:none;"></iframe>
+
+Most active subreddits act almost exclusively as **sources**.  
+**worldnews** and **news** are notable exceptions, acting primarily as **targets**, suggesting they are frequently referenced by other communities.
+
+---
+
+### 1.3.4 Burst-Making Subreddits
+
+We visualize which communities generate bursts over time.
+
+<iframe src="{{ '/assets/plots/1_fig7.html' | relative_url }}" width="100%" height="800" style="border:none;"></iframe>
+
+A small group of subreddits (e.g. **SubredditDrama**, **ShitLiberalsSay**, **CircleBroke**) consistently appears across months, indicating that **bursts are concentrated in a few highly active communities**.
+
+---
+
+### 1.3.5 From Target to Source
+
+We test whether subreddits that are first **targeted** later become **sources**.
+
+<iframe src="{{ '/assets/plots/1_fig8.html' | relative_url }}" width="100%" height="800" style="border:none;"></iframe>
+
+Most subreddits that switch roles do so within **100 days**, but fast transitions (≤ 7 days) occur mainly at the start of the dataset.  
+This suggests that the effect is likely driven by **dataset boundary effects**, rather than systematic retaliation.
+
+---
+
+### Key Takeaways
+
+- Subreddit interaction roles are **highly stable**
+- Bursts are generated by a **small subset of communities**
+- Mean source ratio is a **strong, interpretable structural feature**
+- No strong evidence that being targeted directly causes future burst behavior
+
+These features are retained for downstream burst prediction models.
 
 
 <hr>
