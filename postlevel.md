@@ -225,11 +225,11 @@ This comparison helps us understand which semantic features are repeatedly highl
   style="border:none;">
 </iframe>
 
-We can also visualize the features kept by each ranking, and some different unions of features. 
+We can also visualize the features kept by each ranking per group, and some different unions of features. 
 
 For instance, if we take:
 - the top-20 features from the univariate ranking, and
-- the top-20 features from forward selection,
+- the top-20 features from forward selection,  
 their union gives 33 features (because 7 features are shared, so it’s 20 + 20 − 7).
 
 <iframe
@@ -243,13 +243,15 @@ their union gives 33 features (because 7 features are shared, so it’s 20 + 20 
 A couple of things stand out:
 - Mutual information picks only LIWC features in its top-20, meaning it mostly finds signal in the types of words used (themes/categories), rather than in basic text length or sentiment.
 - The univariate and correlation rankings end up being almost identical here, which suggests that the features that differ the most between burst vs non-burst are also the ones most directly correlated with the burst label.
+- The forward-selected features appear more uniformly distributed about the different subgroups: some are LIWC, some are text properties, without being correlated, and we still have 1 VADER feature to represent the sentiment perceived by the post.
+- The manually-selected and the unions of features give a higher number of features. We will try to understand if it's necessary to keep all of them of if we can restrict us to a smaller subset.
 
 
 ## 4. Model Analyses
 Now that we have several “shortlists” of features, the next question is simple:  
 
-**How many features do we really need to predict a burst well?**   
-We’d like to keep the feature set **as small as possible**, while staying **as close as possible to the performance of the full 86-feature model**.
+**How many features do we really need to predict a burst?**   
+We’d like to keep the feature set as small as possible, while staying as close as possible to the performance of the full 86-feature model!
 
 
 Here are all the subsets we will test:  
@@ -271,16 +273,19 @@ Here are all the subsets we will test:
 
 To avoid conclusions that depend on a single algorithm, we test several standard classifiers:
 
-- Logistic Regression  
-- Random Forest  
-- Histogram Gradient Boosting  
-- XGBoost  
+- Logistic Regression: the “basic” model. Fast, simple, easy to read, but it can miss messy patterns.
+- Random Forest: a bunch of decision trees voting together. One tree can be dumb, but 500 trees together are usually solid. 
+- Histogram Gradient Boosting: trees too, but built one after another, each new tree fixes the previous mistakes.   
+- XGBoost: boosted trees on steroids. Same “fix mistakes step by step” idea, but super optimized and often performs best if tuned.  
 
 The results are shown in the plot below.   
 The **last column** is the reference: the model trained on **all 86 features**.  
 The **first four columns** are the four different **top-20** selections.  
 Then we have the **manual-pruned** set (47 features), and finally the different **unions**.
 
+We're using PR-AUC and ROC-AUC to evaluate the performances. 
+- ROC-AUC: “how well the model ranks positives above negatives” overall. A 0.5 performance is equivalent to a model classiying burst randomly, and 1.0 would be perfect.
+- PR-AUC: “how clean your positives are when positives are rare” (precision vs recall). Usually the more honest metric when burst is rare (our case, based on a quite imbalanced dataset).
 
 <iframe
   src="{{ '/assets/plots/3_model_performance_by_subset.html' | relative_url }}"
@@ -293,18 +298,20 @@ Across all subsets, **XGBoost is consistently the strongest model**.
 
 On the feature selection side:  
 - **Mutual information** performs the worst here (both ROC-AUC and PR-AUC).  
-- **Univariate** and **correlation-based** selection give almost the same results — which makes sense, because they tend to pick **very similar (and often redundant) features**.
-- The most interesting result is the **forward-selected top-20** subset: it gives a clear boost in **PR-AUC**, and gets **very close to the performance of much larger feature sets** (unions, and even the full 86-feature set).
+- **Univariate** and **correlation-based** selection give almost the same results, which makes sense, because they tend to pick very similar (and often redundant) features.
+- The most interesting result is the **forward-selected top-20** subset: it gives a clear boost in PR-AUC, and gets very close to the performance of much larger feature sets (unions, and even the full 86-feature set).
 
-The **forward_top20** subset achieves performance that is **almost as good as using all 86 features**.    
+The **forward_top20** subset achieves performance that is almost as good as using all 86 features.    
 So in practice, we can reduce the feature space by a factor of ~4, while keeping nearly the same predictive power.  
 
-In other words: **these 20 features seem to capture most of the signal needed to detect bursts.**. 
+In other words: **these 20 features seem to capture most of the signal needed to detect bursts!**. 
 
 **But what do these 20 features actually capture?**  
 
 To better understand *why* the forward-selected top-20 features work so well, we can try to understand what each feature represents in practice, and how it may relate to a Reddit post becoming widely discussed or shared. 
 
+
+<small>
 | Feature | What it measures | Why it may contribute to a burst |
 |---|---|---|
 | Fraction of digits | Proportion of numbers in the text | Numbers often signal evidence, statistics, dates, prices, or scores. These posts are easy to quote, verify, or challenge, which fuels discussion. |
@@ -327,6 +334,7 @@ To better understand *why* the forward-selected top-20 features work so well, we
 | LIWC_Work | Work-related vocabulary | Topics related to jobs, careers, or productivity are broadly relatable and often spark comparison and debate. |
 | LIWC_Leisure | Leisure and hobbies | Shared interests (games, sports, entertainment) spread easily across communities. |
 | LIWC_Home | Home and everyday life | Familiar, everyday contexts increase identification and cross-community resonance. |
+</small>
 
 Overall, these features suggest that bursting posts are not just about *what* is said, but *how* it is said:  
 emotion, personal stance, social framing, and concrete storytelling all play a key role.
