@@ -1,14 +1,14 @@
 ---
 layout: page
 title: Post Level
-subtitle: What is said and how it is said
+subtitle: What is said and how it is said ?
 permalink: /postlevel/
-cover-img: /assets/img/user.jpg
+cover-img: /assets/img/baniere.jpg
 ---
 <div class="page-banner">
   <div class="page-banner-inner">
-    <h1 class="page-title">Post Level</h1>
-    <p class="page-subtitle">What is said and how it is said</p>
+    <h1 class="page-title">Meaning, emotion, and form interact to create bursts</h1>
+    <p class="page-subtitle"></p>
   </div>
 </div>
 

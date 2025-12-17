@@ -3,12 +3,12 @@ layout: page
 title: Community Level
 subtitle: How subreddit structure relates to bursts ?
 permalink: /communitylevel/
-cover-img: /assets/img/foule2.jpg
+cover-img: /assets/img/baniere.jpg
 ---
 
 <div class="page-banner">
   <div class="page-banner-inner">
-    <h1 class="page-title"></h1>
+    <h1 class="page-title"> Understanding bursts through network structure </h1>
     <p class="page-subtitle"></p>
   </div>
 </div>
