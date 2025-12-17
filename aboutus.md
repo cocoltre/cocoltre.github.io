@@ -8,7 +8,7 @@ subtitle: Why you'd want to give us the best grade
   <div class="hero-text">
     <h2>Les Requins du Dataset 🦈</h2>
     <p>
-      Our team name is Les Requins du Dataset, or The Sharks of the Dataset in english. We’re a team of 5 exploring how Reddit conflicts spill across communities, and how to predict a burst.
+      Our team name is Les Requins du Dataset, or The Sharks of the Dataset in english. We’re a team of 5 exploring how Reddit conflicts spill across communities, and what categorizes a burst.
     </p>
 
     <div class="team-list">
@@ -22,9 +22,10 @@ subtitle: Why you'd want to give us the best grade
     <p style="margin-top:12px">
       We have the following qualities:
       <br>• We are excellent swimmers
-      <br>•We are extremely loyal to our family
+      <br>• We are extremely loyal to our family
       <br>• We don’t abandon our teammates when the code breaks at 2am
-      <br>• We can turn chaos into plots
+      <br>• We can turn chaos into plots  
+  
       What else do you need?
     </p>
   </div>
