@@ -204,7 +204,19 @@ We try to remove obvious duplicates while preserving interpretable representativ
   </iframe>
 </div>
 
+<div style="transform:scale(0.55); transform-origin:0 0; width:182%; height:650px;">
+  <iframe
+    src="{{ '/assets/plots/corr_before.html' | relative_url }}"
+    style="border:none; width:100%; height:1100px; overflow:hidden;">
+  </iframe>
+</div>
 
+<div style="transform:scale(0.55); transform-origin:0 0; width:182%; height:650px;">
+  <iframe
+    src="{{ '/assets/plots/corr_after.html' | relative_url }}"
+    style="border:none; width:100%; height:1100px; overflow:hidden;">
+  </iframe>
+</div>
 
 Pruning clearly breaks up the big correlation blocks, especially those driven by textual properties, and keep a lower number of relevant LIWC thematics features.
 So the remaining matrix is less redundant and easier to read. That said, 47 variables is still a lot for a sparse signal like “burst,” and some clusters remain (e.g., LIWC families with overlapping constructs).
@@ -311,7 +323,7 @@ In other words: **these 20 features seem to capture most of the signal needed to
 To better understand *why* the forward-selected top-20 features work so well, we can try to understand what each feature represents in practice, and how it may relate to a Reddit post becoming widely discussed or shared. 
 
 
-<small>
+
 | Feature | What it measures | Why it may contribute to a burst |
 |---|---|---|
 | Fraction of digits | Proportion of numbers in the text | Numbers often signal evidence, statistics, dates, prices, or scores. These posts are easy to quote, verify, or challenge, which fuels discussion. |
@@ -334,7 +346,7 @@ To better understand *why* the forward-selected top-20 features work so well, we
 | LIWC_Work | Work-related vocabulary | Topics related to jobs, careers, or productivity are broadly relatable and often spark comparison and debate. |
 | LIWC_Leisure | Leisure and hobbies | Shared interests (games, sports, entertainment) spread easily across communities. |
 | LIWC_Home | Home and everyday life | Familiar, everyday contexts increase identification and cross-community resonance. |
-</small>
+
 
 Overall, these features suggest that bursting posts are not just about *what* is said, but *how* it is said:  
 emotion, personal stance, social framing, and concrete storytelling all play a key role.
