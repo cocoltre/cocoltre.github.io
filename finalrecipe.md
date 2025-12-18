@@ -5,12 +5,13 @@ subtitle: Summary, takeaways, and future work
 permalink: /finalrecipe/
 ---
 
-
-
 <div class="hero">
   <div class="hero-text">
     <h1>The Recipe of a Viral Conflict</h1>
-    <p>We study what makes a Reddit post “spill over” across communities — and how to predict it.</p>
+    <p>
+      We study what makes a Reddit post “spill over” across communities —
+      and how to <b>simulate</b> its likelihood.
+    </p>
     <a class="btn btn-primary" href="{{ '/index' | relative_url }}">Intro</a>
     <a class="btn btn-primary" href="{{ '/communitylevel' | relative_url }}">Community-level results</a>
     <a class="btn btn-primary" href="{{ '/userlevel' | relative_url }}">User-level results</a>
@@ -28,7 +29,10 @@ permalink: /finalrecipe/
   </div>
   <div class="card">
     <h3>What do we predict?</h3>
-    <p>The probability that a new post triggers that burst.</p>
+    <p>
+      A <b>simulated probability</b> that a new post could trigger such a burst,
+      based on partial information.
+    </p>
   </div>
   <div class="card">
     <h3>Why it matters</h3>
@@ -36,8 +40,7 @@ permalink: /finalrecipe/
   </div>
 </div>
 
-
-
+---
 
 ## Conclusion
 
@@ -63,9 +66,16 @@ Overall, our findings suggest that viral conflicts emerge from the interaction b
   <a class="btn btn-primary" href="/">Back to introduction →</a>
 </div>
 
+---
 
 <div class="card">
   <h2>Will your post burst?</h2>
+
+  <p style="color:#6b7280;margin-bottom:1rem;">
+    ⚠️ This is a <b>what-if simulation</b>, not a perfect prediction.
+    The model uses the information provided below and fills missing features
+    with typical values observed in our dataset.
+  </p>
 
   <label>Source subreddit</label>
   <select id="src"></select>
@@ -84,36 +94,53 @@ Overall, our findings suggest that viral conflicts emerge from the interaction b
 
   <button id="predict" class="btn btn-primary">Predict</button>
 
-  <p id="out" style="margin-top:1rem;"></p>
+  <p id="out" style="margin-top:1rem;font-weight:700;"></p>
 </div>
 
 <script>
+/* =========================
+   Burst Simulator – frontend
+   ========================= */
+
+const API_BASE = "https://burst-stimulator.onrender.com";
+
 const SUBS = [
   "askreddit","pics","iama","todayilearned","funny","worldnews","videos","news",
   "politics","gaming","wtf","adviceanimals","gifs","science","the_donald"
 ];
 
+const srcSel = document.querySelector("#src");
+const tgtSel = document.querySelector("#tgt");
+const out = document.querySelector("#out");
+
 for (const s of SUBS){
-  document.querySelector("#src").add(new Option(s,s));
-  document.querySelector("#tgt").add(new Option(s,s));
+  srcSel.add(new Option(s, s));
+  tgtSel.add(new Option(s, s));
 }
 
+srcSel.value = SUBS[0];
+tgtSel.value = SUBS[0];
+
 document.querySelector("#predict").onclick = async () => {
-  const out = document.querySelector("#out");
-  out.textContent = "Computing...";
+  out.textContent = "Computing simulated burst probability…";
 
   const payload = {
-    source: document.querySelector("#src").value,
-    target: document.querySelector("#tgt").value,
+    source: srcSel.value,
+    target: tgtSel.value,
     datetime: document.querySelector("#dt").value,
-    title: document.querySelector("#title").value,
-    body: document.querySelector("#body").value
+    title: document.querySelector("#title").value || "",
+    body: document.querySelector("#body").value || ""
   };
 
+  if (!payload.datetime){
+    out.textContent = "Please select a date and time.";
+    return;
+  }
+
   try {
-    const r = await fetch("https://YOUR_API_DOMAIN/predict", {
-      method:"POST",
-      headers: {"Content-Type":"application/json"},
+    const r = await fetch(`${API_BASE}/predict`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload)
     });
 
@@ -123,10 +150,13 @@ document.querySelector("#predict").onclick = async () => {
     }
 
     const data = await r.json();
-    out.textContent = `Burst probability: ${(100*data.probability).toFixed(1)}%`;
-  } catch(e){
-    out.textContent = "Error: cannot reach the prediction API.";
+    const pct = (100 * data.probability).toFixed(1);
+
+    out.textContent = `Simulated burst probability: ${pct}%`;
+
+  } catch (e){
     console.error(e);
+    out.textContent = "Error: unable to reach the prediction API.";
   }
 };
 </script>
