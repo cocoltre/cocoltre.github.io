@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Final Recipe
+body_class: finalrecipe
 subtitle: Summary, takeaways, and future work
 permalink: /finalrecipe/
 ---

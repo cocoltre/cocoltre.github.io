@@ -240,3 +240,8 @@ label{ font-weight: 600; }
   border-radius: 10px;
   margin: 2.5rem 0;
 }
+
+
+body.finalrecipe {
+  background-color: rgb(253, 205, 172);
+}
