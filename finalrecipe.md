@@ -41,18 +41,20 @@ permalink: /finalrecipe/
 
 ## Conclusion
 
-In this project, we examined the dynamics behind negative bursts on Reddit—sudden waves of cross-community attention and conflict that transform ordinary posts into viral flashpoints.
+In this project, we examined the dynamics behind negative bursts on Reddit, sudden waves of cross-community attention and conflict that transform ordinary posts into viral flashpoints. By combining community, user, and post-level analyses, we identified both structural and linguistic factors that contribute to the emergence of these mobilizations.
 {: .text-justify}
 
-(Colle ici ton texte “Conclusion” complet, avec tes paragraphes Community/User/Post.)
+At the community level, bursty subreddits tend to be larger and more active, with a significantly higher number of unique contributors than non-bursty ones. These communities occupy central positions in the Reddit hyperlink network, suggesting that structural visibility and cross-subreddit exposure facilitate the propagation of conflicts.
+{: .text-justify}
 
-## Future work
+At the user level, activity patterns revealed that bursts are not evenly distributed: a small fraction of highly active users drive most interactions. Timing also plays a role, as posts made during peak activity hours or from prolific users have a higher likelihood of drawing attention across subreddits.
+{: .text-justify}
 
-(Colle ici “Future work” / “Next steps”.)
+At the post level, linguistic and semantic analyses showed that bursty posts are longer, lexically richer, and exhibit higher emotional and expressive tone compared to non-bursty ones. These posts tend to provoke engagement by combining strong sentiment with narrative or argumentative cues. However, predictive modeling demonstrated that textual features alone are insufficient to explain virality. Logistic regression models, even after feature decorrelation, achieved limited predictive accuracy, underscoring that contextual and social factors remain essential in understanding collective online behavior.
+{: .text-justify}
 
-#### References
-
-(Optionnel : remettre une section refs ici aussi.)
+Overall, our findings suggest that viral conflicts emerge from the interaction between content and context: structural exposure amplifies emotionally charged or rhetorically rich posts, while user dynamics and cross-subreddit links determine how far and fast these conflicts spread.
+{: .text-justify}
 
 <hr>
 
