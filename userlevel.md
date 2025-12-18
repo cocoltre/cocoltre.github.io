@@ -168,6 +168,15 @@ That's great ! We can use the column "Nb_posts_per_user" as a new feature in our
   style="border:none;">
 </iframe>
 
+### User Score
+
+<iframe
+  src="{{ '/assets/plots/user_score_burst_distribution.html' | relative_url }}"
+  width="100%"
+  height="800"
+  style="border:none;">
+</iframe>
+
 ### When should you post 
 
 <iframe

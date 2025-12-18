@@ -367,7 +367,16 @@ The complete network visualization reveals important patterns about how subreddi
 
 **Implication:** Cluster membership can be reliably used as a feature in our predictive model. Posts from specific clusters have demonstrably different burst propensities, making this an informative signal for classification.
 
+---
 
+#### 3.5 Subreddit Similarity
+
+<iframe
+  src="{{ '/assets/plots/subreddit_similarity_burst_distribution.html' | relative_url }}"
+  width="100%"
+  height="800"
+  style="border:none;">
+</iframe>
 
 ---
 
