@@ -146,8 +146,27 @@ label{ font-weight: 600; }
 
 
 /* =========================
-   Page Outline – compact, bold, indented
+   Page Outline – card + typography
    ========================= */
+
+.page-outline {
+  background: #fff3e6;            /* light orange–grey */
+  border: 1px solid #ffd6b3;
+  border-left: 6px solid #f18603;
+  border-radius: 12px;
+  padding: 1.2rem 1.4rem;
+  margin: 2rem 0;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* Title */
+.page-outline h3 {
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  color: #cc7000;
+  font-weight: 900;
+  letter-spacing: 0.4px;
+}
 
 /* Base list styling */
 .page-outline ul {
@@ -189,15 +208,15 @@ label{ font-weight: 600; }
   margin-right: 8px;
 }
 
-/* Tighter vertical spacing */
+/* Compact spacing */
 .page-outline li {
-  line-height: 1.35;       /* ↓ from 1.7 */
-  margin: 0.15rem 0;       /* ↓ vertical spacing */
+  line-height: 1.35;
+  margin: 0.15rem 0;
 }
 
-/* Increased indentation by hierarchy */
+/* Indentation hierarchy */
 .page-outline ul ul {
-  margin-left: 2rem;       /* ↑ clearer nesting */
+  margin-left: 2rem;
 }
 
 .page-outline ul ul ul {
@@ -208,6 +227,7 @@ label{ font-weight: 600; }
 .page-outline a:hover {
   color: #ff9a1f;
 }
+
 
 
 
