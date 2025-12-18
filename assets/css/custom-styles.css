@@ -203,5 +203,16 @@ label{ font-weight: 600; }
 
 /* Hover effect */
 .page-outline a:hover {
-  color: #ff8c00;
+  color: #f18603;
+}
+
+
+.highlight-question {
+  background: #fff1ea;
+  color: #f18603;
+  font-size: 1.7rem;
+  font-weight: 900;
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  margin: 2.5rem 0;
 }

@@ -187,7 +187,8 @@ Let's investigate:
 
 We then restrict the analysis to burst-labeled posts to answer the following question:
 
-> **Do bursts change the structure of subreddit interaction networks?**
+> ## Do bursts change the structure of subreddit interaction networks?
+{: .highlight-question }
 
 This part of the project is exploratory and aims to identify **simple, interpretable community-level features** that can later be used for **burst prediction**.
 
@@ -203,7 +204,7 @@ Each row represents a **hyperlink between two subreddits**, and the `Burst` labe
 
 ##### Dataset overview
 
-| Quantity | Value |
+| Quantity | Count |
 |--------|-------|
 | Total posts | 831'014 |
 | Burst posts | 727 |
