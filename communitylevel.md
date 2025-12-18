@@ -188,7 +188,7 @@ Let's investigate:
 We then restrict the analysis to burst-labeled posts to answer the following question:
 
 > **Do bursts change the structure of subreddit interaction networks?**
-{: .highlight-question .no_toc}
+{: .highlight-question}
 
 This part of the project is exploratory and aims to identify **simple, interpretable community-level features** that can later be used for **burst prediction**.
 
