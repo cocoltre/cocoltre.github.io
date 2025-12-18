@@ -3,7 +3,7 @@ layout: page
 title: Community Level
 subtitle: How subreddit structure relates to bursts ?
 permalink: /communitylevel/
-cover-img: /assets/img/baniere.jpg
+cover-img: /assets/img/baniere.png
 ---
 
 <div class="page-banner">
@@ -14,22 +14,6 @@ cover-img: /assets/img/baniere.jpg
 </div>
 
 <a id="top"></a>
-
-
-<iframe
-  src="{{ '/assets/plots/1_clusters_bubbles_subreddits.html' | relative_url }}"
-  width="100%"
-  height="800"
-  style="border:none;">
-</iframe>
-
-Look like cluster 24 seems to be a kinky one
-
-cluster_16 looks like fan pages   
-
-cluster_25 are images
-
-
 
 ## Community Level
 First, let's observe how subreddits themselves have an influence on the burst. In this section, we are interested to explore and to understand which subreddits properties distinguish posts that trigger a burst from those that do not.
@@ -338,6 +322,33 @@ But then, looking at the fast switch timeline, (when the switch is done under â‰
 This suggests that the effect is likely driven by **dataset boundary effects**, rather than systematic retaliation.
 
 ---
+### 4.Clustering of the subreddits 
+
+
+<iframe
+  src="{{ '/assets/plots/1_clusters_bubbles_subreddits.html' | relative_url }}"
+  width="100%"
+  height="800"
+  style="border:none;">
+</iframe>
+
+Look like cluster 24 seems to be a kinky one
+
+cluster_16 looks like fan pages   
+
+cluster_25 are images
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Key Takeaways --> a changer 
 
