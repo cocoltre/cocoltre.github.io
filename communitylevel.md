@@ -24,11 +24,16 @@ Our goals are to:
 - Identify the subreddits' differences that differ most between bursty and non-bursty posts.
 - Understand which of these differences best explain or predict the probability of triggering a burst.
 
-## Page outline
+<div class="page-outline">
+
+### Page outline
 {: .no_toc }
 
 - TOC
 {:toc}
+
+</div>
+
 
 ### 1. Size of a source subreddit community
 
