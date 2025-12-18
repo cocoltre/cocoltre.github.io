@@ -168,7 +168,7 @@ That's great ! We can use the column "Nb_posts_per_user" as a new feature in our
   style="border:none;">
 </iframe>
 
-### Activity of a user
+### When should you post 
 
 <iframe
   src="{{ '/assets/plots/stos_1.html' | relative_url }}"
