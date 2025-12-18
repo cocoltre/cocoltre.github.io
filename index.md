@@ -12,31 +12,31 @@ Imagine scrolling through Reddit and stumbling upon a post like this one:
   <div class="reddit-card">
 
     <div class="reddit-card-header">
-      <div class="reddit-logo">
-        <img src="{{ '/assets/img/b&w_logo.png' | relative_url }}" alt="Reddit">
-      </div>
+      <div class="reddit-user">
+        <img src="{{ '/assets/img/batman.svg' | relative_url }}" alt="user avatar">
 
+        <div class="reddit-user-meta">
           <strong>u/dandemonium</strong>
           <span>commented on <a href="#">post</a></span>
         </div>
       </div>
 
       <div class="reddit-logo">
-        <img src="https://www.redditinc.com/assets/images/site/reddit-logo.png" alt="reddit">
+        <img src="{{ '/assets/img/reddit-logo.svg' | relative_url }}" alt="Reddit">
       </div>
     </div>
 
     <div class="reddit-card-body">
-      <p>
+      <h2 class="reddit-post-title">
         Ukraine is rioting over the new set of laws that outlaw basic freedoms such as protesting.
         How come the US citizens don't riot over NDAA?
-      </p>
+      </h2>
 
-      <p class="reddit-muted">
-        People are saying things such as: how come the Ukrainians are hailed for standing up and
-        rioting against their government...
+      <p class="reddit-post-body">
+        People are saying things such as: how come the Ukrainians are hailed for standing up and rioting against their government, and to use violence up until the point where their government is forced to repeal their tyrannical legislation, but it seems like when Americans talk about revolt, it’s immediately squashed with arguments of "and" and more talk of it being senseless. Are Americans too comfortable, or just too many clueless, uneducated citizens?
       </p>
     </div>
+
 
     <div class="reddit-card-footer">
       <span>⬆ upvote</span>
@@ -45,6 +45,7 @@ Imagine scrolling through Reddit and stumbling upon a post like this one:
 
   </div>
 </div>
+
 
 
 
