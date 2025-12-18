@@ -18,7 +18,7 @@ permalink: /finalrecipe/
     <a class="btn btn-primary" href="{{ '/postlevel' | relative_url }}">Post-level results</a>
   </div>
   <div class="hero-img">
-    <img src="{{ '/assets/img/hero_reddit.png' | relative_url }}" alt="Reddit network illustration">
+    <img src="{{ '/assets/img/marmite.png' | relative_url }}" alt="Reddit network illustration">
   </div>
 </div>
 
