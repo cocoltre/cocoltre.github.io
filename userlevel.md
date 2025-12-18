@@ -177,7 +177,11 @@ That's great ! We can use the column "Nb_posts_per_user" as a new feature in our
   style="border:none;">
 </iframe>
 
-### When should you post 
+The figure shows the distribution of user scores, where the score measures how similar a user is to the average member of the community using cosine similarity. By hovering over you can see random users belonging to the selected category. The difference in distributions for mobilizing and non-mobilizing cases is statistically significant (p < 0.001), but the effect size is minor, showing that mobilization is not driven by a sharply distinct type of users. Both outcomes are centered around similar similarity values, indicating that users that post negative posts in the first place might be very similar. There is only a slight tendency for mobilization to involve users who are closer to the community average. 
+
+### When should you post ?!?
+
+When is it optimal to post in order to mobilise people ? Time ;) to find out !
 
 <iframe
   src="{{ '/assets/plots/stos_1.html' | relative_url }}"
@@ -185,6 +189,10 @@ That's great ! We can use the column "Nb_posts_per_user" as a new feature in our
   height="800"
   style="border:none;">
 </iframe>
+
+The figure shows how the timing of a cross-link relates to whether it triggers mobilization. By hovering over you can see random posts that were posted in that timespan. So we can see that cross-links that lead to a burst of comments from members of the source community are more likely to be created around mid-day, especially from late morning to early afternoon. In contrast, cross-links that do not lead to mobilization are more evenly distributed across the day and occur more frequently in the evening and at night.
+
+To determine whether a cross-link leads to mobilization, we examine commenting activity in a 12-hour window after the link is created. The stronger concentration of mobilization events during mid-day hours suggests that cross-links posted when many users are simultaneously active are more likely to prompt coordinated responses. So time clearly has an impact on burst and with a p-value equal to $8.77 \times 10^{-135}$ !!!
 
 <hr>
 
