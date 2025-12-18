@@ -146,7 +146,7 @@ label{ font-weight: 600; }
 
 
 /* =========================
-   Page Outline – bold orange version
+   Page Outline – compact, bold, indented
    ========================= */
 
 /* Base list styling */
@@ -158,19 +158,20 @@ label{ font-weight: 600; }
 
 /* Base link style */
 .page-outline a {
-  color: #f18603;              /* dark orange */
+  color: #f18603;
   text-decoration: none;
+  font-family: "Inter", "Source Sans 3", system-ui, sans-serif;
 }
 
 /* Level 1: main sections */
 .page-outline > ul > li > a {
-  font-size: 1.25rem;          /* bigger */
-  font-weight: 800;            /* bolder */
+  font-size: 1.2rem;
+  font-weight: 800;
 }
 
 /* Level 2: subsections */
 .page-outline ul ul > li > a {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 700;
 }
 
@@ -184,27 +185,30 @@ label{ font-weight: 600; }
 .page-outline li::before {
   content: "▸";
   color: #f18603;
-  font-size: 1.2em;
-  margin-right: 10px;
+  font-size: 1.1em;
+  margin-right: 8px;
 }
 
-/* Spacing & alignment */
+/* Tighter vertical spacing */
 .page-outline li {
-  line-height: 1.7;
-  margin: 0.25rem 0;
+  line-height: 1.35;       /* ↓ from 1.7 */
+  margin: 0.15rem 0;       /* ↓ vertical spacing */
 }
 
-/* Remove vertical lines entirely */
+/* Increased indentation by hierarchy */
 .page-outline ul ul {
-  margin-left: 1.2rem;
-  padding-left: 0;
-  border-left: none;
+  margin-left: 2rem;       /* ↑ clearer nesting */
+}
+
+.page-outline ul ul ul {
+  margin-left: 3rem;
 }
 
 /* Hover effect */
 .page-outline a:hover {
-  color: #f18603;
+  color: #ff9a1f;
 }
+
 
 
 .highlight-question {
