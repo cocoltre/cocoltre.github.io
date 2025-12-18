@@ -4,6 +4,7 @@ title: Final Recipe
 body_class: finalrecipe
 subtitle: Summary, takeaways, and future work
 permalink: /finalrecipe/
+cover-img: /assets/img/reddit-corail.jpg
 ---
 
 <div class="hero">

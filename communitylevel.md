@@ -3,7 +3,7 @@ layout: page
 title: Community Level
 subtitle: How subreddit structure relates to bursts ?
 permalink: /communitylevel/
-cover-img: /assets/img/baniere.png
+cover-img: /assets/img/reddit-black.png
 ---
 
 <div class="page-banner">

@@ -3,7 +3,7 @@ layout: page
 title: Post Level
 subtitle: What is said and how it is said ?
 permalink: /postlevel/
-cover-img: /assets/img/baniere.jpg
+cover-img: /assets/img/reddit-bleu.jpg
 ---
 <div class="page-banner">
   <div class="page-banner-inner">
