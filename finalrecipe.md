@@ -88,13 +88,20 @@ Overall, our findings suggest that viral conflicts emerge from the interaction b
 </div>
 
 <script>
-const SUBS = ["sub1","sub2","sub3"]; // vos ~20 subs
+const SUBS = [
+  "askreddit","pics","iama","todayilearned","funny","worldnews","videos","news",
+  "politics","gaming","wtf","adviceanimals","gifs","science","the_donald"
+];
+
 for (const s of SUBS){
   document.querySelector("#src").add(new Option(s,s));
   document.querySelector("#tgt").add(new Option(s,s));
 }
 
 document.querySelector("#predict").onclick = async () => {
+  const out = document.querySelector("#out");
+  out.textContent = "Computing...";
+
   const payload = {
     source: document.querySelector("#src").value,
     target: document.querySelector("#tgt").value,
@@ -103,14 +110,23 @@ document.querySelector("#predict").onclick = async () => {
     body: document.querySelector("#body").value
   };
 
-  const r = await fetch("https://YOUR_API/predict", {
-    method:"POST",
-    headers: {"Content-Type":"application/json"},
-    body: JSON.stringify(payload)
-  });
+  try {
+    const r = await fetch("https://YOUR_API_DOMAIN/predict", {
+      method:"POST",
+      headers: {"Content-Type":"application/json"},
+      body: JSON.stringify(payload)
+    });
 
-  const data = await r.json();
-  document.querySelector("#out").textContent =
-    `Burst probability: ${(100*data.probability).toFixed(1)}%`;
+    if (!r.ok){
+      const err = await r.text();
+      throw new Error(err);
+    }
+
+    const data = await r.json();
+    out.textContent = `Burst probability: ${(100*data.probability).toFixed(1)}%`;
+  } catch(e){
+    out.textContent = "Error: cannot reach the prediction API.";
+    console.error(e);
+  }
 };
 </script>
