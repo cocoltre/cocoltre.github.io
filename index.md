@@ -8,27 +8,44 @@ permalink: /
 
 Imagine scrolling through Reddit and stumbling upon a post like this one:
 
-<div class="reddit-card">
-  <div class="reddit-header">
-    <span class="reddit-subreddit">r/askreddit</span>
-    <span class="reddit-user">u/dandemonium</span> • <span class="reddit-date">Jan 20, 2014</span>
-  </div>
-  <div class="reddit-title">
-    <p>
-      Ukraine is rioting over the new set of laws that outlaw basic freedoms such as protesting. How come the US citizens don't riot over NDAA?
-      
-    </p>
-  </div>
-  <div class="reddit-content">
-    <p>
-      <a href="http://rt.com/usa/obama-ndaa-appeal-suit" target="_blank">http://rt.com/usa/obama-ndaa-appeal-suit</a>
-    </p>
-    <p>
-      People are saying things such as: how come the Ukrainians are hailed for standing up and rioting against their government, and to use violence up until the point where their government is forced to repeal their tyrannical legislation, but it seems like when Americans talk about revolt, it’s immediately squashed with arguments of "and" and more talk of it being senseless. Are Americans too comfortable, or just too many clueless, uneducated citizens?
-      
-    </p>
+<div class="reddit-hero">
+  <div class="reddit-card">
+
+    <div class="reddit-card-header">
+      <div class="reddit-user">
+        <img src="https://www.redditstatic.com/avatars/avatar_default_02_24A0ED.png" alt="user">
+        <div>
+          <strong>u/dandemonium</strong>
+          <span>commented on <a href="#">post</a></span>
+        </div>
+      </div>
+
+      <div class="reddit-logo">
+        <img src="https://www.redditinc.com/assets/images/site/reddit-logo.png" alt="reddit">
+      </div>
+    </div>
+
+    <div class="reddit-card-body">
+      <p>
+        Ukraine is rioting over the new set of laws that outlaw basic freedoms such as protesting.
+        How come the US citizens don't riot over NDAA?
+      </p>
+
+      <p class="reddit-muted">
+        People are saying things such as: how come the Ukrainians are hailed for standing up and
+        rioting against their government...
+      </p>
+    </div>
+
+    <div class="reddit-card-footer">
+      <span>⬆ upvote</span>
+      <span>💬 replies</span>
+    </div>
+
   </div>
 </div>
+
+
 
 On the 20th of January, 2014, within hours, this post triggered what we call a **negative burst** on Reddit: a sudden surge of reactions and arguments, often hostile or confrontational. What triggers such sudden bursts of negative attention? Is it the topic, the wording, the emotions, or the context?
 {: .text-justify}
