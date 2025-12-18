@@ -159,7 +159,25 @@ As our initial distribution is highly skewed and definitely non normal, it is be
 That's great ! We can use the column "Nb_posts_per_user" as a new feature in our ML model.
 {: .text-justify}
 
-### Clustering of the users 
+### 2. Clustering of the users 
+
+**The Big Question:** How do we group users together? By their posting frequency? By their karma? Neither!
+
+Instead, we group them by **which subreddits they participate in**. Think of it like this: if a user bounces between r/AskReddit, r/funny, and r/IAmA, they belong in the same cluster as other users who frequent these same communities—not because they post the same content, but because they **move in the same circles**.
+
+#### 2.1 The User Clustering Pipeline
+
+User clustering follows a similar mathematical pipeline to subreddit clustering, adapted for user-subreddit participation patterns:
+
+1. **Embed** the data into 300 dimensions (capturing user participation in subreddits)
+2. **Compress** with PCA (keep 80% of the information in ~202 dimensions)
+3. **Smooth** with UMAP (further reduce to 20 dimensions while preserving structure)
+4. **Cluster** using Spectral Clustering (test 10 to 50 clusters and pick the best one)
+5. **Validate** using three quality metrics (ensuring robust cluster selection)
+
+The result? Each user gets a **cluster membership** indicating which user community they belong to—a grouping based entirely on their subreddit participation overlap with other users.
+
+#### 2.2 Bar plot visualization
 
 <iframe
   src="{{ '/assets/plots/2_user_cluster_burst_rate.html' | relative_url }}"
@@ -167,6 +185,11 @@ That's great ! We can use the column "Nb_posts_per_user" as a new feature in our
   height="800"
   style="border:none;">
 </iframe>
+
+User cluster membership can be reliably used as a feature in our predictive model. Posts from users in specific clusters have demonstrably different burst propensities, making this a powerful signal for classification.
+
+
+
 
 ### User Score
 
