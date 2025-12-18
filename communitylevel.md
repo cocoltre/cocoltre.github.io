@@ -327,30 +327,38 @@ This suggests that the effect is likely driven by **dataset boundary effects**, 
 ---
 ### 4. Clustering of the subreddits 
 
+**The Big Question:** How do we group subreddits together? By topic? By size? Neither!
+
+Instead, we group them by **who participates in them**. Think of it like this: if a user bounces between r/gaming, r/pcmasterrace, and r/buildapc, these three communities belong in the same cluster—not because they all talk about games (okay, they do), but because they **share the same people**.
+
+This means our clustering reveals the **invisible network of user overlap** that connects Reddit's communities.
+
+---
+
+#### 4.1 How We Build the Clusters
+
+We use a mathematical pipeline to turn messy user data into clean, interpretable clusters:
+
+1. **Embed** the data into 300 dimensions (capturing user-subreddit relationships)
+2. **Compress** with PCA (keep 95% of the information in ~64 dimensions)
+3. **Smooth** with UMAP (further reduce to 20 dimensions while preserving structure)
+4. **Cluster** using Spectral Clustering (test 10 to 50 clusters and pick the best one)
+5. **Validate** using three quality metrics (making sure we chose wisely)
+
+The result? Each subreddit gets a **cluster membership** telling us which community group it belongs to.
+
+#### 4.2 Network vizualisation 
+
 
 <iframe
-  src="{{ '/assets/plots/1_clusters_bubbles_subreddits.html' | relative_url }}"
+  src="{{ '/assets/plots/1_cluster_network.html' | relative_url }}"
   width="100%"
   height="800"
   style="border:none;">
 </iframe>
 
-Look like cluster 24 seems to be a kinky one
-
-cluster_16 looks like fan pages   
-
-cluster_25 are images
-
-
-
-
-
-
-
-
-
-
-
+As you can see on the graph, the network is pretty complexe. Subreddits clusters or communities interact in interesting ways -> some of them blabla
+---
 
 
 ### Key Takeaways --> a changer 

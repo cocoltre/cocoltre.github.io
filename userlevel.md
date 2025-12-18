@@ -8,17 +8,10 @@ cover-img: /assets/img/baniere.png
 
 <div class="page-banner">
   <div class="page-banner-inner">
-    <h1 class="page-title">User behavior as a catalyst for conflict</h1>
+    <h1 class="page-title">User behavior as a catalyst for bursts</h1>
     <p class="page-subtitle"></p>
   </div>
 </div>
-
-<iframe
-  src="{{ '/assets/plots/2_clusters_bubbles_user.html' | relative_url }}"
-  width="100%"
-  height="800"
-  style="border:none;">
-</iframe>
 
 
 ## User Level
@@ -166,6 +159,14 @@ As our initial distribution is highly skewed and definitely non normal, it is be
 That's great ! We can use the column "Nb_posts_per_user" as a new feature in our ML model.
 {: .text-justify}
 
+### Clustering of the users 
+
+<iframe
+  src="{{ '/assets/plots/2_clusters_bubbles_user.html' | relative_url }}"
+  width="100%"
+  height="800"
+  style="border:none;">
+</iframe>
 
 <hr>
 
