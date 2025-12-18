@@ -43,12 +43,12 @@ What makes some Reddit posts explode into negative bursts, sudden waves of cross
 Our goal in this project is to uncover the mechanisms behind these viral conflicts. We explore the “recipe” of a negative burst: a combination of content, context, and collective behavior that turns ordinary posts into flashpoints of attention.
 {: .text-justify}
 
-To do this, we integrate multiple levels of analysis based on the Reddit Hyperlink Network [<sup>[1]</sup>](#ref), which traces how subreddits reference each other through links and comments. Each level captures a different part of the phenomenon.
+To do this, we integrate multiple levels of analysis based on the Reddit Hyperlink Network, which traces how subreddits reference each other through links and comments. Each level captures a different part of the phenomenon.
 {: .text-justify}
 
 ### How to define a burst
 
-In this work, we adopt the definition of burst proposed by Hamilton et al. in the paper Community Interaction and Conflict on the Web.
+In this work, we adopt the definition of burst proposed by Hamilton et al. in the paper Community Interaction and Conflict on the Web[<sup>[1]</sup>](#ref).
 {: .text-justify}
 
 A burst, or mobilization, is defined as a case where a cross-link between two communities leads to a significant increase in the number of comments made by members of the source community on the discussion thread of the target post. To distinguish genuine mobilizations from random fluctuations in activity, the authors compare the observed number of comments to a null model that estimates the expected commenting rate in the absence of a cross-link.
@@ -76,37 +76,6 @@ At each level, we use both descriptive (visual and statistic dal) and predictive
 </div>
 
 ---
-
-#### References {#ref}
-
-[1] Srijan Kumar, William L. Hamilton, Jure Leskovec, and Dan Jurafsky. 2018. *Community Interaction and Conflict on the Web.* WWW 2018. [DOI](https://doi.org/10.1145/3178876.3186141)
-
-
-
-
-
-
-
-### Conclusion
-
-In this project, we examined the dynamics behind negative bursts on Reddit, sudden waves of cross-community attention and conflict that transform ordinary posts into viral flashpoints. By combining community, user, and post-level analyses, we identified both structural and linguistic factors that contribute to the emergence of these mobilizations.
-{: .text-justify}
-
-At the community level, bursty subreddits tend to be larger and more active, with a significantly higher number of unique contributors than non-bursty ones. These communities occupy central positions in the Reddit hyperlink network, suggesting that structural visibility and cross-subreddit exposure facilitate the propagation of conflicts.
-{: .text-justify}
-
-At the user level, activity patterns revealed that bursts are not evenly distributed: a small fraction of highly active users drive most interactions. Timing also plays a role, as posts made during peak activity hours or from prolific users have a higher likelihood of drawing attention across subreddits.
-{: .text-justify}
-
-At the post level, linguistic and semantic analyses showed that bursty posts are longer, lexically richer, and exhibit higher emotional and expressive tone compared to non-bursty ones. These posts tend to provoke engagement by combining strong sentiment with narrative or argumentative cues. However, predictive modeling demonstrated that textual features alone are insufficient to explain virality. Logistic regression models, even after feature decorrelation, achieved limited predictive accuracy, underscoring that contextual and social factors remain essential in understanding collective online behavior.
-{: .text-justify}
-
-Overall, our findings suggest that viral conflicts emerge from the interaction between content and context: structural exposure amplifies emotionally charged or rhetorically rich posts, while user dynamics and cross-subreddit links determine how far and fast these conflicts spread.
-{: .text-justify}
-
-Future work will focus on conducting more robust, and deeper, statistical analyses to better identify which features most effectively explain burst occurrences. If these findings prove meaningful, we may also explore developing a predictive tool capable of estimating whether a post is likely to trigger a burst.
-{: .text-justify}
-
 
 #### References {#ref}
 
