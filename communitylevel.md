@@ -325,7 +325,7 @@ But then, looking at the fast switch timeline, (when the switch is done under â‰
 This suggests that the effect is likely driven by **dataset boundary effects**, rather than systematic retaliation.
 
 ---
-### 4.Clustering of the subreddits 
+### 4. Clustering of the subreddits 
 
 
 <iframe
