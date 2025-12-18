@@ -22,7 +22,7 @@ Imagine scrolling through Reddit and stumbling upon a post like this one:
       </div>
 
       <div class="reddit-logo">
-        <img src="{{ '/assets/img/b&w_logo.png' | relative_url }}" alt="Reddit">
+        <img src="{{ '/assets/img/reddit-logo.svg' | relative_url }}" alt="Reddit">
       </div>
     </div>
 
