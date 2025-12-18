@@ -246,10 +246,19 @@ body.finalrecipe{
 
 .reddit-hero {
   background: linear-gradient(135deg, #ff4500, #ff6a33);
-  padding: 3.5rem 1rem;
+  padding: 4rem 1rem;
+
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+
+  border-radius: 28px;
+  overflow: hidden;
+
   display: flex;
   justify-content: center;
 }
+
 
 /* Card */
 .reddit-card {
