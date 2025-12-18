@@ -18,7 +18,7 @@ permalink: /finalrecipe/
     <a class="btn btn-primary" href="{{ '/postlevel' | relative_url }}">Post-level results</a>
   </div>
   <div class="hero-img">
-    <img src="{{ '/assets/img/hero_reddit.png' | relative_url }}" alt="Reddit network illustration">
+    <img src="{{ '/assets/img/marmite.png' | relative_url }}" alt="Reddit network illustration">
   </div>
 </div>
 
@@ -61,10 +61,7 @@ Overall, our findings suggest that viral conflicts emerge from the interaction b
 
 <hr>
 
-<div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:20px">
-  <a class="btn btn-default" href="/postlevel/">← Previous: Post level</a>
-  <a class="btn btn-primary" href="/">Back to introduction →</a>
-</div>
+
 
 ---
 
@@ -72,9 +69,6 @@ Overall, our findings suggest that viral conflicts emerge from the interaction b
   <h2>Will your post burst?</h2>
 
   <p style="color:#6b7280;margin-bottom:1rem;">
-    ⚠️ This is a <b>what-if simulation</b>, not a perfect prediction.
-    The model uses the information provided below and fills missing features
-    with typical values observed in our dataset.
   </p>
 
   <label>Source subreddit</label>
@@ -160,3 +154,9 @@ document.querySelector("#predict").onclick = async () => {
   }
 };
 </script>
+
+
+<div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:20px">
+  <a class="btn btn-default" href="/postlevel/">← Previous: Post level</a>
+  <a class="btn btn-primary" href="/">Back to introduction →</a>
+</div>
