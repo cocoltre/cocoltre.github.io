@@ -237,3 +237,85 @@ body.finalrecipe{
   .hero{ grid-template-columns:1fr; }
   .hero-text .btn{ width:100%; }
 }
+
+
+
+/* =========================
+   Reddit Hero Embed
+   ========================= */
+
+.reddit-hero {
+  background: linear-gradient(135deg, #ff4500, #ff6a33);
+  padding: 3.5rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Card */
+.reddit-card {
+  background: #ffffff;
+  border-radius: 14px;
+  width: 100%;
+  max-width: 780px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+  padding: 1.6rem 1.8rem;
+  font-family: "Inter", "Source Sans 3", system-ui, sans-serif;
+}
+
+/* Header */
+.reddit-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.reddit-user {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.reddit-user img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+
+.reddit-user span {
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+
+.reddit-user a {
+  color: #0079d3;
+  text-decoration: none;
+}
+
+.reddit-logo img {
+  height: 28px;
+}
+
+/* Body */
+.reddit-card-body p {
+  font-size: 1.05rem;
+  line-height: 1.55;
+  margin: 0 0 0.9rem;
+  color: #111827;
+}
+
+.reddit-muted {
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+/* Footer */
+.reddit-card-footer {
+  display: flex;
+  gap: 18px;
+  font-size: 0.9rem;
+  color: #6b7280;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 0.8rem;
+}
