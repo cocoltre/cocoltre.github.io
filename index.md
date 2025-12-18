@@ -12,9 +12,10 @@ Imagine scrolling through Reddit and stumbling upon a post like this one:
   <div class="reddit-card">
 
     <div class="reddit-card-header">
-      <div class="reddit-user">
-        <img src="https://www.redditstatic.com/avatars/avatar_default_02_24A0ED.png" alt="user">
-        <div>
+      <div class="reddit-logo">
+        <img src="{{ '/assets/img/b&w_logo.png' | relative_url }}" alt="Reddit">
+      </div>
+
           <strong>u/dandemonium</strong>
           <span>commented on <a href="#">post</a></span>
         </div>
