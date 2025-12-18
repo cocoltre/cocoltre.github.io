@@ -15,7 +15,7 @@ cover-img: /assets/img/baniere.png
 
 <a id="top"></a>
 
-## Community Level
+# Community Level
 First, let's observe how subreddits themselves have an influence on the burst. In this section, we are interested to explore and to understand which subreddits properties distinguish posts that trigger a burst from those that do not.
 {: .text-justify}
 
@@ -25,9 +25,6 @@ Our goals are to:
 - Understand which of these differences best explain or predict the probability of triggering a burst.
 
 <div class="page-outline" markdown="1">
-
-### Page outline
-{: .no_toc }
 
 - TOC
 {:toc}
