@@ -168,6 +168,15 @@ That's great ! We can use the column "Nb_posts_per_user" as a new feature in our
   style="border:none;">
 </iframe>
 
+### Activity of a user
+
+<iframe
+  src="{{ '/assets/plots/stos_1.html' | relative_url }}"
+  width="100%"
+  height="800"
+  style="border:none;">
+</iframe>
+
 <hr>
 
 <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:20px">
