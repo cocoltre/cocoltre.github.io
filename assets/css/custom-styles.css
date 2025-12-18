@@ -148,67 +148,56 @@ label{ font-weight: 600; }
 
 
 /* =========================
-   Page Outline (TOC Card)
+   Page Outline – hierarchy & bullets
    ========================= */
 
-.page-outline {
-  max-width: 900px;
-  margin: 2.5rem auto;
-  padding: 1.5rem 2rem;
-  background: #fafafa;
-  border: 1px solid #e6e6e6;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-  font-family: -apple-system, BlinkMacSystemFont, "Inter",
-               "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-}
-
-/* Title */
-.page-outline h3 {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #222;
-}
-
-/* TOC list */
+/* Base list styling */
 .page-outline ul {
   list-style: none;
   padding-left: 0;
-  margin: 0;
 }
 
-/* First-level items */
-.page-outline > ul > li {
-  margin: 0.4rem 0;
+/* Level 1: main sections */
+.page-outline > ul > li > a {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+/* Level 2: subsections */
+.page-outline ul ul > li > a {
+  font-size: 0.95rem;
   font-weight: 500;
 }
 
-/* Nested levels */
-.page-outline ul ul {
-  margin-left: 1.2rem;
-  margin-top: 0.3rem;
-  border-left: 2px solid #e0e0e0;
-  padding-left: 0.8rem;
+/* Level 3+: sub-subsections */
+.page-outline ul ul ul > li > a {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #356dbb;
 }
 
-/* Links */
-.page-outline a {
-  text-decoration: none;
-  color: #2a7ae2;
-  transition: color 0.15s ease, transform 0.15s ease;
+/* Orange arrows */
+.page-outline li::before {
+  content: "▸";
+  color: #ff8c00; /* orange */
+  font-size: 1.1em;
+  margin-right: 8px;
+}
+
+/* Align bullets vertically */
+.page-outline li {
+  line-height: 1.6;
+}
+
+/* Vertical guide line for hierarchy */
+.page-outline ul ul {
+  margin-left: 1.4rem;
+  padding-left: 1rem;
+  border-left: 2px solid #ffe1b3;
 }
 
 /* Hover effect */
 .page-outline a:hover {
-  color: #174ea6;
-  text-decoration: underline;
+  color: #cc7000;
 }
 
-/* Small bullets replacement */
-.page-outline li::before {
-  content: "▸";
-  color: #bbb;
-  margin-right: 6px;
-}
