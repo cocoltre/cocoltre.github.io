@@ -27,16 +27,17 @@ Imagine scrolling through Reddit and stumbling upon a post like this one:
     </div>
 
     <div class="reddit-card-body">
-      <p>
+      <h2 class="reddit-post-title">
         Ukraine is rioting over the new set of laws that outlaw basic freedoms such as protesting.
         How come the US citizens don't riot over NDAA?
-      </p>
+      </h2>
 
-      <p class="reddit-muted">
+      <p class="reddit-post-body">
         People are saying things such as: how come the Ukrainians are hailed for standing up and
-        rioting against their government...
+      rioting against their government...
       </p>
     </div>
+
 
     <div class="reddit-card-footer">
       <span>⬆ upvote</span>

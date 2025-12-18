@@ -328,3 +328,22 @@ body.finalrecipe{
   border-top: 1px solid #e5e7eb;
   padding-top: 0.8rem;
 }
+
+/* =========================
+   Reddit post content
+   ========================= */
+
+.reddit-post-title {
+  font-size: 1.6rem;
+  font-weight: 900;
+  line-height: 1.35;
+  margin: 0 0 1rem;
+  color: #111827;
+}
+
+.reddit-post-body {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #374151;
+  margin: 0;
+}
