@@ -357,7 +357,20 @@ The result? Each subreddit gets a **cluster membership** telling us which commun
   style="border:none;">
 </iframe>
 
-As you can see on the graph, the network is pretty complexe. Subreddits clusters or communities interact in interesting ways -> some of them blabla
+The complete network visualization reveals important patterns about how subreddit clusters interact and generate bursts:
+
+- **Highly variable burst rates across clusters**: Some clusters are significantly more prone to generating bursts than others. For example, cluster 22 exhibits an outgoing burst rate of 22%, demonstrating that certain communities are much more likely to trigger cross-community mobilizations.
+
+- **Size does not determine burst activity**: Interestingly, the largest clusters (in terms of subreddits) are not necessarily the ones with the highest burst rates. Smaller, more tightly-knit communities can be just as (or more) effective at generating bursts, suggesting that community culture and positioning matter more than sheer size.
+
+- **Complex interconnections**: The network shows dense interactions between certain cluster pairs. For instance, clusters 13 and 17 show extensive back-and-forth linking, indicating communities that frequently reference and engage with each other—a pattern likely to amplify burst propagation.
+
+- **Cluster membership as a predictive feature**: These observations suggest that a post's source and target cluster membership are strong indicators of burst likelihood. A post originating from a high-burst cluster (like cluster 22) targeting another active cluster will have different dynamics than one from a low-burst cluster.
+
+**Implication:** Cluster membership can be reliably used as a feature in our predictive model. Posts from specific clusters have demonstrably different burst propensities, making this an informative signal for classification.
+
+
+
 ---
 
 
