@@ -184,19 +184,19 @@ label{ font-weight: 600; }
 
 /* Level 1: main sections */
 .page-outline > ul > li > a {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   font-weight: 800;
 }
 
 /* Level 2: subsections */
 .page-outline ul ul > li > a {
-  font-size: 1.05rem;
+  font-size: 1.3rem;
   font-weight: 700;
 }
 
 /* Level 3+: sub-subsections */
 .page-outline ul ul ul > li > a {
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   font-weight: 600;
 }
 
@@ -204,14 +204,14 @@ label{ font-weight: 600; }
 .page-outline li::before {
   content: "▸";
   color: #f18603;
-  font-size: 1.1em;
+  font-size: 1.3em;
   margin-right: 8px;
 }
 
 /* Compact spacing */
 .page-outline li {
   line-height: 1.35;
-  margin: 0.15rem 0;
+  margin: 0.3rem 0;
 }
 
 /* Indentation hierarchy */
