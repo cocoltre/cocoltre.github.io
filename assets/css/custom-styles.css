@@ -145,59 +145,63 @@ label{ font-weight: 600; }
 .page-subtitle{ margin: 0; opacity: 0.95; }
 
 
-
-
 /* =========================
-   Page Outline – hierarchy & bullets
+   Page Outline – bold orange version
    ========================= */
 
 /* Base list styling */
 .page-outline ul {
   list-style: none;
   padding-left: 0;
+  margin: 0;
+}
+
+/* Base link style */
+.page-outline a {
+  color: #cc7000;              /* dark orange */
+  text-decoration: none;
 }
 
 /* Level 1: main sections */
 .page-outline > ul > li > a {
-  font-size: 1.05rem;
-  font-weight: 600;
+  font-size: 1.25rem;          /* bigger */
+  font-weight: 800;            /* bolder */
 }
 
 /* Level 2: subsections */
 .page-outline ul ul > li > a {
-  font-size: 0.95rem;
-  font-weight: 500;
+  font-size: 1.1rem;
+  font-weight: 700;
 }
 
 /* Level 3+: sub-subsections */
 .page-outline ul ul ul > li > a {
-  font-size: 0.85rem;
-  font-weight: 400;
-  color: #356dbb;
+  font-size: 0.95rem;
+  font-weight: 600;
 }
 
 /* Orange arrows */
 .page-outline li::before {
   content: "▸";
-  color: #ff8c00; /* orange */
-  font-size: 1.1em;
-  margin-right: 8px;
+  color: #cc7000;
+  font-size: 1.2em;
+  margin-right: 10px;
 }
 
-/* Align bullets vertically */
+/* Spacing & alignment */
 .page-outline li {
-  line-height: 1.6;
+  line-height: 1.7;
+  margin: 0.25rem 0;
 }
 
-/* Vertical guide line for hierarchy */
+/* Remove vertical lines entirely */
 .page-outline ul ul {
-  margin-left: 1.4rem;
-  padding-left: 1rem;
-  border-left: 2px solid #ffe1b3;
+  margin-left: 1.2rem;
+  padding-left: 0;
+  border-left: none;
 }
 
 /* Hover effect */
 .page-outline a:hover {
-  color: #cc7000;
+  color: #ff8c00;
 }
-
