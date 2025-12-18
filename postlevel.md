@@ -336,6 +336,14 @@ To better understand *why* the forward-selected top-20 features work so well, we
 Overall, these features suggest that bursting posts are not just about *what* is said, but *how* it is said:  
 emotion, personal stance, social framing, and concrete storytelling all play a key role.
 
+
+### Takeaways we keep to build our final recipe ! 
+
+- A REMPLIR QUAND PAGE TERMINEE
+
+These features are retained for downstream burst prediction models.
+
+
 <hr>
 
 <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:20px">
