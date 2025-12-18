@@ -162,7 +162,7 @@ That's great ! We can use the column "Nb_posts_per_user" as a new feature in our
 ### Clustering of the users 
 
 <iframe
-  src="{{ '/assets/plots/2_clusters_bubbles_user.html' | relative_url }}"
+  src="{{ '/assets/plots/2_user_cluster_burst_rate.html' | relative_url }}"
   width="100%"
   height="800"
   style="border:none;">
