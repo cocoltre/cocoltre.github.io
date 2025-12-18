@@ -64,40 +64,71 @@ Overall, our findings suggest that viral conflicts emerge from the interaction b
 <hr>
 
 
-
 ---
 
-<div class="card">
-  <h2>Will your post burst?</h2>
+<div class="reddit-hero">
+  <div class="reddit-card finalrecipe-card">
 
-  <p style="color:#6b7280;margin-bottom:1rem;">
-  </p>
+    <div class="reddit-card-header">
+      <div class="reddit-user">
+        <img src="{{ '/assets/img/batman.svg' | relative_url }}" alt="user avatar">
+        <div class="reddit-user-meta">
+          <strong>u/finalrecipe-bot</strong>
+          <span>simulated a <a href="#">burst</a></span>
+        </div>
+      </div>
 
-  <label>Source subreddit</label>
-  <select id="src"></select>
+      <div class="reddit-logo">
+        <img src="{{ '/assets/img/reddit-logo.svg' | relative_url }}" alt="Reddit">
+      </div>
+    </div>
 
-  <label>Target subreddit</label>
-  <select id="tgt"></select>
+    <div class="reddit-card-body">
+      <h2 class="reddit-post-title">
+        Will your post trigger a cross-community conflict?
+      </h2>
 
-  <label>Date & time</label>
-  <input id="dt" type="datetime-local">
+      <p class="reddit-post-body">
+        Fill in partial information about a Reddit post to simulate
+        the probability that it will generate a burst of cross-subreddit attention.
+      </p>
 
-  <label>Title</label>
-  <input id="title" type="text" placeholder="Post title">
+      <div class="simulator-form">
 
-  <label>Body</label>
-  <textarea id="body" rows="6" placeholder="Post content"></textarea>
+        <label>Source subreddit</label>
+        <select id="src"></select>
 
-  <button id="predict" class="btn btn-primary">Predict</button>
+        <label>Target subreddit</label>
+        <select id="tgt"></select>
 
-  <p id="out" style="margin-top:1rem;font-weight:700;"></p>
+        <label>Date & time</label>
+        <input id="dt" type="datetime-local">
+
+        <label>Title</label>
+        <input id="title" type="text" placeholder="Post title">
+
+        <label>Body</label>
+        <textarea id="body" rows="6" placeholder="Post content"></textarea>
+
+        <button id="predict" class="btn btn-primary">
+          Simulate burst probability
+        </button>
+
+        <p id="out" class="simulator-output"></p>
+
+      </div>
+    </div>
+
+    <div class="reddit-card-footer">
+      <span>simulation</span>
+      <span>model-based</span>
+      <span>probabilistic</span>
+    </div>
+
+  </div>
 </div>
 
 <script>
-/* =========================
-   Burst Simulator – frontend
-   ========================= */
-
 const API_BASE = "https://burst-stimulator.onrender.com";
 
 const SUBS = [
@@ -118,7 +149,7 @@ srcSel.value = SUBS[0];
 tgtSel.value = SUBS[0];
 
 document.querySelector("#predict").onclick = async () => {
-  out.textContent = "Computing simulated burst probability…";
+  out.textContent = "Computing simulated burst probability...";
 
   const payload = {
     source: srcSel.value,
@@ -156,7 +187,6 @@ document.querySelector("#predict").onclick = async () => {
   }
 };
 </script>
-
 
 <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:20px">
   <a class="btn btn-default" href="/postlevel/">← Previous: Post level</a>

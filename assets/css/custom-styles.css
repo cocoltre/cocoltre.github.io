@@ -347,3 +347,46 @@ body.finalrecipe{
   color: #374151;
   margin: 0;
 }
+
+
+/* =========================
+   Final Recipe Simulator
+   ========================= */
+
+.finalrecipe-card {
+  max-width: 820px;
+}
+
+.simulator-form {
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.7rem;
+}
+
+.simulator-form label {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-top: 0.4rem;
+}
+
+.simulator-form input,
+.simulator-form select,
+.simulator-form textarea {
+  width: 100%;
+  padding: 0.55rem 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+
+.simulator-form textarea {
+  resize: vertical;
+}
+
+.simulator-output {
+  margin-top: 0.8rem;
+  font-weight: 700;
+  color: #ff4500;
+}
