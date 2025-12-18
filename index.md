@@ -13,7 +13,7 @@ Imagine scrolling through Reddit and stumbling upon a post like this one:
 
     <div class="reddit-card-header">
       <div class="reddit-user">
-        <img src="{{ '/assets/img/avatar.png' | relative_url }}" alt="user avatar">
+        <img src="{{ '/assets/img/batman.svg' | relative_url }}" alt="user avatar">
 
         <div class="reddit-user-meta">
           <strong>u/dandemonium</strong>
