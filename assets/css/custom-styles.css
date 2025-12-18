@@ -19,13 +19,15 @@
   --card: #FFFFFF;
   --border: rgba(0,0,0,.10);
 
-  --primary: var(--p1);      /* bouton principal */
-  --primary-hover: #52B4BB;  /* un peu plus foncé */
-  --secondary: var(--p6);    /* bouton “default” */
+  --primary: var(--p1);
+  --primary-hover: #52B4BB;
+  --secondary: var(--p6);
   --secondary-hover: #86A7F0;
 }
 
-/* Boutons Beautiful Jekyll */
+/* =========================
+   Buttons (Beautiful Jekyll)
+   ========================= */
 .btn{
   border-radius: 999px;
   padding: 10px 16px;
@@ -33,15 +35,13 @@
   border: 1px solid transparent;
   transition: transform .06s ease, background-color .15s ease, border-color .15s ease;
 }
-
 .btn:active{ transform: translateY(1px); }
 
 .btn-primary{
   background: var(--primary) !important;
   border-color: var(--primary) !important;
-  color: #073B3E !important; /* texte foncé lisible sur pastel */
+  color: #073B3E !important;
 }
-
 .btn-primary:hover{
   background: var(--primary-hover) !important;
   border-color: var(--primary-hover) !important;
@@ -52,14 +52,14 @@
   border-color: var(--secondary) !important;
   color: #1E2A44 !important;
 }
-
 .btn-default:hover{
-  background: rgba(158,185,243,.25) !important; /* pastel léger */
+  background: rgba(158,185,243,.25) !important;
   border-color: var(--secondary-hover) !important;
 }
 
-/* Optionnel: style des "cards" de ta page */
-/* HERO : 2 colonnes (texte+boutons à gauche, image à droite) */
+/* =========================
+   HERO
+   ========================= */
 .hero{
   display:grid;
   grid-template-columns: 1.1fr .9fr;
@@ -67,29 +67,26 @@
   align-items:center;
   margin:1.5rem 0 2rem;
 }
-
-/* Empiler les boutons à gauche */
 .hero-text .btn{
-  display:block;          /* 1 bouton par ligne */
-  width: fit-content;     /* ou 100% si tu veux des boutons full-width */
+  display:block;
+  width: fit-content;
   margin-top: .6rem;
 }
-
-/* Image à droite */
 .hero-img img{
   width:100%;
   border-radius:18px;
   box-shadow:0 12px 30px rgba(0,0,0,.08);
 }
 
-/* CARDS : 3 en colonne */
+/* =========================
+   Cards
+   ========================= */
 .cards{
   display:grid;
-  grid-template-columns: 1fr;  /* une seule colonne */
+  grid-template-columns: 1fr;
   gap:1rem;
   margin-top:1.5rem;
 }
-
 .card{
   background:#fff;
   border:1px solid rgba(0,0,0,.08);
@@ -98,13 +95,9 @@
   box-shadow:0 10px 25px rgba(0,0,0,.04);
 }
 
-/* Mobile : tout en colonne (image sous le texte) */
-@media(max-width:900px){
-  .hero{ grid-template-columns:1fr; }
-  .hero-text .btn{ width:100%; } /* optionnel: boutons pleine largeur sur mobile */
-}
-
-/* inputs de ton mini-form */
+/* =========================
+   Form elements
+   ========================= */
 select, input, textarea{
   width: 100%;
   padding: 10px 12px;
@@ -114,10 +107,22 @@ select, input, textarea{
 }
 label{ font-weight: 600; }
 
-.team-list{display:grid;grid-template-columns:1fr;gap:.5rem;margin-top:1rem}
-.member{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:12px;padding:.55rem .8rem}
+.team-list{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:.5rem;
+  margin-top:1rem;
+}
+.member{
+  background:#fff;
+  border:1px solid rgba(0,0,0,.08);
+  border-radius:12px;
+  padding:.55rem .8rem;
+}
 
-
+/* =========================
+   Page banner (image + title/subtitle)
+   ========================= */
 .page-banner{
   background-image: url("/assets/img/reddit.png");
   background-size: cover;
@@ -128,29 +133,33 @@ label{ font-weight: 600; }
   position: relative;
   overflow: hidden;
 }
-
 .page-banner::before{
   content:"";
   position:absolute;
   inset:0;
-  background: rgba(0,0,0,0.35); /* assombrit pour que le texte reste lisible */
+  background: rgba(0,0,0,0.35);
 }
-
 .page-banner-inner{
   position: relative;
-  color: white;
+  color: #fff;
+}
+
+/* titre/subtitle dans le banner */
+.page-banner .page-title,
+.page-banner .page-subtitle,
+.page-banner h1,
+.page-banner h2{
+  color:#fff !important;
 }
 
 .page-title{ margin: 0 0 6px; }
 .page-subtitle{ margin: 0; opacity: 0.95; }
 
-
 /* =========================
-   Page Outline – card + typography
+   Page outline – card + typography
    ========================= */
-
 .page-outline {
-  background: #fff3e6;            /* light orange–grey */
+  background: #fff3e6;
   border: 1px solid #ffd6b3;
   border-left: 6px solid #f18603;
   border-radius: 12px;
@@ -158,8 +167,6 @@ label{ font-weight: 600; }
   margin: 2rem 0;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
-
-/* Title */
 .page-outline h3 {
   margin-top: 0;
   margin-bottom: 0.8rem;
@@ -167,70 +174,45 @@ label{ font-weight: 600; }
   font-weight: 900;
   letter-spacing: 0.4px;
 }
-
-/* Base list styling */
 .page-outline ul {
   list-style: none;
   padding-left: 0;
   margin: 0;
 }
-
-/* Base link style */
 .page-outline a {
   color: #f18603;
   text-decoration: none;
   font-family: "Inter", "Source Sans 3", system-ui, sans-serif;
 }
-
-/* Level 1: main sections */
 .page-outline > ul > li > a {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   font-weight: 800;
 }
-
-/* Level 2: subsections */
 .page-outline ul ul > li > a {
-  font-size: 1.3rem;
+  font-size: 1.05rem;
   font-weight: 700;
 }
-
-/* Level 3+: sub-subsections */
 .page-outline ul ul ul > li > a {
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   font-weight: 600;
 }
-
-/* Orange arrows */
 .page-outline li::before {
   content: "▸";
   color: #f18603;
-  font-size: 1.3em;
+  font-size: 1.1em;
   margin-right: 8px;
 }
-
-/* Compact spacing */
 .page-outline li {
   line-height: 1.35;
-  margin: 0.3rem 0;
+  margin: 0.15rem 0;
 }
+.page-outline ul ul { margin-left: 2rem; }
+.page-outline ul ul ul { margin-left: 3rem; }
+.page-outline a:hover { color: #ff9a1f; }
 
-/* Indentation hierarchy */
-.page-outline ul ul {
-  margin-left: 2rem;
-}
-
-.page-outline ul ul ul {
-  margin-left: 3rem;
-}
-
-/* Hover effect */
-.page-outline a:hover {
-  color: #ff9a1f;
-}
-
-
-
-
+/* =========================
+   Highlight question block
+   ========================= */
 .highlight-question {
   background: #fff1ea;
   color: #f18603;
@@ -241,7 +223,17 @@ label{ font-weight: 600; }
   margin: 2.5rem 0;
 }
 
-
-body.finalrecipe {
+/* =========================
+   Finalrecipe background (only if body_class is wired in layout)
+   ========================= */
+body.finalrecipe{
   background-color: rgb(253, 205, 172);
+}
+
+/* =========================
+   Responsive
+   ========================= */
+@media(max-width:900px){
+  .hero{ grid-template-columns:1fr; }
+  .hero-text .btn{ width:100%; }
 }
