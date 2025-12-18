@@ -24,7 +24,7 @@ Our goals are to:
 - Identify the subreddits' differences that differ most between bursty and non-bursty posts.
 - Understand which of these differences best explain or predict the probability of triggering a burst.
 
-<div class="page-outline">
+<div class="page-outline" markdown="1">
 
 ### Page outline
 {: .no_toc }
