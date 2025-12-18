@@ -1,15 +1,15 @@
 ---
 layout: page
 title: User Level
-subtitle: Who participates and when
+subtitle: Who participates and when ?
 permalink: /userlevel/
-cover-img: /assets/img/user.png
+cover-img: /assets/img/baniere.png
 ---
 
 <div class="page-banner">
   <div class="page-banner-inner">
-    <h1 class="page-title">User Level</h1>
-    <p class="page-subtitle">Who participates and when</p>
+    <h1 class="page-title">User behavior as a catalyst for conflict</h1>
+    <p class="page-subtitle"></p>
   </div>
 </div>
 

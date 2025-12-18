@@ -23,7 +23,6 @@ subtitle: Why you'd want to give us the best grade
       We have the following qualities:
       <br>• We are excellent swimmers
       <br>• We are extremely loyal to our family
-      <br>• We are extremely loyal to our family
       <br>• We don’t abandon our teammates when the code breaks at 2am
       <br>• We can turn chaos into plots, what else do you need?
     </p>
