@@ -158,7 +158,7 @@ label{ font-weight: 600; }
 
 /* Base link style */
 .page-outline a {
-  color: #cc7000;              /* dark orange */
+  color: #f18603;              /* dark orange */
   text-decoration: none;
 }
 
@@ -183,7 +183,7 @@ label{ font-weight: 600; }
 /* Orange arrows */
 .page-outline li::before {
   content: "▸";
-  color: #cc7000;
+  color: #f18603;
   font-size: 1.2em;
   margin-right: 10px;
 }
