@@ -12,17 +12,17 @@ Imagine scrolling through Reddit and stumbling upon a post like this one:
   <div class="reddit-card">
 
     <div class="reddit-card-header">
-      <div class="reddit-logo">
-        <img src="{{ '/assets/img/b&w_logo.png' | relative_url }}" alt="Reddit">
-      </div>
+      <div class="reddit-user">
+        <img src="{{ '/assets/img/avatar.png' | relative_url }}" alt="user avatar">
 
+        <div class="reddit-user-meta">
           <strong>u/dandemonium</strong>
           <span>commented on <a href="#">post</a></span>
         </div>
       </div>
 
       <div class="reddit-logo">
-        <img src="https://www.redditinc.com/assets/images/site/reddit-logo.png" alt="reddit">
+        <img src="{{ '/assets/img/b&w_logo.png' | relative_url }}" alt="Reddit">
       </div>
     </div>
 
@@ -45,6 +45,7 @@ Imagine scrolling through Reddit and stumbling upon a post like this one:
 
   </div>
 </div>
+
 
 
 
