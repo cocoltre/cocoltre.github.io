@@ -369,7 +369,7 @@ The complete network visualization reveals important patterns about how subreddi
 
 ---
 
-#### 3.5 Subreddit Similarity
+#### 5 Subreddit Similarity
 
 <iframe
   src="{{ '/assets/plots/subreddit_similarity_burst_distribution.html' | relative_url }}"
@@ -377,6 +377,8 @@ The complete network visualization reveals important patterns about how subreddi
   height="800"
   style="border:none;">
 </iframe>
+
+What about the how close in subject are the two subreddits ? Above you can see the distribution of topical similarity between source and target subreddits, measured using cosine similarity. Most cross-links connect communities that are already highly similar, with similarity values concentrated toward the upper end of the scale. This holds for both mobilizing and non-mobilizing cases. It shown that mobilizations are slightly more likely between topically similar communities compared to random pairs.But similarity alone does not explain whether a cross-link leads to mobilization, instead topical alignment appears to be a prerequisite for negative interaction, rather than a driver of escalation.
 
 ---
 
