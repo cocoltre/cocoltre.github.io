@@ -39,20 +39,6 @@ Let's look into that. What is the effective size of a subreddit ? Is it best des
 {: .text-justify}
 
 In the following, we will try to answer the initial question with the two definitions.
-To achieve this, we will take a dataset containing, for each post:
-{: .text-justify}
-
-- the source_subreddit, the author, and the burst parameter.
-
-The dataset is derived using handcrafted_features.csv, tokenized_posts.tsv, and snap.tsv, taking the source_subreddit, the author, and the burst parameter. You can generate this dataset by running src/scripts/1_create_dataset_subreddits-users.py
-{: .text-justify}
-
-<div style="position: relative; width: 100%; max-width: 800px; padding-top: 50%; margin: auto;">
-  <iframe
-    src="{{ '/assets/plots/1_top10_subreddits_size.html' | relative_url }}"
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
-  </iframe>
-</div>
 
 <div style="position: relative; width: 100%; max-width: 800px; padding-top: 50%; margin: auto;">
   <iframe
@@ -61,12 +47,16 @@ The dataset is derived using handcrafted_features.csv, tokenized_posts.tsv, and 
   </iframe>
 </div>
 
-<div style="position: relative; width: 100%; max-width: 800px; padding-top: 50%; margin: auto;">
-  <iframe
-    src="{{ '/assets/plots/1_subreddit_size_describe.html' | relative_url }}"
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
-  </iframe>
-</div>
+| Statistic | Number of Posts per Subreddit | Number of Active Users per Subreddit |
+|---|---:|---:|
+| Count (in Subreddits) | 4145 | 4145 |
+| Mean | 4.512183 | 3.790109 |
+| Std | 26.427213 | 18.182336 |
+| Min | 1 | 1 |
+| 25% | 1 | 1 |
+| 50% | 1 | 1 |
+| 75% | 2 | 2 |
+| Max | 1159 | 707 |
 
 First, let's call an "active user" a user that has already posted in a specific subreddit.
 {: .text-justify}
@@ -118,23 +108,15 @@ Suprinsingly, we see that if a post is made in a subreddit with a medium number 
 As our initial distribution is highly skewed and definitely non normal, it is better to use Kruskal–Wallis statistical test. What we find is amazing: the p-value is extremely low (7.0e-63). Thus, we have strong statistical evidence to say that the mean burst ratios between the 3 clusters is different, ie the number of active users of a subreddit has an influence on the probability of a post to make a burst.
 {: .text-justify}
 
-That's great! We can use the column "Nb_users_per_subreddit" as our first feature in our ML model.
+That's great! We can use the number of Active Users per Subreddit as our first feature in our model.
 {: .text-justify}
 
 #### 1.2 The size is the number of posts
 
 Now let's see if the number of posts a community has, also has an influence on the probability of a post to make a burst.
-Remember our data:
 {: .text-justify}
 
-<div style="position: relative; width: 100%; max-width: 800px; padding-top: 50%; margin: auto;">
-  <iframe
-    src="{{ '/assets/plots/1_top10_subreddits_size.html' | relative_url }}"
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
-  </iframe>
-</div>
-
-Here, we can see that subreddits have many different amounts of posts. We also see that no matter the amount of active users nor their identity, they have different burst ratios (the portion of posts that did a burst).
+Remember, we saw that subreddits have many different amounts of posts. We also saw that no matter the amount of active users nor their identity, they have different burst ratios (the portion of posts that did a burst).
 {: .text-justify}
 
 **Can the number of posts of a subreddit influence the probability of it to make a burst ?**
@@ -169,7 +151,7 @@ Suprinsingly, we see here that if a post is made in a subreddit with a high numb
 As our initial distribution is highly skewed and definitely non normal, it is better to use Kruskal–Wallis statistical test. What we find is amazing: the p-value is extremely low (3.2e-38). Thus, we have strong statistical evidence to say that the mean burst ratios between the 3 clusters is different, ie the number of posts of a subreddit has an influence on the probability of a post to make a burst.
 {: .text-justify}
 
-That's great! We can use the column "Nb_posts_per_subreddit" as our second feature in our ML model.
+That's great! We can use the number of Posts per Subreddit as our second feature in our ML model.
 {: .text-justify}
 
 
