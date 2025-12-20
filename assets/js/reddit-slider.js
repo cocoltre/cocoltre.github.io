@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextBtn = slider.querySelector('.nav-btn.next');
     const currentEl = slider.querySelector('.current');
     const totalEl = slider.querySelector('.total');
-    
+
     let currentIndex = 0;
     totalEl.textContent = cards.length;
 
@@ -32,6 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    updateSlider(); // initialize
+    updateSlider(); // initialize slider position
   });
 });
