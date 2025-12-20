@@ -49,7 +49,7 @@ In the following, we will try to answer the initial question with the two defini
       style="
         width: 420px;        /* original width of the Plotly plot */
         height: 300px;        /* original height */
-        transform: scale(0.7);  /* shrink factor */
+        transform: scale(0.8);  /* shrink factor */
         transform-origin: top left;  /* keep everything aligned */
         border: none;
         display: block;
