@@ -124,7 +124,7 @@ label{ font-weight: 600; }
    Page banner (image + title/subtitle)
    ========================= */
 .page-banner{
-  background-image: url("/assets/img/page2.jpg");
+  background-image: url("/assets/img/foule2.jpg");
   background-size: cover;
   background-position: center;
   border-radius: 18px;
