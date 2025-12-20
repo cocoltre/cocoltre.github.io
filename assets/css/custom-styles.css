@@ -442,6 +442,12 @@ body.finalrecipe{
 }
 
 
+/* Cover header: force title/subtitle en blanc */
+.intro-header .page-heading h1,
+.intro-header .page-heading .page-subheading{
+  color: #fff !important;
+}
+
 
 /* ===== Force cover titles to white (robuste BJ) ===== */
 header.intro-header .page-heading h1,
@@ -461,7 +467,7 @@ header.intro-header::before{
   content:"";
   position:absolute;
   inset:0;
-  background: rgba(0,0,0,.04);
+  background: rgba(0,0,0,.35);
   pointer-events: none;
 }
 header.intro-header .container{
