@@ -442,26 +442,6 @@ body.finalrecipe{
 }
 
 
-/* Cover header: force title/subtitle en blanc */
-.intro-header .page-heading h1,
-.intro-header .page-heading .page-subheading{
-  color: #fff !important;
-}
-
-/* voile sombre sur l'image pour que le blanc soit lisible */
-.intro-header .container{
-  position: relative;
-  z-index: 1;
-}
-.intro-header::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background: rgba(0,0,0,0.35);
-}
-.intro-header{
-  position: relative;
-}
 
 /* ===== Force cover titles to white (robuste BJ) ===== */
 header.intro-header .page-heading h1,
@@ -481,7 +461,7 @@ header.intro-header::before{
   content:"";
   position:absolute;
   inset:0;
-  background: rgba(0,0,0,.35);
+  background: rgba(0,0,0,.12);
   pointer-events: none;
 }
 header.intro-header .container{
