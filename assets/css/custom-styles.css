@@ -248,9 +248,9 @@ body.finalrecipe{
   background: linear-gradient(135deg, #ff4500, #ff6a33);
   padding: 4rem 1rem;
 
-  width: calc(100vw - 6rem);
-  margin-left: calc(50% - 50vw + 3rem);
-  margin-right: calc(50% - 50vw + 3rem);
+  width: calc(100vw - 12rem); /* was 6rem */
+  margin-left: calc(50% - 50vw + 6rem);
+  margin-right: calc(50% - 50vw + 6rem);
 
   border-radius: 28px;
   overflow: hidden;
