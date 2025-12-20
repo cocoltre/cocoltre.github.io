@@ -40,13 +40,19 @@ Let's look into that. What is the effective size of a subreddit ? Is it best des
 
 In the following, we will try to answer the initial question with the two definitions.
 
-<div style="position: relative; width: 100%; max-width: 800px; padding-top: 50%; margin: auto;">
-  <iframe
-    src="{{ '/assets/plots/1_distribution_subreddits_size.html' | relative_url }}"
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
-  </iframe>
-</div>
+<div style="display: flex; gap: 20px; align-items: flex-start; max-width: 1000px; margin: auto;">
 
+  <!-- Plot (left) -->
+  <div style="flex: 1; position: relative; padding-top: 50%;">
+    <iframe
+      src="{{ '/assets/plots/1_distribution_subreddits_size.html' | relative_url }}"
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+    </iframe>
+  </div>
+
+  <!-- Table (right) -->
+  <div style="flex: 1; overflow-x: auto;">
+    
 | Statistic | Number of Posts per Subreddit | Number of Active Users per Subreddit |
 |---|---:|---:|
 | Count (in Subreddits) | 4145 | 4145 |
@@ -57,6 +63,10 @@ In the following, we will try to answer the initial question with the two defini
 | 50% | 1 | 1 |
 | 75% | 2 | 2 |
 | Max | 1159 | 707 |
+
+  </div>
+</div>
+
 
 First, let's call an "active user" a user that has already posted in a specific subreddit.
 {: .text-justify}
