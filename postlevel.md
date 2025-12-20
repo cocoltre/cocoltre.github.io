@@ -58,7 +58,7 @@ We've been talking about Reddit's posts, but do we even know what they really ta
             <img src="{{ '/assets/img/batman.svg' | relative_url }}" alt="user avatar">
 
             <div class="reddit-user-meta">
-              <strong>u/dandemonium</strong>
+              <strong>u/HarryBlessKnapp</strong>
               <span>commented on <a href="#">post</a></span>
             </div>
           </div>
@@ -70,49 +70,11 @@ We've been talking about Reddit's posts, but do we even know what they really ta
 
         <div class="reddit-card-body">
           <h2 class="reddit-post-title">
-            Ukraine is rioting over the new set of laws that outlaw basic freedoms such as protesting.
-            How come the US citizens don't riot over NDAA?
+            525 65 102 10 19687
           </h2>
 
           <p class="reddit-post-body">
-            People are saying things such as: how come the Ukrainians are hailed for standing up and rioting against their government, and to use violence up until the point where their government is forced to repeal their tyrannical legislation, but it seems like when Americans talk about revolt, it’s immediately squashed with arguments of "and" and more talk of it being senseless. Are Americans too comfortable, or just too many clueless, uneducated citizens?
-          </p>
-        </div>
-
-
-        <div class="reddit-card-footer">
-          <span>⬆ upvote</span>
-          <span>💬 replies</span>
-        </div>
-
-      </div>
-
-      <!-- POST 1 -->
-      <div class="reddit-card">
-
-        <div class="reddit-card-header">
-          <div class="reddit-user">
-            <img src="{{ '/assets/img/batman.svg' | relative_url }}" alt="user avatar">
-
-            <div class="reddit-user-meta">
-              <strong>u/dandemonium</strong>
-              <span>commented on <a href="#">post</a></span>
-            </div>
-          </div>
-
-          <div class="reddit-logo">
-            <img src="{{ '/assets/img/reddit-logo.svg' | relative_url }}" alt="Reddit">
-          </div>
-        </div>
-
-        <div class="reddit-card-body">
-          <h2 class="reddit-post-title">
-            Ukraine is rioting over the new set of laws that outlaw basic freedoms such as protesting.
-            How come the US citizens don't riot over NDAA?
-          </h2>
-
-          <p class="reddit-post-body">
-            People are saying things such as: how come the Ukrainians are hailed for standing up and rioting against their government, and to use violence up until the point where their government is forced to repeal their tyrannical legislation, but it seems like when Americans talk about revolt, it’s immediately squashed with arguments of "and" and more talk of it being senseless. Are Americans too comfortable, or just too many clueless, uneducated citizens?
+            -1 -1 735 -1 -1 76 107 23 137
           </p>
         </div>
 
@@ -132,7 +94,7 @@ We've been talking about Reddit's posts, but do we even know what they really ta
             <img src="{{ '/assets/img/batman.svg' | relative_url }}" alt="user avatar">
 
             <div class="reddit-user-meta">
-              <strong>u/dandemonium</strong>
+              <strong>u/makenzie71</strong>
               <span>commented on <a href="#">post</a></span>
             </div>
           </div>
@@ -144,12 +106,11 @@ We've been talking about Reddit's posts, but do we even know what they really ta
 
         <div class="reddit-card-body">
           <h2 class="reddit-post-title">
-            Ukraine is rioting over the new set of laws that outlaw basic freedoms such as protesting.
-            How come the US citizens don't riot over NDAA?
+            75846 9908 30 2591 2 23076 938 12047 315 100 76 16 8813 22 5143
           </h2>
 
           <p class="reddit-post-body">
-            People are saying things such as: how come the Ukrainians are hailed for standing up and rioting against their government, and to use violence up until the point where their government is forced to repeal their tyrannical legislation, but it seems like when Americans talk about revolt, it’s immediately squashed with arguments of "and" and more talk of it being senseless. Are Americans too comfortable, or just too many clueless, uneducated citizens?
+            -1 -1 735 80501 140445 666 4104 512
           </p>
         </div>
 
@@ -160,7 +121,6 @@ We've been talking about Reddit's posts, but do we even know what they really ta
         </div>
 
       </div>
-
 
       <!-- POST 3 -->
       <div class="reddit-card">
@@ -170,7 +130,7 @@ We've been talking about Reddit's posts, but do we even know what they really ta
             <img src="{{ '/assets/img/batman.svg' | relative_url }}" alt="user avatar">
 
             <div class="reddit-user-meta">
-              <strong>u/dandemonium</strong>
+              <strong>u/Koitous</strong>
               <span>commented on <a href="#">post</a></span>
             </div>
           </div>
@@ -182,12 +142,11 @@ We've been talking about Reddit's posts, but do we even know what they really ta
 
         <div class="reddit-card-body">
           <h2 class="reddit-post-title">
-            Ukraine is rioting over the new set of laws that outlaw basic freedoms such as protesting.
-            How come the US citizens don't riot over NDAA?
+            735 -1 25661 49 39 3 4 14961 563 5 89 130 8 2 6626 2947 449 5
           </h2>
 
           <p class="reddit-post-body">
-            People are saying things such as: how come the Ukrainians are hailed for standing up and rioting against their government, and to use violence up until the point where their government is forced to repeal their tyrannical legislation, but it seems like when Americans talk about revolt, it’s immediately squashed with arguments of "and" and more talk of it being senseless. Are Americans too comfortable, or just too many clueless, uneducated citizens?
+            -1 -1 735 819 2338 -1 30 202 42 240 3204 48 1810 4104 76 72222 1041 124350 5633 7860
           </p>
         </div>
 
@@ -199,7 +158,44 @@ We've been talking about Reddit's posts, but do we even know what they really ta
 
       </div>
 
+
       <!-- POST 4 -->
+      <div class="reddit-card">
+
+        <div class="reddit-card-header">
+          <div class="reddit-user">
+            <img src="{{ '/assets/img/batman.svg' | relative_url }}" alt="user avatar">
+
+            <div class="reddit-user-meta">
+              <strong>u/MudButtLenny</strong>
+              <span>commented on <a href="#">post</a></span>
+            </div>
+          </div>
+
+          <div class="reddit-logo">
+            <img src="{{ '/assets/img/reddit-logo.svg' | relative_url }}" alt="Reddit">
+          </div>
+        </div>
+
+        <div class="reddit-card-body">
+          <h2 class="reddit-post-title">
+            1269 4 588 50 3432 30 334 3520 31421
+          </h2>
+
+          <p class="reddit-post-body">
+            -1 -1 735 186 -1 4104
+          </p>
+        </div>
+
+
+        <div class="reddit-card-footer">
+          <span>⬆ upvote</span>
+          <span>💬 replies</span>
+        </div>
+
+      </div>
+
+      <!-- POST 5 -->
       <div class="reddit-card">
 
         <div class="reddit-card-header">
@@ -253,11 +249,207 @@ We've been talking about Reddit's posts, but do we even know what they really ta
 
 This is what our posts look like for now. Kind of hard to know what the post was about right ?
 
-<div style="position: relative; width: 100%; max-width: 800px; padding-top: 50%; margin: auto;">
-  <iframe
-    src="{{ '/assets/plots/3_top5_words.html' | relative_url }}"
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
-  </iframe>
+<div class="reddit-hero">
+
+  <!-- slider -->
+  <div class="reddit-slider">
+
+    <button class="nav-btn prev">‹</button>
+
+    <div class="reddit-track">
+      <!-- POST 1 -->
+      <div class="reddit-card">
+
+        <div class="reddit-card-header">
+          <div class="reddit-user">
+            <img src="{{ '/assets/img/batman.svg' | relative_url }}" alt="user avatar">
+
+            <div class="reddit-user-meta">
+              <strong>u/HarryBlessKnapp</strong>
+              <span>commented on <a href="#">post</a></span>
+            </div>
+          </div>
+
+          <div class="reddit-logo">
+            <img src="{{ '/assets/img/reddit-logo.svg' | relative_url }}" alt="Reddit">
+          </div>
+        </div>
+
+        <div class="reddit-card-body">
+          <h2 class="reddit-post-title">
+            525 65 102 10 19687
+          </h2>
+
+          <p class="reddit-post-body">
+            -1 -1 735 -1 -1 76 107 23 137
+          </p>
+        </div>
+
+
+        <div class="reddit-card-footer">
+          <span>⬆ upvote</span>
+          <span>💬 replies</span>
+        </div>
+
+      </div>
+
+      <!-- POST 2 -->
+      <div class="reddit-card">
+
+        <div class="reddit-card-header">
+          <div class="reddit-user">
+            <img src="{{ '/assets/img/batman.svg' | relative_url }}" alt="user avatar">
+
+            <div class="reddit-user-meta">
+              <strong>u/makenzie71</strong>
+              <span>commented on <a href="#">post</a></span>
+            </div>
+          </div>
+
+          <div class="reddit-logo">
+            <img src="{{ '/assets/img/reddit-logo.svg' | relative_url }}" alt="Reddit">
+          </div>
+        </div>
+
+        <div class="reddit-card-body">
+          <h2 class="reddit-post-title">
+            75846 9908 30 2591 2 23076 938 12047 315 100 76 16 8813 22 5143
+          </h2>
+
+          <p class="reddit-post-body">
+            -1 -1 735 80501 140445 666 4104 512
+          </p>
+        </div>
+
+
+        <div class="reddit-card-footer">
+          <span>⬆ upvote</span>
+          <span>💬 replies</span>
+        </div>
+
+      </div>
+
+      <!-- POST 3 -->
+      <div class="reddit-card">
+
+        <div class="reddit-card-header">
+          <div class="reddit-user">
+            <img src="{{ '/assets/img/batman.svg' | relative_url }}" alt="user avatar">
+
+            <div class="reddit-user-meta">
+              <strong>u/Koitous</strong>
+              <span>commented on <a href="#">post</a></span>
+            </div>
+          </div>
+
+          <div class="reddit-logo">
+            <img src="{{ '/assets/img/reddit-logo.svg' | relative_url }}" alt="Reddit">
+          </div>
+        </div>
+
+        <div class="reddit-card-body">
+          <h2 class="reddit-post-title">
+            735 -1 25661 49 39 3 4 14961 563 5 89 130 8 2 6626 2947 449 5
+          </h2>
+
+          <p class="reddit-post-body">
+            -1 -1 735 819 2338 -1 30 202 42 240 3204 48 1810 4104 76 72222 1041 124350 5633 7860
+          </p>
+        </div>
+
+
+        <div class="reddit-card-footer">
+          <span>⬆ upvote</span>
+          <span>💬 replies</span>
+        </div>
+
+      </div>
+
+
+      <!-- POST 4 -->
+      <div class="reddit-card">
+
+        <div class="reddit-card-header">
+          <div class="reddit-user">
+            <img src="{{ '/assets/img/batman.svg' | relative_url }}" alt="user avatar">
+
+            <div class="reddit-user-meta">
+              <strong>u/MudButtLenny</strong>
+              <span>commented on <a href="#">post</a></span>
+            </div>
+          </div>
+
+          <div class="reddit-logo">
+            <img src="{{ '/assets/img/reddit-logo.svg' | relative_url }}" alt="Reddit">
+          </div>
+        </div>
+
+        <div class="reddit-card-body">
+          <h2 class="reddit-post-title">
+            1269 4 588 50 3432 30 334 3520 31421
+          </h2>
+
+          <p class="reddit-post-body">
+            -1 -1 735 186 -1 4104
+          </p>
+        </div>
+
+
+        <div class="reddit-card-footer">
+          <span>⬆ upvote</span>
+          <span>💬 replies</span>
+        </div>
+
+      </div>
+
+      <!-- POST 5 -->
+      <div class="reddit-card">
+
+        <div class="reddit-card-header">
+          <div class="reddit-user">
+            <img src="{{ '/assets/img/batman.svg' | relative_url }}" alt="user avatar">
+
+            <div class="reddit-user-meta">
+              <strong>u/dandemonium</strong>
+              <span>commented on <a href="#">post</a></span>
+            </div>
+          </div>
+
+          <div class="reddit-logo">
+            <img src="{{ '/assets/img/reddit-logo.svg' | relative_url }}" alt="Reddit">
+          </div>
+        </div>
+
+        <div class="reddit-card-body">
+          <h2 class="reddit-post-title">
+            Ukraine is rioting over the new set of laws that outlaw basic freedoms such as protesting.
+            How come the US citizens don't riot over NDAA?
+          </h2>
+
+          <p class="reddit-post-body">
+            People are saying things such as: how come the Ukrainians are hailed for standing up and rioting against their government, and to use violence up until the point where their government is forced to repeal their tyrannical legislation, but it seems like when Americans talk about revolt, it’s immediately squashed with arguments of "and" and more talk of it being senseless. Are Americans too comfortable, or just too many clueless, uneducated citizens?
+          </p>
+        </div>
+
+
+        <div class="reddit-card-footer">
+          <span>⬆ upvote</span>
+          <span>💬 replies</span>
+        </div>
+
+      </div>
+
+      
+    </div>
+
+    <button class="nav-btn next">›</button>
+  </div>
+
+  <!-- counter -->
+  <div class="reddit-counter">
+    <span id="current">1</span> / <span id="total">10</span>
+  </div>
+
 </div>
 
 Great, now we can understand a bit better the content of each post. Let's see if that can bring us more information.
