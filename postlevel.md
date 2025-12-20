@@ -37,6 +37,14 @@ Our goals are to:
 - Identify the semantic features that differ most between bursty and non-bursty posts.
 - Understand which of these features best explain or predict the probability of triggering a burst.
 
+<div class="page-outline" markdown="1">
+
+- TOC
+{:toc}
+
+</div>
+
+
 ## 1. Words associated with burst
 
 We've been talking about Reddit's posts, but do we even know what they really talk about ? Let's find out ! In this section, we are interested to decode the content of every post and see how they can influence the probability of making a burst.
