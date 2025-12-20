@@ -40,32 +40,41 @@ Let's look into that. What is the effective size of a subreddit ? Is it best des
 
 In the following, we will try to answer the initial question with the two definitions.
 
-<div style="display: flex; gap: 20px; align-items: flex-start; max-width: 1000px; margin: auto;">
+<div style="display: flex; gap: 20px; max-width: 900px; margin: auto; align-items: flex-start;">
 
-  <!-- Plot (left) -->
-  <div style="flex: 1; position: relative; padding-top: 50%;">
+  <!-- Plot -->
+  <div style="flex: 1; height: 350px;">
     <iframe
       src="{{ '/assets/plots/1_distribution_subreddits_size.html' | relative_url }}"
-      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+      style="width: 100%; height: 100%; border: none;">
     </iframe>
   </div>
 
-  <!-- Table (right) -->
-  <div style="flex: 1; overflow-x: auto;">
-    
-| Statistic | Number of Posts per Subreddit | Number of Active Users per Subreddit |
-|---|---:|---:|
-| Count (in Subreddits) | 4145 | 4145 |
-| Mean | 4.512183 | 3.790109 |
-| Std | 26.427213 | 18.182336 |
-| Min | 1 | 1 |
-| 25% | 1 | 1 |
-| 50% | 1 | 1 |
-| 75% | 2 | 2 |
-| Max | 1159 | 707 |
-
+  <!-- Table -->
+  <div style="flex: 1; font-size: 0.9em;">
+    <table>
+      <thead>
+        <tr>
+          <th>Statistic</th>
+          <th>Number of Posts per Subreddit</th>
+          <th>Number of Active Users per Subreddit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Count (in Subreddits)</td><td>4145</td><td>4145</td></tr>
+        <tr><td>Mean</td><td>4.512183</td><td>3.790109</td></tr>
+        <tr><td>Std</td><td>26.427213</td><td>18.182336</td></tr>
+        <tr><td>Min</td><td>1</td><td>1</td></tr>
+        <tr><td>25%</td><td>1</td><td>1</td></tr>
+        <tr><td>50%</td><td>1</td><td>1</td></tr>
+        <tr><td>75%</td><td>2</td><td>2</td></tr>
+        <tr><td>Max</td><td>1159</td><td>707</td></tr>
+      </tbody>
+    </table>
   </div>
+
 </div>
+
 
 
 First, let's call an "active user" a user that has already posted in a specific subreddit.
