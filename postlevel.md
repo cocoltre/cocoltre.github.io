@@ -42,27 +42,214 @@ Our goals are to:
 We've been talking about Reddit's posts, but do we even know what they really talk about ? Let's find out ! In this section, we are interested to decode the content of every post and see how they can influence the probability of making a burst.
 {: .text-justify}
 
-Our goals are to:
+<div class="reddit-hero">
 
-- Decode the content of every post.
-- Understand which words best explain or predict the probability of triggering a burst.
+  <!-- slider -->
+  <div class="reddit-slider">
 
-To achieve this, we will take a dataset containing, for each post:
+    <button class="nav-btn prev">‹</button>
 
-- the source_subreddit, the author, the body's title, the post's body, and the burst parameter.
+    <div class="reddit-track">
+      <!-- POST 1 -->
+      <div class="reddit-card">
 
-The dataset is derived using handcrafted_features.csv, tokenized_posts.tsv, and snap.tsv, taking the source_subreddit, the author, the body's title, the post's body, and the burst parameter. You can generate this dataset by running src/scripts/4_create_dataset_words.py
-{: .text-justify}
+        <div class="reddit-card-header">
+          <div class="reddit-user">
+            <img src="{{ '/assets/img/batman.svg' | relative_url }}" alt="user avatar">
 
-We will also use the dataset glove_word_embeds.txt which contains all the vocabulary and their embeddings.
-{: .text-justify}
+            <div class="reddit-user-meta">
+              <strong>u/dandemonium</strong>
+              <span>commented on <a href="#">post</a></span>
+            </div>
+          </div>
 
-<div style="position: relative; width: 100%; max-width: 800px; padding-top: 50%; margin: auto;">
-  <iframe
-    src="{{ '/assets/plots/3_top5_posts.html' | relative_url }}"
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
-  </iframe>
+          <div class="reddit-logo">
+            <img src="{{ '/assets/img/reddit-logo.svg' | relative_url }}" alt="Reddit">
+          </div>
+        </div>
+
+        <div class="reddit-card-body">
+          <h2 class="reddit-post-title">
+            Ukraine is rioting over the new set of laws that outlaw basic freedoms such as protesting.
+            How come the US citizens don't riot over NDAA?
+          </h2>
+
+          <p class="reddit-post-body">
+            People are saying things such as: how come the Ukrainians are hailed for standing up and rioting against their government, and to use violence up until the point where their government is forced to repeal their tyrannical legislation, but it seems like when Americans talk about revolt, it’s immediately squashed with arguments of "and" and more talk of it being senseless. Are Americans too comfortable, or just too many clueless, uneducated citizens?
+          </p>
+        </div>
+
+
+        <div class="reddit-card-footer">
+          <span>⬆ upvote</span>
+          <span>💬 replies</span>
+        </div>
+
+      </div>
+
+      <!-- POST 1 -->
+      <div class="reddit-card">
+
+        <div class="reddit-card-header">
+          <div class="reddit-user">
+            <img src="{{ '/assets/img/batman.svg' | relative_url }}" alt="user avatar">
+
+            <div class="reddit-user-meta">
+              <strong>u/dandemonium</strong>
+              <span>commented on <a href="#">post</a></span>
+            </div>
+          </div>
+
+          <div class="reddit-logo">
+            <img src="{{ '/assets/img/reddit-logo.svg' | relative_url }}" alt="Reddit">
+          </div>
+        </div>
+
+        <div class="reddit-card-body">
+          <h2 class="reddit-post-title">
+            Ukraine is rioting over the new set of laws that outlaw basic freedoms such as protesting.
+            How come the US citizens don't riot over NDAA?
+          </h2>
+
+          <p class="reddit-post-body">
+            People are saying things such as: how come the Ukrainians are hailed for standing up and rioting against their government, and to use violence up until the point where their government is forced to repeal their tyrannical legislation, but it seems like when Americans talk about revolt, it’s immediately squashed with arguments of "and" and more talk of it being senseless. Are Americans too comfortable, or just too many clueless, uneducated citizens?
+          </p>
+        </div>
+
+
+        <div class="reddit-card-footer">
+          <span>⬆ upvote</span>
+          <span>💬 replies</span>
+        </div>
+
+      </div>
+
+      <!-- POST 2 -->
+      <div class="reddit-card">
+
+        <div class="reddit-card-header">
+          <div class="reddit-user">
+            <img src="{{ '/assets/img/batman.svg' | relative_url }}" alt="user avatar">
+
+            <div class="reddit-user-meta">
+              <strong>u/dandemonium</strong>
+              <span>commented on <a href="#">post</a></span>
+            </div>
+          </div>
+
+          <div class="reddit-logo">
+            <img src="{{ '/assets/img/reddit-logo.svg' | relative_url }}" alt="Reddit">
+          </div>
+        </div>
+
+        <div class="reddit-card-body">
+          <h2 class="reddit-post-title">
+            Ukraine is rioting over the new set of laws that outlaw basic freedoms such as protesting.
+            How come the US citizens don't riot over NDAA?
+          </h2>
+
+          <p class="reddit-post-body">
+            People are saying things such as: how come the Ukrainians are hailed for standing up and rioting against their government, and to use violence up until the point where their government is forced to repeal their tyrannical legislation, but it seems like when Americans talk about revolt, it’s immediately squashed with arguments of "and" and more talk of it being senseless. Are Americans too comfortable, or just too many clueless, uneducated citizens?
+          </p>
+        </div>
+
+
+        <div class="reddit-card-footer">
+          <span>⬆ upvote</span>
+          <span>💬 replies</span>
+        </div>
+
+      </div>
+
+
+      <!-- POST 3 -->
+      <div class="reddit-card">
+
+        <div class="reddit-card-header">
+          <div class="reddit-user">
+            <img src="{{ '/assets/img/batman.svg' | relative_url }}" alt="user avatar">
+
+            <div class="reddit-user-meta">
+              <strong>u/dandemonium</strong>
+              <span>commented on <a href="#">post</a></span>
+            </div>
+          </div>
+
+          <div class="reddit-logo">
+            <img src="{{ '/assets/img/reddit-logo.svg' | relative_url }}" alt="Reddit">
+          </div>
+        </div>
+
+        <div class="reddit-card-body">
+          <h2 class="reddit-post-title">
+            Ukraine is rioting over the new set of laws that outlaw basic freedoms such as protesting.
+            How come the US citizens don't riot over NDAA?
+          </h2>
+
+          <p class="reddit-post-body">
+            People are saying things such as: how come the Ukrainians are hailed for standing up and rioting against their government, and to use violence up until the point where their government is forced to repeal their tyrannical legislation, but it seems like when Americans talk about revolt, it’s immediately squashed with arguments of "and" and more talk of it being senseless. Are Americans too comfortable, or just too many clueless, uneducated citizens?
+          </p>
+        </div>
+
+
+        <div class="reddit-card-footer">
+          <span>⬆ upvote</span>
+          <span>💬 replies</span>
+        </div>
+
+      </div>
+
+      <!-- POST 4 -->
+      <div class="reddit-card">
+
+        <div class="reddit-card-header">
+          <div class="reddit-user">
+            <img src="{{ '/assets/img/batman.svg' | relative_url }}" alt="user avatar">
+
+            <div class="reddit-user-meta">
+              <strong>u/dandemonium</strong>
+              <span>commented on <a href="#">post</a></span>
+            </div>
+          </div>
+
+          <div class="reddit-logo">
+            <img src="{{ '/assets/img/reddit-logo.svg' | relative_url }}" alt="Reddit">
+          </div>
+        </div>
+
+        <div class="reddit-card-body">
+          <h2 class="reddit-post-title">
+            Ukraine is rioting over the new set of laws that outlaw basic freedoms such as protesting.
+            How come the US citizens don't riot over NDAA?
+          </h2>
+
+          <p class="reddit-post-body">
+            People are saying things such as: how come the Ukrainians are hailed for standing up and rioting against their government, and to use violence up until the point where their government is forced to repeal their tyrannical legislation, but it seems like when Americans talk about revolt, it’s immediately squashed with arguments of "and" and more talk of it being senseless. Are Americans too comfortable, or just too many clueless, uneducated citizens?
+          </p>
+        </div>
+
+
+        <div class="reddit-card-footer">
+          <span>⬆ upvote</span>
+          <span>💬 replies</span>
+        </div>
+
+      </div>
+
+      
+    </div>
+
+    <button class="nav-btn next">›</button>
+  </div>
+
+  <!-- counter -->
+  <div class="reddit-counter">
+    <span id="current">1</span> / <span id="total">10</span>
+  </div>
+
 </div>
+
+
 
 This is what our posts look like for now. Kind of hard to know what the post was about right ?
 

@@ -329,6 +329,44 @@ body.finalrecipe{
   padding-top: 0.8rem;
 }
 
+/* buttons */
+.reddit-slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.reddit-track {
+  display: flex;
+  transition: transform 0.4s ease;
+  width: 100%;
+}
+
+/* buttons */
+.nav-btn {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.nav-btn:hover {
+  background: rgba(255,255,255,0.35);
+}
+
+/* counter */
+.reddit-counter {
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: 600;
+  color: white;
+}
+
 /* =========================
    Reddit post content
    ========================= */
