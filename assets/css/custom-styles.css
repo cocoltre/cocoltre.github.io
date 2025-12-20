@@ -254,9 +254,6 @@ body.finalrecipe{
 
   border-radius: 28px;
   overflow: hidden;
-
-  display: flex;
-  justify-content: center;
 }
 
 
@@ -346,6 +343,7 @@ body.finalrecipe{
   display: flex;
   transition: transform 0.4s ease;
   width: 100%;
+  justify-content: center;
 }
 
 /* buttons */
