@@ -49,12 +49,13 @@ In the following, we will try to answer the initial question with the two defini
       style="
         width: 1200px;
         height: 800px;
-        transform: scale(0.7);
+        transform: scale(0.7) translateX(-20%);
         transform-origin: 0 0;
         border: none;
       ">
     </iframe>
   </div>
+
 
 
   <!-- Table -->
