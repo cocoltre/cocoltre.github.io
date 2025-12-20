@@ -440,3 +440,25 @@ body.finalrecipe{
   font-weight: 700;
   color: #ff4500;
 }
+
+
+/* Cover header: force title/subtitle en blanc */
+.intro-header .page-heading h1,
+.intro-header .page-heading .page-subheading{
+  color: #fff !important;
+}
+
+/* voile sombre sur l'image pour que le blanc soit lisible */
+.intro-header .container{
+  position: relative;
+  z-index: 1;
+}
+.intro-header::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,0.35);
+}
+.intro-header{
+  position: relative;
+}
