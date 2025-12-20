@@ -58,7 +58,7 @@ We've been talking about Reddit's posts, but do we even know what they really ta
             <img src="{{ '/assets/img/batman.svg' | relative_url }}" alt="user avatar">
 
             <div class="reddit-user-meta">
-              <strong>u/HarryBlessKnapp</strong>
+              <strong>u/Pompsy</strong>
               <span>commented on <a href="#">post</a></span>
             </div>
           </div>
@@ -70,11 +70,11 @@ We've been talking about Reddit's posts, but do we even know what they really ta
 
         <div class="reddit-card-body">
           <h2 class="reddit-post-title">
-            525 65 102 10 19687
+            24663 11637 15133 3218
           </h2>
 
           <p class="reddit-post-body">
-            -1 -1 735 -1 -1 76 107 23 137
+            -1 159833 -1 -1 4104 21 4 412 8 10 107 2791 20 12 24 2791 135 205 92 24 59 4 6407 714 22 4 412 8 10 224 6 134 223 2 78 4 65 1308 7 629 163 10 98 397 28 10 1024 542 8 412 5 17 1308 475 182 16 9 1243 10094 1 34027 1861 182 16 4 227 714 8 14813 0 412 32 24 542 4 412 8 27 16 1352 5 0 876 699 58 61 876 7 67 772 10 85 24 487 7 725 7901 475 7 475 37 996 1 6636 2 150 112 934 1485 3640 26 110595 4990 72 3312 6375 53 13 0 179 574 3 4 452 53 13 0 179 574 3 4 452 683 2 735 -1 7 35 608 475 7 475 9 253 23699 4180 2 17 12078 944 83502 -1 105706 91553 130433 159029 86596 129992 18457 17638 22001 11131 24192 1902 186 1881 16238 540 105544 65 44202 41312
           </p>
         </div>
 
@@ -94,7 +94,7 @@ We've been talking about Reddit's posts, but do we even know what they really ta
             <img src="{{ '/assets/img/batman.svg' | relative_url }}" alt="user avatar">
 
             <div class="reddit-user-meta">
-              <strong>u/makenzie71</strong>
+              <strong>u/lju1977</strong>
               <span>commented on <a href="#">post</a></span>
             </div>
           </div>
@@ -106,11 +106,11 @@ We've been talking about Reddit's posts, but do we even know what they really ta
 
         <div class="reddit-card-body">
           <h2 class="reddit-post-title">
-            75846 9908 30 2591 2 23076 938 12047 315 100 76 16 8813 22 5143
+            15981 0 1200
           </h2>
 
           <p class="reddit-post-body">
-            -1 -1 735 80501 140445 666 4104 512
+            -1 22787 227 -1 -1 0 1200 618 181 10 139 207 13 18526 2421 3 1793 0 1200 0 1200 181 186 68 139 19 3370 193 0 3370 3 10256
           </p>
         </div>
 
@@ -130,7 +130,7 @@ We've been talking about Reddit's posts, but do we even know what they really ta
             <img src="{{ '/assets/img/batman.svg' | relative_url }}" alt="user avatar">
 
             <div class="reddit-user-meta">
-              <strong>u/Koitous</strong>
+              <strong>u/Miathermopolis</strong>
               <span>commented on <a href="#">post</a></span>
             </div>
           </div>
@@ -142,11 +142,11 @@ We've been talking about Reddit's posts, but do we even know what they really ta
 
         <div class="reddit-card-body">
           <h2 class="reddit-post-title">
-            735 -1 25661 49 39 3 4 14961 563 5 89 130 8 2 6626 2947 449 5
+            98 3 0 88 7961 4632 4336 1742 15682 315 3 23 141 53 991 1 60 10 241 2 4020
           </h2>
 
           <p class="reddit-post-body">
-            -1 -1 735 819 2338 -1 30 202 42 240 3204 48 1810 4104 76 72222 1041 124350 5633 7860
+            -1 -1 44197 2261 -1 76 20 443 4104 47 132 2 636 35 1066 22 1573 15682 930 397 24367 1 34 13 326 4632 1 797 34 170 15 0 1888 337 52 302 137 49 544 24367 109 35 14 1373
           </p>
         </div>
 
@@ -167,7 +167,7 @@ We've been talking about Reddit's posts, but do we even know what they really ta
             <img src="{{ '/assets/img/batman.svg' | relative_url }}" alt="user avatar">
 
             <div class="reddit-user-meta">
-              <strong>u/MudButtLenny</strong>
+              <strong>u/throwoneawayagain</strong>
               <span>commented on <a href="#">post</a></span>
             </div>
           </div>
@@ -179,11 +179,11 @@ We've been talking about Reddit's posts, but do we even know what they really ta
 
         <div class="reddit-card-body">
           <h2 class="reddit-post-title">
-            1269 4 588 50 3432 30 334 3520 31421
+            202 5 2997 2 10060 10043 1971 1647 207 17 6 337 22 51 600
           </h2>
 
           <p class="reddit-post-body">
-            -1 -1 735 186 -1 4104
+            -1 129630 2343 2308 1250 -1 41 76 20 443 4 202 5 45 2424 653 8 46 10 392 7699 2 4 6421 3 1971 45 6 136 340 10 47 3083 43 0 180 118 2 4 6421 3 11109 7699 76 4554 348 2313 7960 0 90 3 6881 1971 2 78 5932 2070 1 119 28 2 30 789 34 13 167 2698 735 1971 55 35525 1971 1425 2 117 340 16229 819 12 0 578 3 340 4614 1 16066 1463 1716 14 290 2705 5 0 340 1539 87 0 5338 775 287 16 6202 7 253 7699 22 6 12 4 3528 2259 1384 3 16066 512 202 379
           </p>
         </div>
 
@@ -203,7 +203,7 @@ We've been talking about Reddit's posts, but do we even know what they really ta
             <img src="{{ '/assets/img/batman.svg' | relative_url }}" alt="user avatar">
 
             <div class="reddit-user-meta">
-              <strong>u/dandemonium</strong>
+              <strong>u/TapirLiu</strong>
               <span>commented on <a href="#">post</a></span>
             </div>
           </div>
@@ -215,12 +215,11 @@ We've been talking about Reddit's posts, but do we even know what they really ta
 
         <div class="reddit-card-body">
           <h2 class="reddit-post-title">
-            Ukraine is rioting over the new set of laws that outlaw basic freedoms such as protesting.
-            How come the US citizens don't riot over NDAA?
+            18 26 7303 164 3571 11 2920 499 253 849 1 340 499 1539 76 1050 58 6790
           </h2>
 
           <p class="reddit-post-body">
-            People are saying things such as: how come the Ukrainians are hailed for standing up and rioting against their government, and to use violence up until the point where their government is forced to repeal their tyrannical legislation, but it seems like when Americans talk about revolt, it’s immediately squashed with arguments of "and" and more talk of it being senseless. Are Americans too comfortable, or just too many clueless, uneducated citizens?
+            -1 -1 -1 -1 27 387 495 1625 194 49 58 2561 9 72 2 78 0 499 936 35 1237 58 1839 152 4 81 184 1396 109 73 499 2054 6 81 498 567 152 4 99 804 1396 69 0 206 735 36 106 0 373 6184 1868 720 76 764 2 117 104 2 90 498 499 2446 189 5 0 356 338 247 76 4557 99 1103 9 4 65 164 76 961 99 52 9 0 164 359 300 1 2444 1 76 62 745 30 121 2 78 157 2388 0 65 164 111 28 12 138 152 4 1396 99 804 69 76 959 9 1 9720 7 373 355 1 111 58 6790 53 3474 100 76 78 22 53 2561 76 27 751 2 267 30 135 164 59 35 1396
           </p>
         </div>
 
@@ -239,7 +238,7 @@ We've been talking about Reddit's posts, but do we even know what they really ta
   </div>
 
   <div class="reddit-counter">
-    <span class="current">1</span> / <span class="total">10</span>
+    <span class="current">1</span> / <span class="total">5</span>
   </div>
 </div>
 
@@ -263,7 +262,7 @@ This is what our posts look like for now. Kind of hard to know what the post was
             <img src="{{ '/assets/img/batman.svg' | relative_url }}" alt="user avatar">
 
             <div class="reddit-user-meta">
-              <strong>u/HarryBlessKnapp</strong>
+              <strong>u/Pompsy</strong>
               <span>commented on <a href="#">post</a></span>
             </div>
           </div>
@@ -275,11 +274,11 @@ This is what our posts look like for now. Kind of hard to know what the post was
 
         <div class="reddit-card-body">
           <h2 class="reddit-post-title">
-            525 65 102 10 19687
+            moronic monday january th
           </h2>
 
           <p class="reddit-post-body">
-            -1 -1 735 -1 -1 76 107 23 137
+            <UNK> hiphopheads <UNK> <UNK> http have a question that you need answered was it not answered last week did not get a satisfying answer or a question that you feel is too small to make a new thread for maybe something you think everyone but you knows ask that question in this thread questions must be on topic concise and answerable answers must be a real answer that solves the question do not ask a question that can be covered in the resources section some other resources for any terms you may not understand for specific lyric questions for questions about songs and sampling to look through previous mm threads an infograph explaining how albums leak what are the different parts of a song what are the different parts of a song thanks to u <UNK> for more general questions for questions on making hiphop subscribe to this pronunciation guide rza <UNK> gza jiz zah jhen aiko juh nay ahh ee ko danny brown s ad lib style nujabes new jah bes
           </p>
         </div>
 
@@ -299,7 +298,7 @@ This is what our posts look like for now. Kind of hard to know what the post was
             <img src="{{ '/assets/img/batman.svg' | relative_url }}" alt="user avatar">
 
             <div class="reddit-user-meta">
-              <strong>u/makenzie71</strong>
+              <strong>u/lju1977</strong>
               <span>commented on <a href="#">post</a></span>
             </div>
           </div>
@@ -311,11 +310,11 @@ This is what our posts look like for now. Kind of hard to know what the post was
 
         <div class="reddit-card-body">
           <h2 class="reddit-post-title">
-            75846 9908 30 2591 2 23076 938 12047 315 100 76 16 8813 22 5143
+            fearing the truth
           </h2>
 
           <p class="reddit-post-body">
-            -1 -1 735 80501 140445 666 4104 512
+            <UNK> christianity real <UNK> <UNK> the truth shall set you free why are christians afraid of telling the truth the truth set s people free from sin including the sin of homosexuality
           </p>
         </div>
 
@@ -335,7 +334,7 @@ This is what our posts look like for now. Kind of hard to know what the post was
             <img src="{{ '/assets/img/batman.svg' | relative_url }}" alt="user avatar">
 
             <div class="reddit-user-meta">
-              <strong>u/Koitous</strong>
+              <strong>u/Miathermopolis</strong>
               <span>commented on <a href="#">post</a></span>
             </div>
           </div>
@@ -347,11 +346,11 @@ This is what our posts look like for now. Kind of hard to know what the post was
 
         <div class="reddit-card-body">
           <h2 class="reddit-post-title">
-            735 -1 25661 49 39 3 4 14961 563 5 89 130 8 2 6626 2947 449 5
+            think of the most embarrassing hilarious nasty etc fart story of your life what happened and were you able to recover
           </h2>
 
           <p class="reddit-post-body">
-            -1 -1 735 819 2338 -1 30 202 42 240 3204 48 1810 4104 76 72222 1041 124350 5633 7860
+            <UNK> <UNK> uu f <UNK> i was reading http would love to hear more funny or crazy fart stories everyone farts and they are often hilarious and sometimes they come at the worst possible time please help me enjoy farts even more by sharing
           </p>
         </div>
 
@@ -372,7 +371,7 @@ This is what our posts look like for now. Kind of hard to know what the post was
             <img src="{{ '/assets/img/batman.svg' | relative_url }}" alt="user avatar">
 
             <div class="reddit-user-meta">
-              <strong>u/MudButtLenny</strong>
+              <strong>u/throwoneawayagain</strong>
               <span>commented on <a href="#">post</a></span>
             </div>
           </div>
@@ -384,11 +383,11 @@ This is what our posts look like for now. Kind of hard to know what the post was
 
         <div class="reddit-card-body">
           <h2 class="reddit-post-title">
-            1269 4 588 50 3432 30 334 3520 31421
+            post in suggests to recycle spoiled milk explain why this is possible or just wrong
           </h2>
 
           <p class="reddit-post-body">
-            -1 -1 735 186 -1 4104
+            <UNK> askscience v p c <UNK> so i was reading a post in which linked saying that if you added yogurt to a gallon of milk which is going bad you would wake up the next day to a gallon of edible yogurt i ve seen recipes detailing the use of sour milk to make cottage cheese and such but to my knowledge they are using raw u milk when pasteurized milk starts to go bad isn t it the result of bad bacteria and pathogens leaving waste by products resulting in the bad taste could the prescribed method actually be viable for making yogurt or is it a potentially dangerous mix of pathogens original post below
           </p>
         </div>
 
@@ -408,7 +407,7 @@ This is what our posts look like for now. Kind of hard to know what the post was
             <img src="{{ '/assets/img/batman.svg' | relative_url }}" alt="user avatar">
 
             <div class="reddit-user-meta">
-              <strong>u/dandemonium</strong>
+              <strong>u/TapirLiu</strong>
               <span>commented on <a href="#">post</a></span>
             </div>
           </div>
@@ -420,12 +419,11 @@ This is what our posts look like for now. Kind of hard to know what the post was
 
         <div class="reddit-card-body">
           <h2 class="reddit-post-title">
-            Ukraine is rioting over the new set of laws that outlaw basic freedoms such as protesting.
-            How come the US citizens don't riot over NDAA?
+            as an indie game developer with weak art making ability and bad art taste i m some depressed
           </h2>
 
           <p class="reddit-post-body">
-            People are saying things such as: how come the Ukrainians are hailed for standing up and rioting against their government, and to use violence up until the point where their government is forced to repeal their tyrannical legislation, but it seems like when Americans talk about revolt, it’s immediately squashed with arguments of "and" and more talk of it being senseless. Are Americans too comfortable, or just too many clueless, uneducated citizens?
+            <UNK> <UNK> <UNK> <UNK> can anyone especially artists give me some suggestions on how to make the art feeling more comfortable some facts got a very high score even its art presentation is very simple however got a much lower score than the old u one after the above polished failure release i decided to go back to use simple art styles again in the past several months i devoted much effort on a new game i spent much time on the game level design and programming and i also tried my best to make better arts the new game really but it still got a score much lower than i expected on and screenshots for above games and really some depressed what improvements should i make or what suggestions i can follow to let my last game get more score
           </p>
         </div>
 
@@ -444,7 +442,7 @@ This is what our posts look like for now. Kind of hard to know what the post was
   </div>
 
   <div class="reddit-counter">
-    <span class="current">1</span> / <span class="total">10</span>
+    <span class="current">1</span> / <span class="total">5</span>
   </div>
 </div>
 
