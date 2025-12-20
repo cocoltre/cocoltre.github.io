@@ -1,32 +1,37 @@
-const cards = document.querySelectorAll('.reddit-card');
-const track = document.querySelector('.reddit-track');
-const total = cards.length;
-let currentIndex = 0;
+document.addEventListener('DOMContentLoaded', () => {
+  const sliders = document.querySelectorAll('.reddit-hero');
 
-// set total counter
-document.getElementById('total').textContent = total;
+  sliders.forEach(slider => {
+    const track = slider.querySelector('.reddit-track');
+    const cards = slider.querySelectorAll('.reddit-card');
+    const prevBtn = slider.querySelector('.nav-btn.prev');
+    const nextBtn = slider.querySelector('.nav-btn.next');
+    const currentEl = slider.querySelector('.current');
+    const totalEl = slider.querySelector('.total');
+    
+    let currentIndex = 0;
+    totalEl.textContent = cards.length;
 
-// function to move slider
-const updateSlider = () => {
-  const cardWidth = cards[0].getBoundingClientRect().width; // actual card width
-  track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    const updateSlider = () => {
+      const cardWidth = cards[0].getBoundingClientRect().width;
+      track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+      currentEl.textContent = currentIndex + 1;
+    };
 
-  // update current counter
-  document.getElementById('current').textContent = currentIndex + 1;
-};
+    prevBtn.addEventListener('click', () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateSlider();
+      }
+    });
 
-// previous button
-document.querySelector('.nav-btn.prev').addEventListener('click', () => {
-  if (currentIndex > 0) {
-    currentIndex--;
-    updateSlider();
-  }
-});
+    nextBtn.addEventListener('click', () => {
+      if (currentIndex < cards.length - 1) {
+        currentIndex++;
+        updateSlider();
+      }
+    });
 
-// next button
-document.querySelector('.nav-btn.next').addEventListener('click', () => {
-  if (currentIndex < total - 1) {
-    currentIndex++;
-    updateSlider();
-  }
+    updateSlider(); // initialize
+  });
 });

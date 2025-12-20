@@ -238,11 +238,9 @@ We've been talking about Reddit's posts, but do we even know what they really ta
     <button class="nav-btn next">›</button>
   </div>
 
-  <!-- counter -->
   <div class="reddit-counter">
-    <span id="current">1</span> / <span id="total">10</span>
+    <span class="current">1</span> / <span class="total">10</span>
   </div>
-
 </div>
 
 
@@ -445,11 +443,9 @@ This is what our posts look like for now. Kind of hard to know what the post was
     <button class="nav-btn next">›</button>
   </div>
 
-  <!-- counter -->
   <div class="reddit-counter">
-    <span id="current">1</span> / <span id="total">10</span>
+    <span class="current">1</span> / <span class="total">10</span>
   </div>
-
 </div>
 
 Great, now we can understand a bit better the content of each post. Let's see if that can bring us more information.
