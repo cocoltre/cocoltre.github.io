@@ -251,9 +251,9 @@ body.finalrecipe{
   overflow: hidden;
 
   /* Use calc to fit the container exactly */
-  width: calc(100% - 12rem);
-  margin-left: 6rem;
-  margin-right: 6rem;
+  width: 100%;              /* container takes full parent width */
+  max-width: 700px;        /* choose the width you want */
+  margin: 0 auto;           /* centers horizontally */
   box-sizing: border-box;
 }
 
