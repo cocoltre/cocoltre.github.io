@@ -462,3 +462,29 @@ body.finalrecipe{
 .intro-header{
   position: relative;
 }
+
+/* ===== Force cover titles to white (robuste BJ) ===== */
+header.intro-header .page-heading h1,
+header.intro-header .page-heading .subheading,
+header.intro-header .post-heading h1,
+header.intro-header .post-heading .subheading,
+header.intro-header h1,
+header.intro-header h2{
+  color: #fff !important;
+}
+
+/* Voile sombre pour lisibilité */
+header.intro-header{
+  position: relative;
+}
+header.intro-header::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,.35);
+  pointer-events: none;
+}
+header.intro-header .container{
+  position: relative;
+  z-index: 1;
+}
