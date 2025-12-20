@@ -246,17 +246,16 @@ body.finalrecipe{
 
 .reddit-hero {
   background: linear-gradient(135deg, #ff4500, #ff6a33);
-  padding: 4rem 2rem;       /* internal padding */
+  padding: 4rem 2rem;
   border-radius: 28px;
   overflow: hidden;
 
-  width: 100%;               /* full width of container */
-  max-width: 1200px;         /* adjust to your page content width */
-  margin: 0 auto;            /* centers horizontally */
-  box-sizing: border-box;    /* include padding in width */
+  /* Use calc to fit the container exactly */
+  width: calc(100% - 12rem);
+  margin-left: 6rem;
+  margin-right: 6rem;
+  box-sizing: border-box;
 }
-
-
 
 
 /* Card */
@@ -264,7 +263,7 @@ body.finalrecipe{
   background: #ffffff;
   border-radius: 14px;
 
-  width: 90%;           /* card is 90% of slider width */
+  width: calc(100% - 4rem);
   max-width: 780px;     
   margin: 0 auto;       /* center card inside slider */
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
@@ -345,12 +344,11 @@ body.finalrecipe{
 
 
 .reddit-slider {
-  position: relative;   /* needed for absolute buttons */
+  position: relative;
   width: 100%;
   overflow: hidden;
 }
 
-/* overlay buttons */
 .nav-btn {
   position: absolute;
   top: 50%;
@@ -365,17 +363,11 @@ body.finalrecipe{
   z-index: 2;
 }
 
-.nav-btn.prev {
-  left: 10px;  /* close to the card */
-}
+.nav-btn.prev { left: 5px; }
+.nav-btn.next { right: 5px; }
 
-.nav-btn.next {
-  right: 10px; /* close to the card */
-}
+.nav-btn:hover { background: rgba(255,255,255,0.8); }
 
-.nav-btn:hover {
-  background: rgba(255,255,255,0.8);
-}
 
 
 /* counter */
