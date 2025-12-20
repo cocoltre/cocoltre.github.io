@@ -274,11 +274,11 @@ This is what our posts look like for now. Kind of hard to know what the post was
 
         <div class="reddit-card-body">
           <h2 class="reddit-post-title">
-            moronic monday january th
+            Moronic Monday, January 20th
           </h2>
 
           <p class="reddit-post-body">
-            <UNK> hiphopheads <UNK> <UNK> http have a question that you need answered was it not answered last week did not get a satisfying answer or a question that you feel is too small to make a new thread for maybe something you think everyone but you knows ask that question in this thread questions must be on topic concise and answerable answers must be a real answer that solves the question do not ask a question that can be covered in the resources section some other resources for any terms you may not understand for specific lyric questions for questions about songs and sampling to look through previous mm threads an infograph explaining how albums leak what are the different parts of a song what are the different parts of a song thanks to u <UNK> for more general questions for questions on making hiphop subscribe to this pronunciation guide rza <UNK> gza jiz zah jhen aiko juh nay ahh ee ko danny brown s ad lib style nujabes new jah bes
+            r/hiphopheads Have a question that you need answered? Was it not answered last week, or did not get a satisfying answer? Or a question that you feel is too small to make a new thread for? Maybe something you think everyone but you knows? Ask that question in this thread. Questions must be on topic, concise, and answerable. Answers must be a real answer that solves the question. Do not ask a question that can be covered in the resources section. Some other resources for any terms you may not understand: for specific lyric questions, for questions about songs and sampling, to look through previous mm threads. An infograph explaining how albums leak. What are the different parts of a song? What are the different parts of a song? Thanks to u for more general questions. For questions on making hiphop, subscribe to this pronunciation guide: rza gza jiz zah jhen aiko juh nay ahh ee ko danny brown s ad lib style nujabes new jah bes.
           </p>
         </div>
 
@@ -310,11 +310,11 @@ This is what our posts look like for now. Kind of hard to know what the post was
 
         <div class="reddit-card-body">
           <h2 class="reddit-post-title">
-            fearing the truth
+            Fearing the truth
           </h2>
 
           <p class="reddit-post-body">
-            <UNK> christianity real <UNK> <UNK> the truth shall set you free why are christians afraid of telling the truth the truth set s people free from sin including the sin of homosexuality
+            r/christianity4real The truth shall set you free. Why are christians afraid of telling the truth? The truth set s people free from sin, including the sin of homosexuality.
           </p>
         </div>
 
@@ -346,11 +346,11 @@ This is what our posts look like for now. Kind of hard to know what the post was
 
         <div class="reddit-card-body">
           <h2 class="reddit-post-title">
-            think of the most embarrassing hilarious nasty etc fart story of your life what happened and were you able to recover
+            Think of the most embarrassing, hilarious, nasty, etc., fart story of your life. What happened, and were you able to recover?
           </h2>
 
           <p class="reddit-post-body">
-            <UNK> <UNK> uu f <UNK> i was reading http would love to hear more funny or crazy fart stories everyone farts and they are often hilarious and sometimes they come at the worst possible time please help me enjoy farts even more by sharing
+            I was reading [httplink]. Would love to hear more funny or crazy fart stories. Everyone farts, and they are often hilarious, and sometimes they come at the worst possible time. Please help me enjoy farts even more by sharing.
           </p>
         </div>
 
@@ -383,11 +383,11 @@ This is what our posts look like for now. Kind of hard to know what the post was
 
         <div class="reddit-card-body">
           <h2 class="reddit-post-title">
-            post in suggests to recycle spoiled milk explain why this is possible or just wrong
+            Post in suggests to recycle spoiled milk. Explain why this is possible, or just wrong.
           </h2>
 
           <p class="reddit-post-body">
-            <UNK> askscience v p c <UNK> so i was reading a post in which linked saying that if you added yogurt to a gallon of milk which is going bad you would wake up the next day to a gallon of edible yogurt i ve seen recipes detailing the use of sour milk to make cottage cheese and such but to my knowledge they are using raw u milk when pasteurized milk starts to go bad isn t it the result of bad bacteria and pathogens leaving waste by products resulting in the bad taste could the prescribed method actually be viable for making yogurt or is it a potentially dangerous mix of pathogens original post below
+            r/askscience So I was reading a post in which linked, saying that if you added yogurt to a gallon of milk, which is going bad, you would wake up the next day to a gallon of edible yogurt. I’ve seen recipes detailing the use of sour milk to make cottage cheese and such, but to my knowledge they are using raw u milk. When pasteurized milk starts to go bad, isn’t it the result of bad bacteria and pathogens leaving waste by-products, resulting in the bad taste? Could the prescribed method actually be viable for making yogurt, or is it a potentially dangerous mix of pathogens? Original post below.
           </p>
         </div>
 
@@ -419,11 +419,11 @@ This is what our posts look like for now. Kind of hard to know what the post was
 
         <div class="reddit-card-body">
           <h2 class="reddit-post-title">
-            as an indie game developer with weak art making ability and bad art taste i m some depressed
+            As an indie game developer with weak art-making ability and bad art taste, I’m some depressed.
           </h2>
 
           <p class="reddit-post-body">
-            <UNK> <UNK> <UNK> <UNK> can anyone especially artists give me some suggestions on how to make the art feeling more comfortable some facts got a very high score even its art presentation is very simple however got a much lower score than the old u one after the above polished failure release i decided to go back to use simple art styles again in the past several months i devoted much effort on a new game i spent much time on the game level design and programming and i also tried my best to make better arts the new game really but it still got a score much lower than i expected on and screenshots for above games and really some depressed what improvements should i make or what suggestions i can follow to let my last game get more score
+            Can anyone, especially artists, give me some suggestions on how to make the art feeling more comfortable? Some facts got a very high score, even its art presentation is very simple; however, got a much lower score than the old u one. After the above polished failure release, I decided to go back to use simple art styles again. In the past several months, I devoted much effort on a new game. I spent much time on the game level design and programming, and I also tried my best to make better arts. The new game really, but it still got a score much lower than I expected on. And screenshots for above games and really some depressed. What improvements should I make, or what suggestions I can follow to let my last game get more score?
           </p>
         </div>
 
