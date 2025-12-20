@@ -261,15 +261,17 @@ body.finalrecipe{
 .reddit-card {
   background: #ffffff;
   border-radius: 14px;
-  min-width: 100%;     /* ensures 1 card per slider view */
-  max-width: 780px;    /* optional, keeps card from stretching too much */
+
+  min-width: 80%;      /* a bit smaller than full slider width */
+  max-width: 780px;    /* keeps card from stretching too much */
   margin: 0 auto;      /* centers card horizontally */
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
   padding: 1.6rem 1.8rem;
   font-family: "Inter", "Source Sans 3", system-ui, sans-serif;
-  flex-shrink: 0;      /* prevents shrinking in flex layout */
+  flex-shrink: 0;
   box-sizing: border-box;
 }
+
 
 
 /* Header */
@@ -337,20 +339,21 @@ body.finalrecipe{
   overflow: hidden;      /* hides other cards */
 }
 
-
-
 .reddit-track {
   display: flex;
   transition: transform 0.4s ease;
-  width: 100%;
-  justify-content: center;
+  padding: 0 5%;  /* adds space around cards */
 }
+
 
 /* buttons */
 .nav-btn {
-  background: rgba(255,255,255,0.2);
+  position: absolute;        /* absolute relative to slider */
+  top: 50%;                  /* vertical center */
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.5);
   border: none;
-  color: white;
+  color: #111827;
   font-size: 2rem;
   cursor: pointer;
   padding: 0.5rem 1rem;
@@ -358,8 +361,18 @@ body.finalrecipe{
   z-index: 2;
 }
 
+/* left button */
+.nav-btn.prev {
+  left: 8px;   /* adjust distance from card */
+}
+
+/* right button */
+.nav-btn.next {
+  right: 8px;  /* adjust distance from card */
+}
+
 .nav-btn:hover {
-  background: rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.8);
 }
 
 /* counter */
