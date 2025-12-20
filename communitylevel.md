@@ -43,20 +43,12 @@ In the following, we will try to answer the initial question with the two defini
 <div style="display: flex; gap: 20px; max-width: 900px; margin: auto; align-items: flex-start;">
 
   <!-- Plot (fixed & responsive) -->
-  <div style="flex: 1; max-width: 450px; height: 320px; overflow: hidden;">
+  <div style="flex: 1; max-width: 450px; height: 320px;">
     <iframe
       src="{{ '/assets/plots/1_distribution_subreddits_size.html' | relative_url }}"
-      style="
-        width: 1200px;
-        height: 800px;
-        transform: scale(0.7) translateX(-20%);
-        transform-origin: 0 0;
-        border: none;
-      ">
+      style="width: 100%; height: 100%; border: none;">
     </iframe>
   </div>
-
-
 
   <!-- Table -->
   <div style="flex: 1; font-size: 0.7em;">
