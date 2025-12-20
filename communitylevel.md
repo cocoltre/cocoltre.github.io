@@ -43,12 +43,21 @@ In the following, we will try to answer the initial question with the two defini
 <div style="display: flex; gap: 20px; max-width: 900px; margin: auto; align-items: flex-start;">
 
   <!-- Plot (fixed & responsive) -->
-  <div style="flex: 1; max-width: 450px; height: 320px;">
+  <div style="flex: 1; max-width: 450px; height: 320px; overflow: hidden;">
     <iframe
       src="{{ '/assets/plots/1_distribution_subreddits_size.html' | relative_url }}"
-      style="width: 100%; height: 100%; border: none;">
+      style="
+        width: 420px;        /* original width of the Plotly plot */
+        height: 300px;        /* original height */
+        transform: scale(0.35);  /* shrink factor */
+        transform-origin: top left;  /* keep everything aligned */
+        border: none;
+        display: block;
+      ">
     </iframe>
   </div>
+
+
 
   <!-- Table -->
   <div style="flex: 1; font-size: 0.7em;">
