@@ -246,13 +246,16 @@ body.finalrecipe{
 
 .reddit-hero {
   background: linear-gradient(135deg, #ff4500, #ff6a33);
-  padding: 4rem 2rem;   /* some internal padding */
+  padding: 4rem 2rem;       /* internal padding */
   border-radius: 28px;
   overflow: hidden;
 
-  max-width: 1200px;    /* or whatever your page width is */
-  margin: 0 auto;       /* center horizontally */
+  width: 100%;               /* full width of container */
+  max-width: 1200px;         /* adjust to your page content width */
+  margin: 0 auto;            /* centers horizontally */
+  box-sizing: border-box;    /* include padding in width */
 }
+
 
 
 
