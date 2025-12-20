@@ -43,12 +43,19 @@ In the following, we will try to answer the initial question with the two defini
 <div style="display: flex; gap: 20px; max-width: 900px; margin: auto; align-items: flex-start;">
 
   <!-- Plot (fixed & responsive) -->
-  <div style="flex: 1; max-width: 750px; height: 520px; overflow: hidden;">
+  <div style="flex: 1; max-width: 450px; height: 320px; overflow: hidden;">
     <iframe
       src="{{ '/assets/plots/1_distribution_subreddits_size.html' | relative_url }}"
-      style="width: 90%; height: 90%; border: none;">
+      style="
+        width: 1200px;
+        height: 800px;
+        transform: scale(0.35);
+        transform-origin: 0 0;
+        border: none;
+      ">
     </iframe>
   </div>
+
 
   <!-- Table -->
   <div style="flex: 1; font-size: 0.7em;">
@@ -61,7 +68,7 @@ In the following, we will try to answer the initial question with the two defini
         </tr>
       </thead>
       <tbody>
-        <tr><td>Count (in Subreddits)</td><td>4145</td><td>4145</td></tr>
+        <tr><td>Count of Subreddits</td><td>4145</td><td>4145</td></tr>
         <tr><td>Mean</td><td>4.512183</td><td>3.790109</td></tr>
         <tr><td>Std</td><td>26.427213</td><td>18.182336</td></tr>
         <tr><td>Min</td><td>1</td><td>1</td></tr>
