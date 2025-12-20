@@ -43,7 +43,7 @@ In the following, we will try to answer the initial question with the two defini
 <div style="display: flex; gap: 20px; max-width: 900px; margin: auto; align-items: flex-start;">
 
   <!-- Plot (fixed & responsive) -->
-  <div style="flex: 1; max-width: 450px; height: 320px; overflow: hidden;">
+  <div style="flex: 1; max-width: 350px; height: 220px; overflow: hidden;">
     <iframe
       src="{{ '/assets/plots/1_distribution_subreddits_size.html' | relative_url }}"
       style="width: 100%; height: 100%; border: none;">
