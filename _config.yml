@@ -150,7 +150,7 @@ hover-col: "#F89C74"     # Pastel rose (accent secondaire, hover)
 
 
 # Top band (navbar)
-navbar-col: "#F7FCFD"      # très clair (proche du turquoise, lisible)
+navbar-col: "#F2FBFC"     # très clair (proche du turquoise, lisible)
 navbar-text-col: "#2B2B2B"
 navbar-border-col: "#66C5CC" # border nette, cohérente avec les plots
 
