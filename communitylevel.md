@@ -47,8 +47,8 @@ In the following, we will try to answer the initial question with the two defini
     <iframe
       src="{{ '/assets/plots/1_distribution_subreddits_size.html' | relative_url }}"
       style="
-        width: 450px;        /* original width of the Plotly plot */
-        height: 300px;        /* original height */
+        width: 1200px;        /* original width of the Plotly plot */
+        height: 800px;        /* original height */
         transform: scale(0.9);  /* shrink factor */
         transform-origin: top left;  /* keep everything aligned */
         border: none;
