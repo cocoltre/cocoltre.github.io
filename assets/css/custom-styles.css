@@ -124,7 +124,7 @@ label{ font-weight: 600; }
    Page banner (image + title/subtitle)
    ========================= */
 .page-banner{
-  background-image: url("/assets/img/reddit.png");
+  background-image: url("/assets/img/foule2.jpg");
   background-size: cover;
   background-position: center;
   border-radius: 18px;
@@ -159,9 +159,9 @@ label{ font-weight: 600; }
    Page outline – card + typography
    ========================= */
 .page-outline {
-  background: #fff3e6;
-  border: 1px solid #ffd6b3;
-  border-left: 6px solid #f18603;
+  background: #FFF1EA; 
+  border: 1px solid #F6B79F ;
+  border-left: 6px solid #F89C74;
   border-radius: 12px;
   padding: 1.2rem 1.4rem;
   margin: 2rem 0;
@@ -170,7 +170,7 @@ label{ font-weight: 600; }
 .page-outline h3 {
   margin-top: 0;
   margin-bottom: 0.8rem;
-  color: #cc7000;
+  color: #A14E33 ; 
   font-weight: 900;
   letter-spacing: 0.4px;
 }
@@ -180,10 +180,14 @@ label{ font-weight: 600; }
   margin: 0;
 }
 .page-outline a {
-  color: #f18603;
+  color: #A14E33;
   text-decoration: none;
   font-family: "Inter", "Source Sans 3", system-ui, sans-serif;
 }
+.page-outline a:hover{
+  color: #F89C74;       /* au survol seulement, ton corail */
+}
+
 .page-outline > ul > li > a {
   font-size: 1.2rem;
   font-weight: 800;
@@ -198,7 +202,7 @@ label{ font-weight: 600; }
 }
 .page-outline li::before {
   content: "▸";
-  color: #f18603;
+  color: #F6B79F;
   font-size: 1.1em;
   margin-right: 8px;
 }
@@ -245,7 +249,7 @@ body.finalrecipe{
    ========================= */
 
 .reddit-hero {
-  background: linear-gradient(135deg, #ff4500, #ff6a33);
+  background: linear-gradient(135deg, #ff6a33, #F89C74);
   padding: 4rem 2rem;
   border-radius: 28px;
   overflow: hidden;
@@ -439,4 +443,52 @@ body.finalrecipe{
   margin-top: 0.8rem;
   font-weight: 700;
   color: #ff4500;
+}
+
+
+/* Cover header: force title/subtitle en blanc */
+.intro-header .page-heading h1,
+.intro-header .page-heading .page-subheading{
+  color: #fff !important;
+}
+
+/* voile sombre sur l'image pour que le blanc soit lisible */
+.intro-header .container{
+  position: relative;
+  z-index: 1;
+}
+.intro-header::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,0.04);
+}
+.intro-header{
+  position: relative;
+}
+
+/* ===== Force cover titles to white (robuste BJ) ===== */
+header.intro-header .page-heading h1,
+header.intro-header .page-heading .subheading,
+header.intro-header .post-heading h1,
+header.intro-header .post-heading .subheading,
+header.intro-header h1,
+header.intro-header h2{
+  color: #fff !important;
+}
+
+/* Voile sombre pour lisibilité */
+header.intro-header{
+  position: relative;
+}
+header.intro-header::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,.04);
+  pointer-events: none;
+}
+header.intro-header .container{
+  position: relative;
+  z-index: 1;
 }

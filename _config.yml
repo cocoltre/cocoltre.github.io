@@ -38,7 +38,7 @@ navbar-links:
 
 # Image to show in the navigation bar - works best with a square image
 # Remove this parameter if you don't want an image in the navbar
-avatar: "/assets/img/shark.jpg"
+avatar: "/assets/img/shark2.jpg"
 
 # By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
 round-avatar: true
@@ -123,7 +123,7 @@ feed_show_excerpt: true
 feed_show_tags: true
 
 # Add a search button to the navbar
-post_search: true
+post_search: false
 
 # Add a button in the footer to edit the current page. Only works if your website is hosted on GitHub
 #edit_page_button: true
@@ -146,11 +146,11 @@ page-col: "#FFFFFF"
 text-col: "#2B2B2B"
 
 link-col: "#66C5CC"      # Pastel turquoise (accent principal)
-hover-col: "#FE88B1"     # Pastel rose (accent secondaire, hover)
+hover-col: "#F89C74"     # Pastel rose (accent secondaire, hover)
 
 
 # Top band (navbar)
-navbar-col: "#EAF6F7"        # très clair (proche du turquoise, lisible)
+navbar-col: "#F2FBFC"     # très clair (proche du turquoise, lisible)
 navbar-text-col: "#2B2B2B"
 navbar-border-col: "#66C5CC" # border nette, cohérente avec les plots
 

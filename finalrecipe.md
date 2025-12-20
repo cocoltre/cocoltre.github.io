@@ -192,3 +192,13 @@ document.querySelector("#predict").onclick = async () => {
   <a class="btn btn-default" href="/postlevel/">← Previous: Post level</a>
   <a class="btn btn-primary" href="/">Back to introduction →</a>
 </div>
+
+#### References {#ref}
+
+[1] Srijan Kumar, William L. Hamilton, Jure Leskovec, and Dan Jurafsky. 2018. Community Interaction and Conflict on the Web. In WWW 2018: The 2018 Web Conference, April 23–27, 2018, Lyon, France. ACM, New York, NY, USA, 11 pages. [DOI](https://doi.org/10.1145/3178876.3186141)
+
+
+
+Cover Image : OpenAI. "DALL·E - Image Generation with Text as Input." [DALL·E](https://openai.com/dall-e). OpenAI, 2023
+
+[<sup>[top]</sup>](#top)

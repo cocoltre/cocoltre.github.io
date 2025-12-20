@@ -25,6 +25,15 @@ Our goals are to:
 - Identify the user properties that differ most between bursty and non-bursty posts.
 - Understand which of these properties best explain or predict the probability of triggering a burst.
 
+
+<div class="page-outline" markdown="1">
+
+- TOC
+{:toc}
+
+</div>
+
+
 ### Activity of a user
 
 Does the activity of a user influence the probability of their post to make a burst ?
