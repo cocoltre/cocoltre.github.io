@@ -246,15 +246,14 @@ body.finalrecipe{
 
 .reddit-hero {
   background: linear-gradient(135deg, #ff4500, #ff6a33);
-  padding: 4rem 1rem;
-
-  width: calc(100vw - 12rem); /* was 6rem */
-  margin-left: calc(50% - 50vw + 6rem);
-  margin-right: calc(50% - 50vw + 6rem);
-
+  padding: 4rem 2rem;   /* some internal padding */
   border-radius: 28px;
   overflow: hidden;
+
+  max-width: 1200px;    /* or whatever your page width is */
+  margin: 0 auto;       /* center horizontally */
 }
+
 
 
 /* Card */
@@ -262,15 +261,16 @@ body.finalrecipe{
   background: #ffffff;
   border-radius: 14px;
 
-  min-width: 80%;      /* a bit smaller than full slider width */
-  max-width: 780px;    /* keeps card from stretching too much */
-  margin: 0 auto;      /* centers card horizontally */
+  width: 90%;           /* card is 90% of slider width */
+  max-width: 780px;     
+  margin: 0 auto;       /* center card inside slider */
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
   padding: 1.6rem 1.8rem;
   font-family: "Inter", "Source Sans 3", system-ui, sans-serif;
   flex-shrink: 0;
   box-sizing: border-box;
 }
+
 
 
 
@@ -333,11 +333,6 @@ body.finalrecipe{
 }
 
 /* buttons */
-.reddit-slider {
-  position: relative;
-  width: 100%;
-  overflow: hidden;      /* hides other cards */
-}
 
 .reddit-track {
   display: flex;
@@ -346,10 +341,16 @@ body.finalrecipe{
 }
 
 
-/* buttons */
+.reddit-slider {
+  position: relative;   /* needed for absolute buttons */
+  width: 100%;
+  overflow: hidden;
+}
+
+/* overlay buttons */
 .nav-btn {
-  position: absolute;        /* absolute relative to slider */
-  top: 50%;                  /* vertical center */
+  position: absolute;
+  top: 50%;
   transform: translateY(-50%);
   background: rgba(255,255,255,0.5);
   border: none;
@@ -361,19 +362,18 @@ body.finalrecipe{
   z-index: 2;
 }
 
-/* left button */
 .nav-btn.prev {
-  left: 8px;   /* adjust distance from card */
+  left: 10px;  /* close to the card */
 }
 
-/* right button */
 .nav-btn.next {
-  right: 8px;  /* adjust distance from card */
+  right: 10px; /* close to the card */
 }
 
 .nav-btn:hover {
   background: rgba(255,255,255,0.8);
 }
+
 
 /* counter */
 .reddit-counter {
