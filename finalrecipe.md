@@ -195,11 +195,6 @@ out.textContent = msg ;
 </script>
 ---
 
-<div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:20px">
-  <a class="btn btn-default" href="/postlevel/">← Previous: Post level</a>
-  <a class="btn btn-primary" href="/">Back to introduction →</a>
-</div>
-
 
 ## Conclusion
 
@@ -220,6 +215,12 @@ Overall, our findings suggest that viral conflicts emerge from the interaction b
 
 <hr>
 
+---
+<div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:20px">
+  <a class="btn btn-default" href="/postlevel/">← Previous: Post level</a>
+  <a class="btn btn-primary" href="/">Back to introduction →</a>
+</div>
+
 
 #### References {#ref}
 
@@ -227,6 +228,6 @@ Overall, our findings suggest that viral conflicts emerge from the interaction b
 
 
 
-Cover Image : OpenAI. "DALL·E - Image Generation with Text as Input." [DALL·E](https://openai.com/dall-e). OpenAI, 2023
+All Images : OpenAI. "DALL·E - Image Generation with Text as Input." [DALL·E](https://openai.com/dall-e). OpenAI, 2023
 
 [<sup>[top]</sup>](#top)

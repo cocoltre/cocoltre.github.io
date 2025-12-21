@@ -2,6 +2,7 @@
 layout: page
 title: About us
 subtitle: Why you'd want to give us the best grade
+cover-img: /assets/img/reddit-black.png
 ---
 
 <div class="hero">
