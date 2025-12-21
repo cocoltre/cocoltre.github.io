@@ -114,6 +114,43 @@ We adopt a multi-scale perspective, moving from the macro level of subreddit net
   </div>
 </div>
 
+<div class="quiz-container">
+  <div class="question-section">
+    <h3>Was it a burst?</h3>
+    <div class="answers">
+      <button id="yesBtn">Yes</button>
+      <button id="noBtn">No</button>
+    </div>
+  </div>
+
+  <div class="reddit-hero">
+    <div class="reddit-card" id="redditCard">
+      <div class="reddit-card-header">
+        <div class="reddit-user">
+          <img id="userAvatar" src="" alt="user avatar">
+          <div class="reddit-user-meta">
+            <strong id="userName"></strong>
+            <span>commented on <a href="#" id="postLink">post</a></span>
+          </div>
+        </div>
+        <div class="reddit-logo">
+          <img src="{{ '/assets/img/reddit-logo.svg' | relative_url }}" alt="Reddit">
+        </div>
+      </div>
+      <div class="reddit-card-body">
+        <h2 class="reddit-post-title" id="postTitle"></h2>
+        <p class="reddit-post-body" id="postBody"></p>
+      </div>
+      <div class="reddit-card-footer">
+        <span>⬆ upvote</span>
+        <span>💬 replies</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="{{ '/assets/js/quiz.js' | relative_url }}"></script>
+
 ---
 
 
