@@ -49,7 +49,7 @@ Let's look into that. What is the effective activity of a user ? Is it best desc
       style="
         width: 1200px;        /* original width of the Plotly plot */
         height: 800px;        /* original height */
-        transform: scale(0.2);  /* shrink factor */
+        transform: scale(0.4);  /* shrink factor */
         transform-origin: top left;  /* keep everything aligned */
         border: none;
         display: block;
