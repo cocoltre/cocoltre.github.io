@@ -134,7 +134,7 @@ Because our initial distribution is highly skewed and clearly non-normal, we use
 Next, to compare the clusters between the two features, we apply the Mann–Whitney U test, which assesses whether two independent groups come from the same distribution. Testing whether the clusters based on posts differ from those based on active users, we obtain a p-value of 0.7609. This indicates that we cannot reject the hypothesis that the two features provide the same information: statistically, they behave very similarly.
 {: .text-justify}
 
-Hmm… given how similarly the two features behave across clusters, maybe they are correlated after all. Let’s check and find out!
+Hmm… given this, maybe the two features are correlated after all. Let’s check and find out!
 {: .text-justify}
 
 <div style="position: relative; width: 100%; max-width: 800px; padding-top: 50%; margin: auto;">
