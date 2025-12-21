@@ -511,3 +511,23 @@ header.intro-header .container{
   position: relative;
   z-index: 1;
 }
+
+
+/* Justifier le texte sur tout le site (contenu des pages/posts) */
+.post-content,
+.page-content,
+.blog-post,
+main,
+article{
+  text-align: justify;
+  text-justify: inter-word;      /* aide un peu selon navigateurs */
+  hyphens: auto;                 /* césure si la langue est connue */
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+}
+
+/* Optionnel : éviter de justifier titres, menus, etc. */
+h1, h2, h3, h4, h5, h6,
+.navbar, .navbar *{
+  text-align: left;
+}

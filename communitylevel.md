@@ -31,6 +31,7 @@ Our goals are to:
 
 </div>
 
+---
 
 ### 1. Size of a source subreddit community
 
@@ -96,7 +97,7 @@ That means that 64.1% of subreddits have only 1 active user, which is huge and e
 We also see that the distribution of subreddits across number of active users or number of posts is not exactly the same, which makes sense as 1 user can post several times in the same subreddit.
 {: .text-justify}
 
-We also see that no matter their amount nor the identity of active users, they have different burst ratios (the portion of posts that did a burst). This burst ratio helps to put the same weight for a community that has 1 user who made 4 posts and one that has 1 user who made 1 post, and really just look for the global activity of the subreddit (not their own activity).
+We also observe that no matter their amount nor the identity of active users, they have different burst ratios (the portion of posts that did a burst). This burst ratio helps to put the same weight for a community that has 1 user who made 4 posts and one that has 1 user who made 1 post, and really just look for the global activity of the subreddit (not their own activity).
 {: .text-justify}
 
 **Can the number of active users or the number of posts of a subreddit influence the probability of a post to make a burst?**
@@ -104,6 +105,8 @@ We also see that no matter their amount nor the identity of active users, they h
 
 First, let's first find out about **the number of active users.**
 {: .text-justify}
+
+---
 
 #### 1.1 The size is the number of active users
 
@@ -138,6 +141,8 @@ As our initial distribution is highly skewed and definitely non normal, it is be
 
 That's great! We can use the number of Active Users per Subreddit as our first feature in our model.
 {: .text-justify}
+
+---
 
 #### 1.2 The size is the number of posts
 
@@ -185,7 +190,7 @@ That's great! We can use the number of Posts per Subreddit as our second feature
 
 ### 2. Interactions between communities via hyperlinks
 
-The goal is to analyze how subreddits interact through hyperlinks.
+The goal now is to analyze how subreddits interact through hyperlinks.
 
 Let's investigate:
 - **Who links to whom** (source vs target behavior),
@@ -194,8 +199,7 @@ Let's investigate:
 
 We then restrict the analysis to burst-labeled posts to answer the following question:
 
-> **Do bursts change the structure of subreddit interaction networks?**
-{: .highlight-question}
+***Do bursts change the structure of subreddit interaction networks?***
 
 This part of the project is exploratory and aims to identify **simple, interpretable community-level features** that can later be used for **burst prediction**.
 
@@ -203,13 +207,9 @@ This part of the project is exploratory and aims to identify **simple, interpret
 
 #### 2.1 Dataset Description
 
-The dataset combines:
-- **SNAP Reddit hyperlink data** (`snap_body.tsv`, `snap_title.tsv`)
-- **Handcrafted burst annotations** (`handcrafted_features.tsv`)
+In our dataset, each row represents a **hyperlink between two subreddits**, and the `Burst` label is available only for annotated posts.
 
-Each row represents a **hyperlink between two subreddits**, and the `Burst` label is available only for annotated posts.
-
-##### Dataset overview
+Let's see what we have in details:  
 
 | Quantity | Count |
 |--------|-------|
@@ -235,11 +235,11 @@ Let's first examine which **pairs of subreddits interact the most**, ignoring di
 Among the **top 20 subreddit pairs**, some exceed **500 interactions**, indicating very strong cross-community activity.
 
 Most of these interactions are **positive**, which is expected given the SNAP dataset’s polarity distribution.  
-The pair **drama ↔ subredditdrama** stands out with the highest proportion of negative links, which is consistent with their name id.
+The pair `drama` ↔ `subredditdrama` stands out with the highest proportion of negative links, which is consistent with their name id.
 
 ---
 
-#### 2.3 Source vs Target Roles Over Time
+#### 2.3 Source vs. Target Roles Over Time
 
 As all these hyperlinks have a **source** and a **target**...
 We could now think about the question : ***Do subreddits mainly act as sources (linking to others) or targets (being linked to), and whether this changes over time?***
@@ -254,7 +254,7 @@ This very simple plot shows the **monthly source-to-target ratio** for the ten m
 
 Nice ! We can clearly observe most top subreddits keep a **very stable role** across time, suggesting persistent structural positions in the network.
 
----
+
 
 Next step could be to summarize this behavior into usable features. Let's compute:
 
@@ -267,7 +267,8 @@ Next step could be to summarize this behavior into usable features. Let's comput
 - Mean source ratios are strongly polarized near **0 or 1**
 - Variance is close to **0 for most subreddits**
 
-We can suggest we keep **only the mean source ratio**, as variance provides little additional information. Indeed variance is nearly zero for the vast majority of communities, so it has limited discriminative value compared to the mean source ratio.
+We can suggest to keep **only the mean source ratio** as a new feature that will be use by our model, as variance provides little additional information. Indeed variance is nearly zero for the vast majority of communities, so it has limited discriminative value compared to the mean source ratio.  
+We already have 3 new features ! Let's continue.
 
 ---
 
@@ -303,7 +304,7 @@ However, bursts (which counts are at a much lower scale) show **stronger fluctua
 
 ---
 
-#### 3.3 Source vs Target Roles for Burst Data
+#### 3.3 Source vs. Target Roles for Burst Data
 
 We repeat the role analysis using only burst-labeled interactions.
 
@@ -320,7 +321,7 @@ We visualize which are the top burst-making communities over time.
 
 <iframe src="{{ '/assets/plots/1_fig7.html' | relative_url }}" width="100%" height="600" style="border:none;"></iframe>
 
-A small group of subreddits (e.g. **SubredditDrama**, **ShitLiberalsSay**, **CircleBroke**) consistently appears across months, indicating that **bursts are concentrated in a few highly active communities**.
+A small group of subreddits (e.g. `SubredditDrama`, `ShitLiberalsSay`, `CircleBroke`) consistently appears across months, indicating that **bursts are concentrated in a few highly active communities**.
 
 ---
 
@@ -335,15 +336,42 @@ But then, looking at the fast switch timeline, (when the switch is done under �
 This suggests that the effect is likely driven by **dataset boundary effects**, rather than systematic retaliation.
 
 ---
-### 4. Clustering of the subreddits 
 
-**The Big Question:** How do we group subreddits together? By topic? By size? Neither!
+#### 4. Subreddit Similarity
 
-Instead, we group them by **who participates in them**. Think of it like this: if a user bounces between r/gaming, r/pcmasterrace, and r/buildapc, these three communities belong in the same cluster—not because they all talk about games (okay, they do), but because they **share the same people**.
+Can we try to understand how close in subject are the two subreddits ?
+
+<iframe
+  src="{{ '/assets/plots/subreddit_similarity_burst_distribution.html' | relative_url }}"
+  width="100%"
+  height="800"
+  style="border:none;">
+</iframe>
+
+Here, we can see the distribution of topical similarity between source and target subreddits, measured using cosine similarity.  
+
+Most cross-links connect communities that are already highly similar, with similarity values concentrated toward the upper end of the scale. 
+This holds for both mobilizing and non-mobilizing cases. 
+
+It shown that mobilizations are slightly more likely between topically similar communities compared to random pairs. 
+
+But similarity alone does not explain whether a cross-link leads to mobilization, instead topical alignment appears to be a prerequisite for negative interaction, rather than a driver of escalation.
+
+Clusering the communities could be an interesting idea...
+
+---
+### 5. Clustering of the subreddits 
+
+Now, we're interesting in grouping communities together. This could be very interesting to better understand the predictions our model will perform.  
+
+Big Question: *** How do we group subreddits together? *** By topic? By size? Neither!
+
+Instead, we group them by **who participates in them**.  
+Think of it like this: if a user bounces between `r/gaming`, `r/pcmasterrace`, and `r/buildapc`, these three communities belong in the same cluster; not because they all talk about games (okay, they do), but because they **share the same people**.
 
 This means our clustering reveals the **invisible network of user overlap** that connects Reddit's communities.
 
-#### 4.1 How We Build the Clusters
+#### 5.1 How We Build the Clusters
 
 We use a mathematical pipeline to turn messy user data into clean, interpretable clusters:
 
@@ -353,9 +381,13 @@ We use a mathematical pipeline to turn messy user data into clean, interpretable
 4. **Cluster** using Spectral Clustering (test 10 to 50 clusters and pick the best one)
 5. **Validate** using three quality metrics (making sure we chose wisely)
 
-The result? Each subreddit gets a **cluster membership** telling us which community group it belongs to.
+The result? Each subreddit gets a **cluster membership** telling us which community group it belongs to!
 
-#### 4.2 Network vizualisation 
+
+---
+
+
+#### 5.2 Network vizualisation 
 
 
 <iframe
@@ -376,19 +408,9 @@ The complete network visualization reveals important patterns about how subreddi
 - **Cluster membership as a predictive feature**: These observations suggest that a post's source and target cluster membership are strong indicators of burst likelihood. A post originating from a high-burst cluster (like cluster 22) targeting another active cluster will have different dynamics than one from a low-burst cluster.
 
 **Implication:** Cluster membership can be reliably used as a feature in our predictive model. Posts from specific clusters have demonstrably different burst propensities, making this an informative signal for classification.
+We could give to the model a new feature, for each cluster: the membership is 1 when the subreddit that posted is in the cluster, otherwise the membership is 0.
 
----
 
-#### 5 Subreddit Similarity
-
-<iframe
-  src="{{ '/assets/plots/subreddit_similarity_burst_distribution.html' | relative_url }}"
-  width="100%"
-  height="800"
-  style="border:none;">
-</iframe>
-
-What about the how close in subject are the two subreddits ? Above you can see the distribution of topical similarity between source and target subreddits, measured using cosine similarity. Most cross-links connect communities that are already highly similar, with similarity values concentrated toward the upper end of the scale. This holds for both mobilizing and non-mobilizing cases. It shown that mobilizations are slightly more likely between topically similar communities compared to random pairs.But similarity alone does not explain whether a cross-link leads to mobilization, instead topical alignment appears to be a prerequisite for negative interaction, rather than a driver of escalation.
 
 ---
 

@@ -132,7 +132,7 @@ Overall, our findings suggest that viral conflicts emerge from the interaction b
 const API_BASE = "https://burst-stimulator.onrender.com";
 
 const SUBS = [
-  "askreddit","pics","iama","todayilearned","funny","worldnews","videos","news",
+  "askreddit", "writingprompts", "circlebroke","pics","iama","subredditdrama", "conspiracy", "drama", "todayilearned","funny","worldnews","bestofoutrageculture","news", "shitliberalssay",
   "politics","gaming","wtf","adviceanimals","gifs","science","the_donald"
 ];
 
