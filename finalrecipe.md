@@ -3,7 +3,7 @@ layout: page
 title: Final Recipe
 subtitle: Test it!
 permalink: /finalrecipe/
-cover-img: /assets/img/reddit-black.jpg
+cover-img: /assets/img/reddit-black.png
 body_class: coral-bg
 ---
 
@@ -44,27 +44,16 @@ body_class: coral-bg
 
 ---
 
-## Conclusion
+## Want to test it ?
 
-In this project, we examined the dynamics behind negative bursts on Reddit, sudden waves of cross-community attention and conflict that transform ordinary posts into viral flashpoints. By combining community, user, and post-level analyses, we identified both structural and linguistic factors that contribute to the emergence of these mobilizations.
-{: .text-justify}
+On this project, we analyzed Reddit hyperlinks at different levels.  
+From each level, we tried to extract the most meaningful features, that seem to discriminate the most between post leading to a burst and those that do not.  
 
-At the community level, bursty subreddits tend to be larger and more active, with a significantly higher number of unique contributors than non-bursty ones. These communities occupy central positions in the Reddit hyperlink network, suggesting that structural visibility and cross-subreddit exposure facilitate the propagation of conflicts.
-{: .text-justify}
+The final objective of this project was to try to combine all of these features, train a model, and look if we can predict accurately a burst or not. 
 
-At the user level, activity patterns revealed that bursts are not evenly distributed: a small fraction of highly active users drive most interactions. Timing also plays a role, as posts made during peak activity hours or from prolific users have a higher likelihood of drawing attention across subreddits.
-{: .text-justify}
+We also tried to use this trained model reproduce the comportment of a burst simulator, wanna test it? 
 
-At the post level, linguistic and semantic analyses showed that bursty posts are longer, lexically richer, and exhibit higher emotional and expressive tone compared to non-bursty ones. These posts tend to provoke engagement by combining strong sentiment with narrative or argumentative cues. However, predictive modeling demonstrated that textual features alone are insufficient to explain virality. Logistic regression models, even after feature decorrelation, achieved limited predictive accuracy, underscoring that contextual and social factors remain essential in understanding collective online behavior.
-{: .text-justify}
-
-Overall, our findings suggest that viral conflicts emerge from the interaction between content and context: structural exposure amplifies emotionally charged or rhetorically rich posts, while user dynamics and cross-subreddit links determine how far and fast these conflicts spread.
-{: .text-justify}
-
-<hr>
-
-
----
+*Disclaimer.* This simulator is for educational / informational purposes only. Please do not use it to intentionally provoke or coordinate harassment, brigading, or cross-community conflicts on Reddit.
 
 <div class="reddit-hero">
   <div class="reddit-card finalrecipe-card">
@@ -179,7 +168,24 @@ document.querySelector("#predict").onclick = async () => {
     const data = await r.json();
     const pct = (100 * data.probability).toFixed(1);
 
-    out.textContent = `Simulated burst probability: ${pct}%`;
+    
+    // by this:
+    const pct = 100 * data.probability;      
+
+    let msg = "";
+    if (pct < 15) {
+      msg = "This post will not burst!";
+    } else if (pct < 23) {
+      msg = "This post will probably not burst!";
+    } else if (pct < 28) {
+      msg = "Hmmm, not sure this post will burst or not.";
+    } else if (pct < 35) {
+      msg = "Ouch, this post will probably burst!";
+    } else {
+      msg = "Careful!! This post will burst!!";
+    }
+
+out.textContent = msg ;
 
   } catch (e){
     console.error(e);
@@ -187,11 +193,33 @@ document.querySelector("#predict").onclick = async () => {
   }
 };
 </script>
+---
 
 <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:20px">
   <a class="btn btn-default" href="/postlevel/">← Previous: Post level</a>
   <a class="btn btn-primary" href="/">Back to introduction →</a>
 </div>
+
+
+## Conclusion
+
+In this project, we examined the dynamics behind negative bursts on Reddit, sudden waves of cross-community attention and conflict that transform ordinary posts into viral flashpoints. By combining community, user, and post-level analyses, we identified both structural and linguistic factors that contribute to the emergence of these mobilizations.
+{: .text-justify}
+
+At the community level, bursty subreddits tend to be larger and more active, with a significantly higher number of unique contributors than non-bursty ones. These communities occupy central positions in the Reddit hyperlink network, suggesting that structural visibility and cross-subreddit exposure facilitate the propagation of conflicts.
+{: .text-justify}
+
+At the user level, activity patterns revealed that bursts are not evenly distributed: a small fraction of highly active users drive most interactions. Timing also plays a role, as posts made during peak activity hours or from prolific users have a higher likelihood of drawing attention across subreddits.
+{: .text-justify}
+
+At the post level, linguistic and semantic analyses showed that bursty posts are longer, lexically richer, and exhibit higher emotional and expressive tone compared to non-bursty ones. These posts tend to provoke engagement by combining strong sentiment with narrative or argumentative cues. However, predictive modeling demonstrated that textual features alone are insufficient to explain virality. Logistic regression models, even after feature decorrelation, achieved limited predictive accuracy, underscoring that contextual and social factors remain essential in understanding collective online behavior.
+{: .text-justify}
+
+Overall, our findings suggest that viral conflicts emerge from the interaction between content and context: structural exposure amplifies emotionally charged or rhetorically rich posts, while user dynamics and cross-subreddit links determine how far and fast these conflicts spread.
+{: .text-justify}
+
+<hr>
+
 
 #### References {#ref}
 
