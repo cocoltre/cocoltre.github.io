@@ -82,14 +82,13 @@ We also tried to use this trained model reproduce the comportment of a burst sim
         the probability that it will generate a burst of cross-subreddit attention.
       </p>
 
-      <form class="simulator-form" onsubmit="return false;">
+      <div class="simulator-form">
 
-        <label for="src">Source subreddit</label>
-        <select id="src" name="src"></select>
+        <label>Source subreddit</label>
+        <select id="src"></select>
 
-        <label for="tgt">Target subreddit</label>
-        <select id="tgt" name="tgt"></select>
-
+        <label>Target subreddit</label>
+        <select id="tgt"></select>
 
         <label>Date & time</label>
         <input id="dt" type="datetime-local">
@@ -100,13 +99,13 @@ We also tried to use this trained model reproduce the comportment of a burst sim
         <label>Body</label>
         <textarea id="body" rows="6" placeholder="Post content"></textarea>
 
-        <button id="predict" class="btn btn-primary">
+        <button id="predict" type="button" class="btn btn-primary">
           Simulate burst probability
-        </button>
+        </button>>
 
         <p id="out" class="simulator-output"></p>
 
-      </form>
+      </div>
     </div>
 
     <div class="reddit-card-footer">
@@ -167,10 +166,7 @@ document.querySelector("#predict").onclick = async () => {
     }
 
     const data = await r.json();
-    const pct = (100 * data.probability).toFixed(1);
-
     
-    // by this:
     const pct = 100 * data.probability;      
 
     let msg = "";
