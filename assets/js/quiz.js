@@ -7,28 +7,28 @@ const posts = [
     correct: 'Yes'
   },
   {
-    avatar: '/assets/img/ironman.svg',
+    avatar: '/assets/img/batman.svg',
     user: 'u/tonystark',
     title: 'New AI model released',
     body: 'The new AI model can predict stock trends better than ever.',
     correct: 'No'
   },
   {
-    avatar: '/assets/img/superman.svg',
+    avatar: '/assets/img/batman.svg',
     user: 'u/clarkkent',
     title: 'Weather is unusual today',
     body: 'It seems like the weather patterns are shifting drastically.',
     correct: 'Yes'
   },
   {
-    avatar: '/assets/img/wonderwoman.svg',
+    avatar: '/assets/img/batman.svg',
     user: 'u/dianaprince',
     title: 'Mars rover finds new evidence',
     body: 'Scientists report a new mineral that might indicate past water.',
     correct: 'No'
   },
   {
-    avatar: '/assets/img/spiderman.svg',
+    avatar: '/assets/img/batman.svg',
     user: 'u/peterparker',
     title: 'Local news: park event',
     body: 'A local park held a community event with many participants.',

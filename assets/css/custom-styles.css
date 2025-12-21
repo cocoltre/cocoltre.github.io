@@ -426,7 +426,7 @@ label{ font-weight: 600; }
    Quiz
    ======== */
 
-   .quiz-container {
+.quiz-container {
   display: flex;
   gap: 2rem;
   max-width: 1000px;
