@@ -144,7 +144,8 @@ label{ font-weight: 600; }
 
 /* Variantes avec images */
 .page-banner.banner-foule { background-image: url("/assets/img/foule2.jpg"); }
-.page-banner.banner-reddit { background-image: url("/assets/img/reddit-corail.jpg"); }
+.page-banner.banner-user { background-image: url("/assets/img/reddit-corail.jpg"); }
+.page-banner.banner-reddit { background-image: url("/assets/img/user.png"); }
 
 /* Variante sans image (fond uni / dégradé) */
 .page-banner.no-img{
