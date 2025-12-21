@@ -613,7 +613,42 @@ header.intro-header .post-heading .subheading{
   -moz-appearance: menulist;
 }
 
+/* =========================================
+   FINAL FIX — select dropdown not clickable
+   ========================================= */
 
-.simulator-form * {
-  outline: 1px dashed red;
+/* Container */
+.simulator-form {
+  position: relative;
+  z-index: 10;
+}
+
+/* Labels must NOT capture clicks */
+.simulator-form label {
+  display: block;
+  margin-bottom: 6px;
+  pointer-events: none;   /* CRITICAL */
+}
+
+/* Select must be above everything */
+.simulator-form select {
+  position: relative;
+  z-index: 20;
+  pointer-events: auto;
+  background-color: #ffffff;
+  cursor: pointer;
+
+  appearance: auto;
+  -webkit-appearance: menulist;
+  -moz-appearance: menulist;
+}
+
+/* Defensive: kill any decorative overlays */
+.reddit-card::before,
+.reddit-card::after,
+.reddit-card-body::before,
+.reddit-card-body::after,
+.reddit-hero::before,
+.reddit-hero::after {
+  pointer-events: none !important;
 }
