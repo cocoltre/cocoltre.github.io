@@ -29,12 +29,20 @@ const posts = [
   },
   {
     avatar: '/assets/img/batman.svg',
+    user: 'u/TheodoreNoon',
+    title: 'I just read some funny shit on the Canada subreddit.',
+    body: 'r/the_donald [httplink] apparently the liberals here are going to protest the Trump inauguration Friday and Saturday. This could be the one time where they can chant, and it will be true, folks.',
+    correct: 'Yes'
+  },
+  {
+    avatar: '/assets/img/batman.svg',
     user: 'u/throwoneawayagain',
     title: 'Post in suggests to recycle spoiled milk. Explain why this is possible, or just wrong.',
     body: 'r/askscience So I was reading a post in which linked, saying that if you added yogurt to a gallon of milk, which is going bad, you would wake up the next day to a gallon of edible yogurt. I’ve seen recipes detailing the use of sour milk to make cottage cheese and such, but to my knowledge they are using raw u milk. When pasteurized milk starts to go bad, isn’t it the result of bad bacteria and pathogens leaving waste by-products, resulting in the bad taste? Could the prescribed method actually be viable for making yogurt, or is it a potentially dangerous mix of pathogens? Original post below.',
     correct: 'No'
   },
 ];
+
 
 let currentIndex = 0;
 

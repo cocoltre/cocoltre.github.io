@@ -114,9 +114,11 @@ We adopt a multi-scale perspective, moving from the macro level of subreddit net
   </div>
 </div>
 
+Now, let’s see how good you are at predicting whether a post will trigger a burst.
+
 <div class="quiz-container">
   <div class="question-section">
-    <h3>Was it a burst?</h3>
+    <h3>Do you think that this post led to a burst?</h3>
     <div class="answers">
       <button id="yesBtn">Yes</button>
       <button id="noBtn">No</button>
@@ -150,6 +152,8 @@ We adopt a multi-scale perspective, moving from the macro level of subreddit net
 </div>
 
 <script src="{{ '/assets/js/quiz.js' | relative_url }}"></script>
+
+Tricky, isn’t it? Let’s turn to data analysis to understand why predicting bursts is so hard, and how we can get better at it.
 
 ---
 
