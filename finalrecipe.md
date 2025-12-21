@@ -82,7 +82,7 @@ We also tried to use this trained model reproduce the comportment of a burst sim
         the probability that it will generate a burst of cross-subreddit attention.
       </p>
 
-      <div class="simulator-form">
+      <form class="simulator-form" onsubmit="return false;">
 
         <label for="src">Source subreddit</label>
         <select id="src" name="src"></select>
@@ -106,7 +106,7 @@ We also tried to use this trained model reproduce the comportment of a burst sim
 
         <p id="out" class="simulator-output"></p>
 
-      </div>
+      </form>
     </div>
 
     <div class="reddit-card-footer">
