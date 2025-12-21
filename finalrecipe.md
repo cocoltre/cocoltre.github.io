@@ -170,13 +170,13 @@ document.querySelector("#predict").onclick = async () => {
     const pct = 100 * data.probability;      
 
     let msg = "";
-    if (pct < 15) {
+    if (pct < 20) {
       msg = "This post will not burst!";
-    } else if (pct < 23) {
-      msg = "This post will probably not burst!";
     } else if (pct < 28) {
+      msg = "This post will probably not burst!";
+    } else if (pct < 34) {
       msg = "Hmmm, not sure this post will burst or not.";
-    } else if (pct < 35) {
+    } else if (pct < 40) {
       msg = "Ouch, this post will probably burst!";
     } else {
       msg = "Careful!! This post will burst!!";
