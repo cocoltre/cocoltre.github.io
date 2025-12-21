@@ -14,7 +14,7 @@ cover-img: /assets/img/reddit-black.png
 </div>
 
 
-## User Level
+# User Level
 
 Once we know from where (from which subreddit) one's talking, let's look at who they are exactly, and when they are talking.
 In this section, we are interested to explore and to understand which user properties distinguish posts that trigger a burst from those that do not.
@@ -33,8 +33,9 @@ Our goals are to:
 
 </div>
 
+--- 
 
-### Activity of a user
+### 1. Activity of a user
 
 Does the activity of a user influence the probability of their post to make a burst ?
 Let's look into that. What is the effective activity of a user ? Is it best described by the number of subreddits they belong to (ie have already posted in) ? Or by the number of posts they have made ? 
@@ -96,7 +97,8 @@ We also see that no matter their amount nor the identity of active users, they h
 First, let's first find out about **the number of subreddits.**
 {: .text-justify}
 
-#### The activity is the number of subreddits in which they are active
+--- 
+#### 1.1 The activity is the number of subreddits in which they are active
 
 <div style="position: relative; width: 100%; max-width: 800px; padding-top: 50%; margin: auto;">
   <iframe
@@ -130,9 +132,11 @@ As our initial distribution is highly skewed and definitely non normal, it is be
 That's great! We can use the number of Subreddits per Active User as a new feature in our ML model.
 {: .text-justify}
 
-#### The activity is the number of posts
+--- 
 
-Now let's see if the number of posts a user has made has also an influence on the probability of a post to make a burst.
+#### 1.2 The activity is the number of posts
+
+Now let's see if the number of posts a user has made has also an influence on the probability of a post to make a burst.  
 Remember: we saw that users make many different amounts of posts. We also saw that no matter their amount of the subreddits they belong to nor the identity of active users, they have different burst ratios (the portion of posts that did a burst).
 {: .text-justify}
 
@@ -171,13 +175,63 @@ As our initial distribution is highly skewed and definitely non normal, it is be
 That's great ! We can use the number of Posts per Active User as a new feature in our ML model.
 {: .text-justify}
 
-### 2. Clustering of the users 
+--- 
 
-**The Big Question:** How do we group users together? By their posting frequency? By their karma? Neither!
 
-Instead, we group them by **which subreddits they participate in**. Think of it like this: if a user bounces between r/AskReddit, r/funny, and r/IAmA, they belong in the same cluster as other users who frequent these same communities—not because they post the same content, but because they **move in the same circles**.
+### 2. A moment where you should post ?
 
-#### 2.1 The User Clustering Pipeline
+When is it optimal to post in order to mobilise people ? Time ;) to find out !
+
+<iframe
+  src="{{ '/assets/plots/stos_1.html' | relative_url }}"
+  width="100%"
+  height="800"
+  style="border:none;">
+</iframe>
+
+The figure shows how the timing of a cross-link relates to whether it triggers mobilization.  
+By hovering over you can see random posts that were posted in that timespan. So we can see that cross-links that lead to a burst of comments from members of the source community are more likely to be created around mid-day, especially from late morning to early afternoon. In contrast, cross-links that do not lead to mobilization are more evenly distributed across the day and occur more frequently in the evening and at night.
+
+To determine whether a cross-link leads to mobilization, we examine commenting activity in a 12-hour window after the link is created.  
+
+The stronger concentration of mobilization events during mid-day hours suggests that cross-links posted when many users are simultaneously active are more likely to prompt coordinated responses. So time clearly has an impact on burst (and with a p-value equal to 8.77e-135!).   
+Let's use this feature for our model!
+
+
+--- 
+
+
+### 3. A score for each user
+Reddit users are very different, they have all different interest, different lifestyles, different comportments,...  
+We are interested in a way to characterize an user, relative to the rest of Reddit users.  
+Let's compute a new feature, called User score, where the score measures how similar a user is to the average member of the community, and this using cosine similarity.  
+
+<iframe
+  src="{{ '/assets/plots/user_score_burst_distribution.html' | relative_url }}"
+  width="100%"
+  height="800"
+  style="border:none;">
+</iframe>
+
+Here, you can see the distribution of user scores.  
+By hovering over you can see random users belonging to the selected category.  
+The difference in distributions for mobilizing and non-mobilizing cases is statistically significant (p < 0.001), but the effect size is minor, showing that mobilization is not driven by a sharply distinct type of users.  
+Both outcomes are centered around similar similarity values, indicating that users that post negative posts in the first place might be very similar. There is only a slight tendency for mobilization to involve users who are closer to the community average.  
+Let's keep this feature for our model, but it would be nice to perform a clustering of users, to group them together...
+
+--- 
+
+### 4. Clustering of the users 
+
+
+Now, we're interesting in grouping users together. This could be very interesting to better understand the predictions our model will perform.  
+
+
+Big Question: ***How do we group users together? By their posting frequency? By their karma? Neither!***
+
+Instead, we group them by **which subreddits they participate in**. Think of it like this: if a user bounces between `r/AskReddit`, `r/funny`, and `r/IAmA`, they belong in the same cluster as other users who frequent these same communities; not because they post the same content, but because they **move in the same circles**.
+
+#### 4.1 How We Build the Clusters
 
 User clustering follows a similar mathematical pipeline to subreddit clustering, adapted for user-subreddit participation patterns:
 
@@ -188,6 +242,8 @@ User clustering follows a similar mathematical pipeline to subreddit clustering,
 5. **Validate** using three quality metrics (ensuring robust cluster selection)
 
 The result? Each user gets a **cluster membership** indicating which user community they belong to—a grouping based entirely on their subreddit participation overlap with other users.
+
+--- 
 
 #### 2.2 Bar plot visualization
 
@@ -201,33 +257,14 @@ The result? Each user gets a **cluster membership** indicating which user commun
 User cluster membership can be reliably used as a feature in our predictive model. Posts from users in specific clusters have demonstrably different burst propensities, making this a powerful signal for classification.
 
 
+### Takeaways we keep to build our final recipe ! 
 
 
-### User Score
-
-<iframe
-  src="{{ '/assets/plots/user_score_burst_distribution.html' | relative_url }}"
-  width="100%"
-  height="800"
-  style="border:none;">
-</iframe>
-
-Here, you can see the distribution of user scores, where the score measures how similar a user is to the average member of the community using cosine similarity. By hovering over you can see random users belonging to the selected category. The difference in distributions for mobilizing and non-mobilizing cases is statistically significant (p < 0.001), but the effect size is minor, showing that mobilization is not driven by a sharply distinct type of users. Both outcomes are centered around similar similarity values, indicating that users that post negative posts in the first place might be very similar. There is only a slight tendency for mobilization to involve users who are closer to the community average. 
-
-### When should you post ?!?
-
-When is it optimal to post in order to mobilise people ? Time ;) to find out !
-
-<iframe
-  src="{{ '/assets/plots/stos_1.html' | relative_url }}"
-  width="100%"
-  height="800"
-  style="border:none;">
-</iframe>
-
-The figure shows how the timing of a cross-link relates to whether it triggers mobilization. By hovering over you can see random posts that were posted in that timespan. So we can see that cross-links that lead to a burst of comments from members of the source community are more likely to be created around mid-day, especially from late morning to early afternoon. In contrast, cross-links that do not lead to mobilization are more evenly distributed across the day and occur more frequently in the evening and at night.
-
-To determine whether a cross-link leads to mobilization, we examine commenting activity in a 12-hour window after the link is created. The stronger concentration of mobilization events during mid-day hours suggests that cross-links posted when many users are simultaneously active are more likely to prompt coordinated responses. So time clearly has an impact on burst and with a p-value equal to 8.77e-135 !!!
+- **User activity matters**: users active in *fewer* subreddits tend to trigger bursts more often.
+- **Low posting frequency correlates with bursts**: users with *fewer total posts* show higher burst ratios.
+- **Timing matters**: mobilizing cross-links are more likely around **late morning / early afternoon**.
+- **User score helps a bit**: statistically different, but the effect is small → keep it as a weak feature.
+- **User clusters are informative**: cluster membership captures “same circles” behavior and predicts burst propensity.
 
 <hr>
 
