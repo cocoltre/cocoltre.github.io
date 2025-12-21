@@ -95,7 +95,6 @@ At each level, we use descriptive (visual and statistic dal) or predictive (mode
   <div class="hero-text">
     <p>
     At each level, we use descriptive (visual and statistic dal) or predictive (model-based) analyses. This step-by-step approach allows us to isolate which dimensions—network position, user profile, or linguistic tone—contribute most to the emergence of a burst.
-    {: .text-justify}
     </p>
     
     <p>
