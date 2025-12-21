@@ -101,7 +101,7 @@ We also tried to use this trained model reproduce the comportment of a burst sim
 
         <button id="predict" type="button" class="btn btn-primary">
           Simulate burst probability
-        </button>>
+        </button>
 
         <p id="out" class="simulator-output"></p>
 
@@ -154,40 +154,34 @@ document.querySelector("#predict").onclick = async () => {
   }
 
   try {
-    const r = await fetch(`${API_BASE}/predict`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload)
-    });
+  const r = await fetch(`${API_BASE}/predict`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
 
-    if (!r.ok){
-      const err = await r.text();
-      throw new Error(err);
-    }
+  const txt = await r.text(); // on lit le body une seule fois
 
-    const data = await r.json();
-    
-    const pct = 100 * data.probability;      
-
-    let msg = "";
-    if (pct < 15) {
-      msg = "This post will not burst!";
-    } else if (pct < 23) {
-      msg = "This post will probably not burst!";
-    } else if (pct < 28) {
-      msg = "Hmmm, not sure this post will burst or not.";
-    } else if (pct < 35) {
-      msg = "Ouch, this post will probably burst!";
-    } else {
-      msg = "Careful!! This post will burst!!";
-    }
-
-out.textContent = msg ;
-
-  } catch (e){
-    console.error(e);
-    out.textContent = "Error: unable to reach the prediction API.";
+  if (!r.ok) {
+    throw new Error(`HTTP ${r.status} — ${txt}`);
   }
+
+  const data = JSON.parse(txt);
+  const pct = 100 * data.probability;
+
+  let msg = "";
+  if (pct < 15) msg = "This post will not burst!";
+  else if (pct < 23) msg = "This post will probably not burst!";
+  else if (pct < 28) msg = "Hmmm, not sure this post will burst or not.";
+  else if (pct < 35) msg = "Ouch, this post will probably burst!";
+  else msg = "Careful!! This post will burst!!";
+
+  out.textContent = msg;
+
+} catch (e) {
+  console.error(e);
+  out.textContent = `Error: ${e.message}`;
+}
 };
 </script>
 ---
