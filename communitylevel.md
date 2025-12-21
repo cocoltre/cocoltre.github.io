@@ -99,7 +99,7 @@ We also see that the distribution of subreddits across number of active users or
 Another key observation: regardless of the number or identity of active users, subreddits show very different burst ratios — the fraction of posts that triggered a burst. The burst ratio allows us to compare communities fairly: it gives the same weight to a subreddit where 1 user made 4 posts and a subreddit where 1 user made just 1 post, focusing on overall subreddit activity rather than individual behavior.
 {: .text-justify}
 
-**Can the number of active users or the number of posts in a subreddit influence the probability that a post will trigger a burst**
+**Can the number of active users or the number of posts in a subreddit influence the probability that a post will trigger a burst?**
 {: .text-justify}
 
 <div style="position: relative; width: 100%; max-width: 800px; padding-top: 50%; margin: auto;">
