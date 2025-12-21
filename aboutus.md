@@ -24,7 +24,7 @@ subtitle: Why you'd want to give us the best grade
       <br>• We are excellent swimmers
       <br>• We are extremely loyal to our family
       <br>• We don’t abandon our teammates when the code breaks at 2am
-      <br>• We can turn chaos into plots.   
+      <br>• We can turn chaos into plots
       <br> What else do you need?
     </p>
   </div>
