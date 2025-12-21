@@ -54,7 +54,8 @@ The final objective of this project was to try to combine all of these features,
 We also tried to use this trained model reproduce the comportment of a burst simulator, wanna test it? 
 
 *Disclaimer.* This simulator is for educational / informational purposes only. Please do not use it to intentionally provoke or coordinate harassment, brigading, or cross-community conflicts on Reddit.  
-To get accurate predictions, use a longer, content-rich post. The simulator works best with meaningful text similar to real Reddit discussions. Keep in mind that short or trivial inputs may lead to unreliable predictions.
+To get accurate predictions, use a longer, content-rich post. The simulator works best with meaningful text similar to real Reddit discussions. Keep in mind that short or trivial inputs may lead to unreliable predictions.   
+If an error persist, do not hesitate to contact us.
 
 <div class="reddit-hero">
   <div class="reddit-card finalrecipe-card">
@@ -213,7 +214,7 @@ Overall, our findings suggest that viral conflicts emerge from the interaction b
 
 <hr>
 
----
+
 <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:20px">
   <a class="btn btn-default" href="/postlevel/">← Previous: Post level</a>
   <a class="btn btn-primary" href="/">Back to introduction →</a>
