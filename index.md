@@ -4,6 +4,7 @@ title: The Recipe of a Viral Conflict
 subtitle: Understanding Negative Bursts on Reddit
 cover-img: /assets/img/reddit-black.png
 permalink: /
+body_class: coral-bg
 ---
 
 Imagine scrolling through Reddit and stumbling upon a post like this one:
@@ -67,7 +68,7 @@ To do this, we integrate multiple levels of analysis based on the Reddit Hyperli
 
 ### How to define a burst
 
-In this work, we adopt the definition of burst proposed by Hamilton et al. in the paper Community Interaction and Conflict on the Web[<sup>[1]</sup>](#ref).
+In this work, we adopt the definition of burst proposed by Hamilton et al. in the paper *Community Interaction and Conflict on the Web*[<sup>[1]</sup>](#ref).
 {: .text-justify}
 
 A burst, or mobilization, is defined as a case where a cross-link between two communities leads to a significant increase in the number of comments made by members of the source community on the discussion thread of the target post. To distinguish genuine mobilizations from random fluctuations in activity, the authors compare the observed number of comments to a null model that estimates the expected commenting rate in the absence of a cross-link.
@@ -81,12 +82,12 @@ A mobilization (or burst) is identified when the increase in comments exceeds th
 We adopt a multi-scale perspective, moving from the macro level of subreddit networks to the micro level of words and sentences. Our analyses combine:
 {: .text-justify}
 
-- Community embeddings to map structural proximity and polarization between subreddits.
 - Interaction networks to track the direction, frequency, and intensity of cross-links over time.
+- Community embeddings to map structural proximity and polarization between subreddits.
 - User embeddings to identify clusters of users and their role in burst diffusion.
 - Semantic features (text statistics, sentiment, and LIWC categories) to capture linguistic signals that characterize bursty posts.
 
-At each level, we use both descriptive (visual and statistic dal) and predictive (model-based) analyses. This step-by-step approach allows us to isolate which dimensions—network position, user profile, or linguistic tone—contribute most to the emergence of a burst.
+At each level, we use descriptive (visual and statistic dal) or predictive (model-based) analyses. This step-by-step approach allows us to isolate which dimensions—network position, user profile, or linguistic tone—contribute most to the emergence of a burst.
 {: .text-justify}
 
 <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:22px">

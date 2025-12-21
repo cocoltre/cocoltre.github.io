@@ -3,7 +3,7 @@ layout: page
 title: User Level
 subtitle: Who participates and when ?
 permalink: /userlevel/
-cover-img: /assets/img/baniere.png
+cover-img: /assets/img/reddit-black.png
 ---
 
 <div class="page-banner">

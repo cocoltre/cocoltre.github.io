@@ -1,6 +1,6 @@
 :root{
   /* Plotly Pastel (approx hex) */
-  --p1:#66C5CC;
+  --p1:#66C5CC; /* rgb(102,197,204) */
   --p2:#F6CF71;
   --p3:#F89C74;
   --p4:#DCB0F2;
@@ -13,7 +13,7 @@
   --p11:#B3B3B3;
 
   /* site tokens */
-  --bg: #FFF6F1;   /* corail très très clair (plus doux que #FFF1EA) */
+  --bg: #FFFFFF;
   --text: #2B2B2B;
   --muted: #666;
   --card: #FFFFFF;
@@ -24,21 +24,12 @@
   --secondary: var(--p6);
   --secondary-hover: #86A7F0;
 }
-
-/* fond global */
-html, body{
-  background-color: var(--bg) !important;
+/* fond corail UNIQUEMENT sur les pages taggées */
+body.coral-bg {
+  background-color: #FFF1EA !important; /* un peu + foncé que #FFF6F1 */
 }
 
-/* si BJ met du blanc sur le wrapper */
-body,
-.main-content,
-.container[role="main"],
-.page-content,
-.wrap,
-.wrapper{
-  background: transparent !important;
-}
+/* garder le contenu lisible : on ne force PAS le wrapper en transparent globalement */
 
 /* =========================
    Buttons (Beautiful Jekyll)

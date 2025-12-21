@@ -1,10 +1,10 @@
 ---
 layout: page
 title: Final Recipe
-body_class: finalrecipe
-subtitle: Summary, takeaways, and future work
+subtitle: Test it!
 permalink: /finalrecipe/
-cover-img: /assets/img/reddit-corail.jpg
+cover-img: /assets/img/reddit-black.jpg
+body_class: coral-bg
 ---
 
 <div class="hero">
