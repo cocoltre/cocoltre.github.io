@@ -109,7 +109,7 @@ Another key observation: regardless of the number or identity of active users, s
   </iframe>
 </div>
 
-Here, we see that the burst ratios vary from 0 to 0.176 (meaning that on average 17.6% of all the posts from a community with 81 active users or with 85 posts make a burst). That indicates that the number of active users and posts a subreddit has may influence the burst ratio, thus the probability of a post to make a burst.
+Here, we see that the burst ratios vary from 0 to 0.176 (on average 17.6% of all the posts from a community with 81 active users or with 85 posts make a burst). That indicates that the number of active users and posts a subreddit has may influence the burst ratio, thus the probability of a post to make a burst.
 {: .text-justify}
 
 Because we have way more subreddits with few users and few posts, it is hard to see in details the burst ratios on this plot. Let's find a better way to visualize.
