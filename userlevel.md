@@ -6,7 +6,7 @@ permalink: /userlevel/
 cover-img: /assets/img/reddit-black.png
 ---
 
-<div class="page-banner">
+<div class="page-banner banner-user">
   <div class="page-banner-inner">
     <h1 class="page-title">User behavior as a catalyst for bursts</h1>
     <p class="page-subtitle"></p>

@@ -6,7 +6,7 @@ permalink: /communitylevel/
 cover-img: /assets/img/reddit-black.png
 ---
 
-<div class="page-banner">
+<div class="page-banner banner-foule">
   <div class="page-banner-inner">
     <h1 class="page-title"> Understanding bursts through network structure </h1>
     <p class="page-subtitle"></p>

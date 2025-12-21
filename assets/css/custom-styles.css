@@ -129,8 +129,10 @@ label{ font-weight: 600; }
 /* =========================
    Page banner (image + title/subtitle)
    ========================= */
+
+/* Banner base (sans image par défaut) */
 .page-banner{
-  background-image: url("/assets/img/foule2.jpg");
+  background-color: #111;          /* fallback si pas d’image */
   background-size: cover;
   background-position: center;
   border-radius: 18px;
@@ -139,23 +141,38 @@ label{ font-weight: 600; }
   position: relative;
   overflow: hidden;
 }
+
+/* Variantes avec images */
+.page-banner.banner-foule { background-image: url("/assets/img/foule2.jpg"); }
+.page-banner.banner-reddit { background-image: url("/assets/img/reddit-corail.jpg"); }
+
+/* Variante sans image (fond uni / dégradé) */
+.page-banner.no-img{
+  background-image: none !important;
+  background: linear-gradient(135deg, #FFF1EA, #ffffff);
+}
+
+/* Voile sombre seulement si image */
 .page-banner::before{
   content:"";
   position:absolute;
   inset:0;
   background: rgba(0,0,0,0.35);
 }
-.page-banner-inner{
-  position: relative;
-  color: #fff;
+
+/* Si pas d’image, enlève le voile sombre */
+.page-banner.no-img::before{
+  background: transparent !important;
 }
 
-/* titre/subtitle dans le banner */
-.page-banner .page-title,
-.page-banner .page-subtitle,
-.page-banner h1,
-.page-banner h2{
-  color:#fff !important;
+.page-banner-inner{ position: relative; color: #fff; }
+
+/* Texte blanc uniquement quand il y a image */
+.page-banner.no-img .page-title,
+.page-banner.no-img .page-subtitle,
+.page-banner.no-img h1,
+.page-banner.no-img h2{
+  color: #2B2B2B !important;
 }
 
 .page-title{ margin: 0 0 6px; }
