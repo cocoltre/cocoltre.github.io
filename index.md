@@ -90,23 +90,29 @@ We adopt a multi-scale perspective, moving from the macro level of subreddit net
 At each level, we use descriptive (visual and statistic dal) or predictive (model-based) analyses. This step-by-step approach allows us to isolate which dimensions—network position, user profile, or linguistic tone—contribute most to the emergence of a burst.
 {: .text-justify}
 
-<div style="display:flex; gap:2rem; align-items:flex-start; margin:2rem 0;">
 
-<div style="flex:0 0 58%;">
+<div class="hero">
+  <div class="hero-text">
+    <p>
+      In fact, at each level we aim not only to analyze what factors appear (or not)
+      to contribute the most to a bursty-post, but also to extract different features
+      that appear meaningful to discriminate between a post leading to a burst or not.
+    </p>
 
-In fact, at each level we aim not only to analyze what factors appear (or not) to contribute the most to a bursty-post, but also to extract different features that appear meaningful to discriminate between a post leading to a burst or not.
+    <p>
+      These features will help us to lead a last part on this project, having as goal
+      to combine all of these features, train a model, and look if we can predict accurately
+      a burst or not. We will also try to understand what features between the whole set
+      are the most important for the classification.
+    </p>
+  </div>
 
-These features will help us to lead a last part on this project, having as goal to combine all of these features, train a model, and look if we can predict accurately a burst or not. We will also try to understand what features between the whole set are the most important for the classification.
-
+  <div class="hero-img">
+    <img src="{{ '/assets/img/marmite.png' | relative_url }}" alt="Final recipe illustration">
+  </div>
 </div>
 
-<div style="flex:0 0 38%; text-align:center;">
-
-![Final recipe](/assets/img/marmite.png)
-
-</div>
-
-</div>
+---
 
 
 <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:22px">
