@@ -5,7 +5,7 @@ subtitle: What is said and how it is said ?
 permalink: /postlevel/
 cover-img: /assets/img/reddit-black.png
 ---
-<div class="page-banner">
+<div class="page-banner banner-post">
   <div class="page-banner-inner">
     <h1 class="page-title">Meaning, emotion, and form interact to create bursts</h1>
     <p class="page-subtitle"></p>
@@ -27,6 +27,7 @@ cover-img: /assets/img/reddit-black.png
 }
 </style>
 
+# Post level
 Once we know who and when one’s talking, let's look look at what they're saying.
 In this section, we are interested to explore and to understand which textual, linguistic or emotional properties distinguish posts that trigger a burst from those that do not.
 {: .text-justify}
@@ -45,11 +46,12 @@ Our goals are to:
 </div>
 
 
-## 1. Words associated with burst
+### 1. Words associated with burst
 
 We've been talking about Reddit's posts, but do we even know what they really talk about ? Let's find out ! In this section, we are interested to decode the content of every post and see how they can influence the probability of making a burst.
 {: .text-justify}
 
+We have the tokens for each post, but is this helpful.
 <div class="reddit-hero">
 
   <!-- slider -->
@@ -252,7 +254,7 @@ We've been talking about Reddit's posts, but do we even know what they really ta
 
 
 
-This is what our posts look like for now. Kind of hard to know what the post was about right ?
+This is what our posts look like for now. Kind of hard to know what the post was about right ? 
 
 <div class="reddit-hero">
 
@@ -534,7 +536,9 @@ Mmm that's what we thought, the previous words were overrepresented. But here we
 For understanding the overall tendance, maybe we should look at what these words represent. We could continue the analysis using specific features, calculated using the text of the posts.
 {: .text-justify}
 
-## 2. Visualize semantic features
+---
+
+### 2. Visualize semantic features
 
 Now, let's look at the semantical part, how words are shaped, what they represent, etc. 
 
@@ -559,7 +563,9 @@ As you can see, it's a LOT !!
 As you remember, we're interested in finding the features that are the most relevant to predict a burst.  
 Here, it will make sense to try to find, among these features, the one that are more explainative, instead of inventing or computing new features, right ? 
 
-## 3. Feature selection
+---
+
+### 3. Feature selection
 After the preprocessing of these features, our goal is to select the most informative ones. We explore several simple strategies:  
 - **Manual pruning** (human judgement): We look at the correlation matrix to spot features that tell almost the same story. When several features are very similar, we keep one and remove the redundant ones, within each subgroup precedently cited. 
 - **Univariate selection** (one feature at a time): For each feature, we compare its typical values in burst posts vs non-burst posts. Features showing a strong difference between the two groups are good candidates.
@@ -569,6 +575,7 @@ After the preprocessing of these features, our goal is to select the most inform
 - **Online forward selection** (step-by-step with a model): We start with no features, then add them one by one, each time keeping the feature that brings the biggest improvement in prediction. We stop when adding more features no longer helps much.
 
 
+#### 3.1 Example of selection: Manual Pruning
 For example, for the first idea, we are interested in pruning this *big* correlation matrix. 
 
 We try to remove obvious duplicates while preserving interpretable representatives across feature families. In parallel, we considered which features are most relevant to our research question and predictive objective, and which ones can be removed because they are either redundant or weakly connected to our task.
@@ -585,7 +592,8 @@ Pruning clearly breaks up the big correlation blocks, especially those driven by
 So the remaining matrix is less redundant and easier to read. That said, 47 variables is still a lot for a sparse signal like “burst,” and some clusters remain (e.g., LIWC families with overlapping constructs).
 
 
-
+---
+#### 3.2 Implement each strategy
 After applying all of these different ideas, we can look at the top 20 most informartive features, according to each ranking.
 
 Each bar represents how strongly a feature is associated with the burst label according to a given scoring criterion.
@@ -621,13 +629,15 @@ A couple of things stand out:
 - The forward-selected features appear more uniformly distributed about the different subgroups: some are LIWC, some are text properties, without being correlated, and we still have 1 VADER feature to represent the sentiment perceived by the post.
 - The manually-selected and the unions of features give a higher number of features. We will try to understand if it's necessary to keep all of them of if we can restrict us to a smaller subset.
 
+---
 
-## 4. Model Analyses
+### 4. Model Analyses
 Now that we have several “shortlists” of features, the next question is simple:  
 
 **How many features do we really need to predict a burst?**   
 We’d like to keep the feature set as small as possible, while staying as close as possible to the performance of the full 86-feature model!
 
+#### 4.1 Feature sets
 
 Here are all the subsets we will test:  
 
@@ -645,6 +655,7 @@ Here are all the subsets we will test:
 | Full feature set | 86 |
 
 
+#### 4.2 Models
 
 To avoid conclusions that depend on a single algorithm, we test several standard classifiers:
 
@@ -657,6 +668,7 @@ We're using PR-AUC and ROC-AUC to evaluate the performances.
 - **ROC-AUC**: “how well the model ranks positives above negatives” overall. A 0.5 performance is equivalent to a model classiying burst randomly, and 1.0 would be perfect.
 - **PR-AUC**: “how clean your positives are when positives are rare” (precision vs recall). Usually the more honest metric when burst is rare (our case, based on a quite imbalanced dataset).
 
+#### 4.3 Results 
 
 The results are shown in the plot below.   
 The **last column** is the reference: the model trained on **all 86 features**.  
@@ -684,7 +696,9 @@ So in practice, we can reduce the feature space by a factor of ~4, while keeping
 
 In other words: **these 20 features seem to capture most of the signal needed to detect bursts!**. 
 
-**But what do these 20 features actually capture?**  
+--- 
+
+#### 4.4 But what do these 20 features actually capture?
 
 To better understand *why* the forward-selected top-20 features work so well, we can try to understand what each feature represents in practice, and how it may relate to a Reddit post becoming widely discussed or shared. 
 
@@ -720,10 +734,15 @@ emotion, personal stance, social framing, and concrete storytelling all play a k
 
 ### Takeaways we keep to build our final recipe ! 
 
-- A REMPLIR QUAND PAGE TERMINEE
+- Bursty posts have **distinct lexical “signatures”** (specific words/topics recur in burst cases).
+- A compact set of **semantic + linguistic features** is enough to capture most of the signal.
+- **Forward-selected top-20 features** performs almost as well as using all 86 → strong dimensionality reduction.
+- **XGBoost** is the most consistent model across subsets; **PR-AUC** is the most relevant metric under heavy imbalance.
 
-These features are retained for downstream burst prediction models.
+These 20 features are retained for our burst prediction model.
 
+
+We're close to the end now, ready to test the model?
 
 <hr>
 
