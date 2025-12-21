@@ -55,7 +55,7 @@ We also tried to use this trained model reproduce the comportment of a burst sim
 
 *Disclaimer.* This simulator is for educational / informational purposes only. Please do not use it to intentionally provoke or coordinate harassment, brigading, or cross-community conflicts on Reddit.  
 To get accurate predictions, use a longer, content-rich post. The simulator works best with meaningful text similar to real Reddit discussions. Keep in mind that short or trivial inputs may lead to unreliable predictions.   
-If an error persist, do not hesitate to contact us.
+If an error persists, do not hesitate to contact us.
 
 <div class="reddit-hero">
   <div class="reddit-card finalrecipe-card">
@@ -123,8 +123,7 @@ If an error persist, do not hesitate to contact us.
 const API_BASE = "https://burst-stimulator.onrender.com";
 
 const SUBS = [
-  "askreddit", "writingprompts", "circlebroke","pics","iama","subredditdrama", "conspiracy", "drama", "todayilearned","funny","worldnews","bestofoutrageculture","news", "shitliberalssay",
-  "politics","gaming","wtf","adviceanimals","gifs","science","the_donald"
+    "askreddit","pics","iama","todayilearned","funny","worldnews","videos","news", "politics","gaming","wtf","adviceanimals","gifs","science","the_donald"
 ];
 
 const srcSel = document.querySelector("#src");
