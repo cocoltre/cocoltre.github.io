@@ -40,7 +40,7 @@ Let's look into that. What is the effective size of a subreddit ? Is it best des
 
 In the following, we will try to answer the initial question with the two definitions.
 
-<div style="display: flex; gap: 20px; max-width: 900px; margin: auto; align-items: flex-start;">
+<div style="display: flex; gap: 0px; max-width: 900px; margin: auto; align-items: flex-start;">
 
   <!-- Plot (fixed & responsive) -->
   <div style="flex: 1; max-width: 450px; height: 320px; overflow: hidden;">
@@ -49,7 +49,7 @@ In the following, we will try to answer the initial question with the two defini
       style="
         width: 1200px;        /* original width of the Plotly plot */
         height: 800px;        /* original height */
-        transform: scale(0.6);  /* shrink factor */
+        transform: scale(0.5);  /* shrink factor */
         transform-origin: top left;  /* keep everything aligned */
         border: none;
         display: block;

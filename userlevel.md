@@ -40,7 +40,7 @@ Does the activity of a user influence the probability of their post to make a bu
 Let's look into that. What is the effective activity of a user ? Is it best described by the number of subreddits they belong to (ie have already posted in) ? Or by the number of posts they have made ? 
 {: .text-justify}
 
-<div style="display: flex; gap: 20px; max-width: 900px; margin: auto; align-items: flex-start;">
+<div style="display: flex; gap: 0px; max-width: 900px; margin: auto; align-items: flex-start;">
 
   <!-- Plot (fixed & responsive) -->
   <div style="flex: 1; max-width: 450px; height: 320px; overflow: hidden;">
