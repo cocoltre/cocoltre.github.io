@@ -162,6 +162,8 @@ Because these two features respond almost identically to changes in subreddit si
 Great, we can thus add the **number of users per subreddit** as our first feature to our model!
 {: .text-justify}
 
+---
+
 ### 2. Interactions between communities via hyperlinks
 
 The goal now is to analyze how subreddits interact through hyperlinks.

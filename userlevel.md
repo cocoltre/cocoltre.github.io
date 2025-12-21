@@ -85,98 +85,79 @@ Let's look into that. What is the effective activity of a user ? Is it best desc
 
 </div>
 
-Here, we can see that active users have many different amounts of subreddits, and of posts. The distribution for both types of activity is extremely left-skewed, meaning that most of the users are active in very few subreddits (minimum 75% of them in only 1) and do few posts (minimum 75% of them make 1 too). We also see that the distribution of active users across the number of subreddits or number of posts is not exactly the same, which makes sense as 1 user can post several times in the same subreddit. Suprinsingly, the users that are active in the most subreddits do not necessarily post the most. For instance, over the 14'000 active users that we have, 12'855 of them have posted in only 1 subreddit, while only 11 active users have posted in more than 10 subreddits. That means that 91.8% of active users have posted in only 1 subreddit, which explains the highly left-skewness.
+Here, we see that users vary widely in both the number of subreddits they participate in and the number of posts they make. Both distributions are extremely left-skewed: most users are active in very few subreddits (at least 75% are active in only 1) and make very few posts (at least 75% make only 1).
 {: .text-justify}
 
-We also see that no matter their amount nor the identity of active users, they have different burst ratios (the portion of their posts that did a burst).
+Interestingly, the distributions for the number of subreddits and the number of posts are not identical, which makes sense, as a single user can post multiple times in the same subreddit. Surprisingly, users who are active in the most subreddits do not necessarily make the most posts. For example, out of 14,000 users, 12,855 have posted in only 1 subreddit, while only 11 users have posted in more than 10 subreddits. This means that 91.8% of users are active in just one subreddit, which explains the extreme left-skewness.
 {: .text-justify}
 
-**Can the number of subreddits in which a user is being active or the number of posts they make influence the probability of their post to make a burst?**
+Another key observation: regardless of how many subreddits a user participates in or how many posts they make, users show very different burst ratios (the fraction of their posts that trigger a burst).
 {: .text-justify}
 
-First, let's first find out about **the number of subreddits.**
-{: .text-justify}
-
---- 
-#### 1.1 The activity is the number of subreddits in which they are active
-
-<div style="position: relative; width: 100%; max-width: 800px; padding-top: 50%; margin: auto;">
-  <iframe
-    src="{{ '/assets/plots/2_mean_burst_ratio_by_users_subreddits.html' | relative_url }}"
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
-  </iframe>
-</div>
-
-Here, we see that the burst ratios vary from 0 to 0.043 (meaning that on average 4.3% of all the posts from a user who is active in 5 subreddits make a burst). That indicates that the number of subreddits in which a user is being active may influence the burst ratio, thus the probability of their post to make a burst.
-{: .text-justify}
-
-Let's see if the difference is statistically significant.
+**Can the number of subreddits a user is active in, or the number of posts they make, influence the probability that one of their posts will trigger a burst?**
 {: .text-justify}
 
 <div style="position: relative; width: 100%; max-width: 800px; padding-top: 50%; margin: auto;">
   <iframe
-    src="{{ '/assets/plots/2_mean_burst_ratio_by_subreddits_cluster.html' | relative_url }}"
+    src="{{ '/assets/plots/2_burst_ratio_subreddits_and_posts_scatter.html' | relative_url }}"
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
   </iframe>
 </div>
 
-With a K-means algorithm, we are able to distinguish 3 clusters of users: the users active in a low number of subreddits (1), in a medium number of subreddits (~2), and in a high number of subreddits (~9).
+Here, we see that the burst ratios vary from 0 to 0.043 (meaning that on average 4.3% of all the posts from a user who is active in 5 subreddits made 22 posts in total make a burst). That indicates that the number of subreddits in which a user is being active may influence the burst ratio, thus the probability of their post to make a burst.
 {: .text-justify}
 
-Suprinsingly, we see that if a post is made by a user who is active in only 1 subreddit, it has more probability to create a burst than if the user is active in more subreddits.
-{: .text-justify}
-
-As our initial distribution is highly skewed and definitely non normal, it is better to use Kruskal–Wallis statistical test. What we find is amazing: the p-value is extremely low (6.41e-10). Thus, we have strong statistical evidence to say that the mean burst ratios between the 3 clusters is different, ie the number of subreddits in which a user is active has an influence on the probability of a post to make a burst.
-{: .text-justify}
-
-That's great! We can use the number of Subreddits per Active User as a new feature in our ML model.
-{: .text-justify}
-
---- 
-
-#### 1.2 The activity is the number of posts
-
-Now let's see if the number of posts a user has made has also an influence on the probability of a post to make a burst.  
-Remember: we saw that users make many different amounts of posts. We also saw that no matter their amount of the subreddits they belong to nor the identity of active users, they have different burst ratios (the portion of posts that did a burst).
-{: .text-justify}
-
-**Can the number of posts of a user influence the probability of it to make a burst ?**
+Because we have way more active users with few subreddits and few posts, it is hard to see in details the burst ratios on this plot. Let's find a better way to visualize.
 {: .text-justify}
 
 <div style="position: relative; width: 100%; max-width: 800px; padding-top: 50%; margin: auto;">
   <iframe
-    src="{{ '/assets/plots/2_mean_burst_ratio_by_users_posts.html' | relative_url }}"
+    src="{{ '/assets/plots/2_users_clusters.html' | relative_url }}"
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
   </iframe>
 </div>
 
-Here, we see that the burst ratios vary from 0 to 0.22 (meaning that on average 22% of all the posts from a user who made 22 posts in total make a burst). That indicates that the number of posts of a user may influence the burst ratio, thus the probability of a post to make a burst.
+Okay, now we see a bit better. With a K-means algorithm, we are able to distinguish 3 clusters of active users: the active users with a low number of posts (~3) or a low number of subreddits (1), with a medium number of posts (~12) or a medium number of subreddits (~2), and with a high number of posts (~58) or a high number of subreddits (~9).
 {: .text-justify}
 
-Because we have way more subreddits with few posts, it is hard to see in details the burst ratios on this plot. Let's find a better way to visualize.
+Interestingly, we observe that posts made by users with low activity (few posts or few subreddits) are more likely to trigger a burst than posts from medium-activity users, and even more than those from high-activity users.
+{: .text-justify}
+
+Because our initial distributions are highly skewed and clearly non-normal, we use the Kruskal–Wallis test, a non-parametric method that evaluates whether the medians of multiple groups differ significantly. The results are striking: the p-values are extremely low for both features (2.09e-40 for post counts and 6.41e-10 for subreddit counts). This provides strong statistical evidence that the mean burst ratios differ across the three clusters for both features. In other words, user activity, whether measured by the number of posts or the number of subreddits, clearly influences the probability of a post generating a burst.
+{: .text-justify}
+
+Next, to compare the clusters between the two features, we apply the Mann–Whitney U test, which assesses whether two independent groups come from the same distribution. Testing whether the clusters based on posts differ from those based on active users, we obtain a p-value of 0.1172. This indicates that we cannot reject the hypothesis that the two features provide the same information: statistically, they behave very similarly.
+{: .text-justify}
+
+Hmm… given how similarly the two features behave across clusters, maybe they are correlated after all. Let’s check and find out!
 {: .text-justify}
 
 <div style="position: relative; width: 100%; max-width: 800px; padding-top: 50%; margin: auto;">
   <iframe
-    src="{{ '/assets/plots/2_mean_burst_ratio_by_posts_cluster.html' | relative_url }}"
+    src="{{ '/assets/plots/2_subreddits_vs_posts_scatter.html' | relative_url }}"
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
   </iframe>
 </div>
 
-Okay, now we see a bit better. With a K-means algorithm, we are able to distinguish 3 clusters of users: the users with a low number of posts (~3), with a medium number of posts (~12), and with a high number of posts (~58).
+Okay, now the picture becomes clearer.
 {: .text-justify}
 
-Suprinsingly, we see here that if a post is made by a user who posts a low number of posts, it has more probability to create a burst than if created by a user that posts more.
+This plot shows that the number of posts per active user is almost perfectly linear with the number of subreddits. This means that they will have highly similar relationships with other variables in the model.
 {: .text-justify}
 
-As our initial distribution is highly skewed and definitely non normal, it is better to use Kruskal–Wallis statistical test. What we find is amazing: the p-value is extremely low (2.09e-40). Thus, we have strong statistical evidence to say that the mean burst ratios between the 3 clusters is different, ie the number of posts of a user has an influence on the probability of a post to make a burst.
+To formally test this relationship, we ran a Pearson correlation test, which measures the strength of a linear association between two continuous variables. The null hypothesis is that there is no linear correlation between the number of subreddits and the number of posts per active user.
 {: .text-justify}
 
-That's great ! We can use the number of Posts per Active User as a new feature in our ML model.
+The result is unambiguous: the correlation is highly significant, with a p-value effectively equal to 0. This allows us to confidently reject the null hypothesis and conclude that active users with more subreddits tend to produce proportionally more posts.
 {: .text-justify}
 
---- 
+Because these two features respond almost identically to changes in user activity, they encode the same information about user activity. Including both would therefore add redundancy rather than explanatory power. We retain only one of them and choose the number of posts per active user, which shows a slightly stronger statistical relationship with burst behavior (lower p-value).
+{: .text-justify}
 
+Great, we can thus add the **number of posts per active user** as our second feature to our model!
+{: .text-justify}
+
+---
 
 ### 2. A moment where you should post ?
 
