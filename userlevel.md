@@ -142,7 +142,7 @@ Hmm… given how similarly the two features behave across clusters, maybe they a
 Okay, now the picture becomes clearer.
 {: .text-justify}
 
-This plot shows that the number of posts per active user is almost perfectly linear with the number of subreddits. This means that they will have highly similar relationships with other variables in the model.
+This plot shows that the number of posts per active user looks like positivelyand almost linearly associated with the number of subreddits. This means that they will have probably similar relationships with other variables in the model.
 {: .text-justify}
 
 To formally test this relationship, we ran a Pearson correlation test, which measures the strength of a linear association between two continuous variables. The null hypothesis is that there is no linear correlation between the number of subreddits and the number of posts per active user.
