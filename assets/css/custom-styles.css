@@ -547,3 +547,73 @@ header.intro-header .post-heading .subheading{
   margin-left: auto;
   margin-right: auto;
 }
+
+
+
+
+/* ===============================
+   FIX: dropdown <select> not clickable
+   =============================== */
+
+/* Ensure the simulator form sits above decorative layers */
+.simulator-form {
+  position: relative;
+  z-index: 50;
+}
+
+/* Make sure selects receive pointer events */
+.simulator-form select {
+  pointer-events: auto;
+  position: relative;
+  z-index: 60;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+/* Defensive: options too */
+.simulator-form option {
+  pointer-events: auto;
+}
+
+/* Disable click interception by reddit-card decorative layers */
+.reddit-card,
+.reddit-card-body,
+.reddit-card-header,
+.reddit-card-footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* Kill invisible overlays created via pseudo-elements */
+.reddit-card::before,
+.reddit-card::after,
+.reddit-card-body::before,
+.reddit-card-body::after,
+.reddit-hero::before,
+.reddit-hero::after {
+  pointer-events: none !important;
+}
+
+/* Ensure labels don’t sit on top of inputs */
+.simulator-form label {
+  position: relative;
+  z-index: 40;
+  pointer-events: none;
+}
+
+/* Mobile / Safari / Chrome safety */
+.simulator-form select:focus {
+  outline: 2px solid #ff4500;
+}
+
+/* Optional: improve dropdown arrow visibility */
+.simulator-form select {
+  appearance: auto;
+  -webkit-appearance: menulist;
+  -moz-appearance: menulist;
+}
+
+
+.simulator-form * {
+  outline: 1px dashed red;
+}
