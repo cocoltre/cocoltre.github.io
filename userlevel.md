@@ -154,7 +154,7 @@ The result is unambiguous: the correlation is highly significant, with a p-value
 Because these two features respond almost identically to changes in user activity, they encode the same information about user activity. Including both would therefore add redundancy rather than explanatory power. We retain only one of them and choose the number of posts per active user, which shows a slightly stronger statistical relationship with burst behavior (lower p-value).
 {: .text-justify}
 
-Great, we can thus add the **number of posts per active user** as our second feature to our model!
+Great, we can thus add the **number of posts per active user** as a new feature to our model!
 {: .text-justify}
 
 ---
