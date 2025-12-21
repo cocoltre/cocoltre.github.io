@@ -164,7 +164,7 @@ Great, we can thus add the **number of posts per active user** as our second fea
 When is it optimal to post in order to mobilise people ? Time ;) to find out !
 
 <iframe
-  src="{{ '/assets/plots/stos_1.html' | relative_url }}"
+  src="{{ '/assets/plots/stos_1_colours_redditcard_centered.html' | relative_url }}"
   width="100%"
   height="800"
   style="border:none;">
