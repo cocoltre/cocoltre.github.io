@@ -337,7 +337,7 @@ This suggests that the effect is likely driven by **dataset boundary effects**, 
 
 ---
 
-#### 4. Subreddit Similarity
+### 4. Subreddit Similarity
 
 Can we try to understand how close in subject are the two subreddits ?
 

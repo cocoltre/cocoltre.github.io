@@ -201,7 +201,7 @@ Let's use this feature for our model!
 --- 
 
 
-### 3. A score for each user
+### 3. A score for each user ?
 Reddit users are very different, they have all different interest, different lifestyles, different comportments,...  
 We are interested in a way to characterize an user, relative to the rest of Reddit users.  
 Let's compute a new feature, called User score, where the score measures how similar a user is to the average member of the community, and this using cosine similarity.  
@@ -245,7 +245,7 @@ The result? Each user gets a **cluster membership** indicating which user commun
 
 --- 
 
-#### 2.2 Bar plot visualization
+#### 4.2 Bar plot visualization
 
 <iframe
   src="{{ '/assets/plots/2_user_cluster_burst_rate.html' | relative_url }}"
