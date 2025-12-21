@@ -94,7 +94,7 @@ Interestingly, the distributions for the number of subreddits and the number of 
 Another key observation: regardless of how many subreddits a user participates in or how many posts they make, users show very different burst ratios (the fraction of their posts that trigger a burst).
 {: .text-justify}
 
-**Can the number of subreddits a user is active in, or the number of posts they make, influence the probability that one of their posts will trigger a burst?**
+***Can the number of subreddits a user is active in, or the number of posts they make, influence the probability that one of their posts will trigger a burst?***
 {: .text-justify}
 
 <div style="position: relative; width: 100%; max-width: 800px; padding-top: 50%; margin: auto;">
