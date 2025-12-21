@@ -53,7 +53,8 @@ The final objective of this project was to try to combine all of these features,
 
 We also tried to use this trained model reproduce the comportment of a burst simulator, wanna test it? 
 
-*Disclaimer.* This simulator is for educational / informational purposes only. Please do not use it to intentionally provoke or coordinate harassment, brigading, or cross-community conflicts on Reddit.
+*Disclaimer.* This simulator is for educational / informational purposes only. Please do not use it to intentionally provoke or coordinate harassment, brigading, or cross-community conflicts on Reddit.  
+To get accurate predictions, use a longer, content-rich post. The simulator works best with meaningful text similar to real Reddit discussions. Keep in mind that short or trivial inputs may lead to unreliable predictions.
 
 <div class="reddit-hero">
   <div class="reddit-card finalrecipe-card">
