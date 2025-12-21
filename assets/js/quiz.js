@@ -60,12 +60,15 @@ function loadPost(index) {
 
 function handleAnswer(answer) {
   const correct = posts[currentIndex].correct;
+  const clickedBtn = document.getElementById(answer.toLowerCase() + 'Btn');
+  const otherBtn = answer.toLowerCase() === 'yes' ? noBtn : yesBtn;
+
   if (answer === correct) {
-    document.getElementById(answer.toLowerCase() + 'Btn').style.backgroundColor = 'green';
-    document.getElementById(answer.toLowerCase() === 'yes' ? 'noBtn' : 'yesBtn').style.backgroundColor = 'red';
+    clickedBtn.style.backgroundColor = 'green';
+    otherBtn.style.backgroundColor = ''; // stays neutral
   } else {
-    document.getElementById(answer.toLowerCase() + 'Btn').style.backgroundColor = 'red';
-    document.getElementById(answer.toLowerCase() === 'yes' ? 'noBtn' : 'yesBtn').style.backgroundColor = 'green';
+    clickedBtn.style.backgroundColor = 'red';
+    otherBtn.style.backgroundColor = 'green';
   }
 
   yesBtn.disabled = true;
@@ -82,6 +85,7 @@ function handleAnswer(answer) {
     }
   }, 1000);
 }
+
 
 yesBtn.addEventListener('click', () => handleAnswer('Yes'));
 noBtn.addEventListener('click', () => handleAnswer('No'));
