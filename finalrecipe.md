@@ -84,11 +84,12 @@ We also tried to use this trained model reproduce the comportment of a burst sim
 
       <div class="simulator-form">
 
-        <label>Source subreddit</label>
-        <select id="src"></select>
+        <label for="src">Source subreddit</label>
+        <select id="src" name="src"></select>
 
-        <label>Target subreddit</label>
-        <select id="tgt"></select>
+        <label for="tgt">Target subreddit</label>
+        <select id="tgt" name="tgt"></select>
+
 
         <label>Date & time</label>
         <input id="dt" type="datetime-local">
