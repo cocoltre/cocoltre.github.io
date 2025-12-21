@@ -104,7 +104,7 @@ Another key observation: regardless of how many subreddits a user participates i
   </iframe>
 </div>
 
-Here, we see that the burst ratios vary from 0 to 0.043 when measuring the number of subreddits per user (meaning that on average 4.3% of all the posts from a user who is active in 5 subreddits make a burst) and from 0 to 0.219 (meaning that on average 21.9% of all the posts from a user who have posted 22 times make a burst). That indicates that the number of subreddits in which a user is being active or the number of posts they have released may influence the burst ratio, thus the probability of their post to make a burst.
+Here, we see that the burst ratios vary from 0 to 0.043 when measuring the number of subreddits per user (meaning that on average 4.3% of all the posts from a user who is active in 5 subreddits make a burst) and from 0 to 0.219 when measuring the number of posts per user (meaning that on average 21.9% of all the posts from a user who have posted 22 times make a burst). That indicates that the number of subreddits in which a user is being active or the number of posts they have released may influence the burst ratio, thus the probability of their post to make a burst.
 {: .text-justify}
 
 Because we have way more active users with few subreddits and few posts, it is hard to see in details the burst ratios on this plot. Let's find a better way to visualize.
