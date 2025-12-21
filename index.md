@@ -96,7 +96,7 @@ We adopt a multi-scale perspective, moving from the macro level of subreddit net
     </p>
     
     <p>
-      In fact, at each level we aim not only to analyze what factors appear (or not)
+      At each level we aim not only to analyze what factors appear (or not)
       to contribute the most to a bursty-post, but also to extract different features
       that appear meaningful to discriminate between a post leading to a burst or not.
     </p>

@@ -21,8 +21,8 @@ First, let's observe how subreddits themselves have an influence on the burst. I
 
 Our goals are to:
 
-- Identify the subreddits' differences that differ most between bursty and non-bursty posts.
-- Understand which of these differences best explain or predict the probability of triggering a burst.
+- Identify the key subreddit characteristics that most distinguish bursty from non-bursty posts.
+- Understand which of these characteristics best explain or predict the probability of triggering a burst.
 
 <div class="page-outline" markdown="1">
 
@@ -243,7 +243,7 @@ Next step could be to summarize this behavior into usable features. Let's comput
 - Mean source ratios are strongly polarized near **0 or 1**
 - Variance is close to **0 for most subreddits**
 
-We can suggest to keep **only the mean source ratio** as a new feature that will be use by our model, as variance provides little additional information. Indeed variance is nearly zero for the vast majority of communities, so it has limited discriminative value compared to the mean source ratio.  
+We can suggest to keep **only the mean source ratio** as a new feature that will be used by our model, as variance provides little additional information. Indeed variance is nearly zero for the vast majority of communities, so it has limited discriminative value compared to the mean source ratio.  
 We already have 3 new features ! Let's continue.
 
 ---
@@ -287,7 +287,7 @@ We repeat the role analysis using only burst-labeled interactions.
 <iframe src="{{ '/assets/plots/1_fig6.html' | relative_url }}" width="100%" height="550" style="border:none;"></iframe>
 
 Most active subreddits act almost exclusively as **sources**.  
-**worldnews** and **news** are notable exceptions, acting primarily as **targets**, suggesting they are frequently referenced by other communities. This sounds pretty expected as news might not want to target community to avoid the degration of their image, but they are also targeted as they cover many controversial topics.
+**worldnews** and **news** are notable exceptions, acting primarily as **targets**, suggesting they are frequently referenced by other communities. This is unsurprising: news communities typically avoid targeting other communities to protect their reputation, yet they remain frequently targeted because they cover controversial topics.
 
 ---
 
@@ -303,12 +303,12 @@ A small group of subreddits (e.g. `SubredditDrama`, `ShitLiberalsSay`, `CircleBr
 
 #### 3.5 Switch from Target to Source
 
-Now, simply out of curiosity, we would like to try to answer : Do subreddits that are first **targeted** later become **sources** ?
+Now, simply out of curiosity, we would like to answer the following question : Do subreddits that are first **targeted** later become **sources** ?
 
 <iframe src="{{ '/assets/plots/1_fig8.html' | relative_url }}" width="100%" height="350" style="border:none;"></iframe>
 
-If we look at the delay distribultion, it's pretty clear that most subreddits that switch roles do so within **100 days**.
-But then, looking at the fast switch timeline, (when the switch is done under ≤ 7 days after being targeted), we see that they fast transitions occur mainly at the start of the dataset, reflecting missing pre-dataset history rather than true behavior trends. Besides, the number of observations is very low.
+If we look at the delay distribution, it's pretty clear that most subreddits that switch roles do so within **100 days**.
+But then, looking at the fast switch timeline, (when the switch is done under ≤ 7 days after being targeted), we see that their fast transitions occur mainly at the start of the dataset, reflecting missing pre-dataset history rather than true behavior trends. Besides, the number of observations is very low.
 This suggests that the effect is likely driven by **dataset boundary effects**, rather than systematic retaliation.
 
 ---
@@ -331,14 +331,14 @@ This holds for both mobilizing and non-mobilizing cases.
 
 It shown that mobilizations are slightly more likely between topically similar communities compared to random pairs. 
 
-But similarity alone does not explain whether a cross-link leads to mobilization, instead topical alignment appears to be a prerequisite for negative interaction, rather than a driver of escalation.
+But similarity alone does not explain whether a cross-link leads to mobilization. Instead topical alignment appears to be a prerequisite for negative interaction, rather than a driver of escalation.
 
-Clusering the communities could be an interesting idea...
+Clustering the communities could be an interesting idea...
 
 ---
 ### 5. Clustering of the subreddits 
 
-Now, we're interesting in grouping communities together. This could be very interesting to better understand the predictions our model will perform.  
+Now we explore community clustering to gain deeper insights into our model's predictions.  
 
 Big Question: 
 ***How do we group subreddits together? By topic? By size? Neither!***
