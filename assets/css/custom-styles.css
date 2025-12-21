@@ -1,6 +1,6 @@
 :root{
   /* Plotly Pastel (approx hex) */
-  --p1:#66C5CC; /* rgb(102,197,204) */
+  --p1:#66C5CC;
   --p2:#F6CF71;
   --p3:#F89C74;
   --p4:#DCB0F2;
@@ -13,7 +13,7 @@
   --p11:#B3B3B3;
 
   /* site tokens */
-  --bg: #FFFFFF;
+  --bg: #FFF6F1;   /* corail très très clair (plus doux que #FFF1EA) */
   --text: #2B2B2B;
   --muted: #666;
   --card: #FFFFFF;
@@ -23,6 +23,21 @@
   --primary-hover: #52B4BB;
   --secondary: var(--p6);
   --secondary-hover: #86A7F0;
+}
+
+/* fond global */
+html, body{
+  background-color: var(--bg) !important;
+}
+
+/* si BJ met du blanc sur le wrapper */
+body,
+.main-content,
+.container[role="main"],
+.page-content,
+.wrap,
+.wrapper{
+  background: transparent !important;
 }
 
 /* =========================
@@ -227,12 +242,7 @@ label{ font-weight: 600; }
   margin: 2.5rem 0;
 }
 
-/* =========================
-   Finalrecipe background (only if body_class is wired in layout)
-   ========================= */
-body.finalrecipe{
-  background-color: rgb(253, 205, 172);
-}
+
 
 /* =========================
    Responsive
